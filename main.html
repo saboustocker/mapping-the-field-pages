@@ -90,6 +90,101 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<style>
+
+  html {
+
+    visibility: hidden;
+
+  }
+
+</style>
+
+
+
+<script>
+
+  (() => {
+
+    const expectedPassword = "mappingthefield";
+
+    const storageKey = "mapping-field-access";
+
+
+
+    const unlock = () => {
+
+      sessionStorage.setItem(storageKey, "granted");
+
+      document.documentElement.style.visibility = "visible";
+
+    };
+
+
+
+    if (sessionStorage.getItem(storageKey) === "granted") {
+
+      unlock();
+
+      return;
+
+    }
+
+
+
+    const enteredPassword = window.prompt(
+
+      "Please enter the password provided to you to view this page:"
+
+    );
+
+
+
+    if (enteredPassword === expectedPassword) {
+
+      unlock();
+
+    } else {
+
+      document.addEventListener("DOMContentLoaded", () => {
+
+        document.body.innerHTML = `
+
+          <main style="
+
+            max-width: 600px;
+
+            margin: 15vh auto;
+
+            padding: 2rem;
+
+            font-family: sans-serif;
+
+            text-align: center;
+
+          ">
+
+            <h1>Access denied</h1>
+
+            <p>The password was incorrect.</p>
+
+            <button onclick="location.reload()">Try again</button>
+
+          </main>
+
+        `;
+
+
+
+        document.documentElement.style.visibility = "visible";
+
+      });
+
+    }
+
+  })();
+
+</script>
 <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
 
 <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
