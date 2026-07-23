@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Appendix E — Academic–Media Attention: Coverage Differences and Temporal Alignment – Mapping the Field of Consumer-Technology Research</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../supplement/03-media-frame-analysis.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+
+  html {
+
+    visibility: hidden;
+
+  }
+
+</style>
+
+
+
+<script>
+
+  (() => {
+
+    const expectedPassword = "mappingthefield";
+
+    const storageKey = "mapping-field-access";
+
+
+
+    const unlock = () => {
+
+      sessionStorage.setItem(storageKey, "granted");
+
+      document.documentElement.style.visibility = "visible";
+
+    };
+
+
+
+    if (sessionStorage.getItem(storageKey) === "granted") {
+
+      unlock();
+
+      return;
+
+    }
+
+
+
+    const enteredPassword = window.prompt(
+
+      "Please enter the password provided to you to view this page:"
+
+    );
+
+
+
+    if (enteredPassword === expectedPassword) {
+
+      unlock();
+
+    } else {
+
+      document.addEventListener("DOMContentLoaded", () => {
+
+        document.body.innerHTML = `
+
+          <main style="
+
+            max-width: 600px;
+
+            margin: 15vh auto;
+
+            padding: 2rem;
+
+            font-family: sans-serif;
+
+            text-align: center;
+
+          ">
+
+            <h1>Access denied</h1>
+
+            <p>The password was incorrect.</p>
+
+            <button onclick="location.reload()">Try again</button>
+
+          </main>
+
+        `;
+
+
+
+        document.documentElement.style.visibility = "visible";
+
+      });
+
+    }
+
+  })();
+
+</script>
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../main-docx/manuscript.docx"> <i class="bi bi-file-earmark-word" role="img" aria-label="Download main manuscript as Word">
+</i> 
+<span class="menu-text">Main manuscript</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../supplement-docx/supplementary-materials.docx"> <i class="bi bi-file-earmark-word" role="img" aria-label="Download supplementary materials as Word">
+</i> 
+<span class="menu-text">Supplementary materials</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../supplement/01-academic-corpus-analysis.html">Appendices</a></li><li class="breadcrumb-item"><a href="../supplement/04-lag-analysis.html"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Academic–Media Attention: Coverage Differences and Temporal Alignment</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapping the Field of Consumers and Technology</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../main.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapping the Field of Consumers and Technology</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../supplement/01-academic-corpus-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Academic Corpus Analysis: Inclusion and exclusion Analysis Pipeline</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../supplement/02-technology-clustering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Technology Clustering: Model Selection and Fit</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../supplement/05-extended-results-academic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Academic Text Corpus Analysis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../supplement/03-media-frame-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Media Frame Analysis: Analysis Pipeline</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../supplement/04-lag-analysis.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Academic–Media Attention: Coverage Differences and Temporal Alignment</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#comparable-annual-attention-shares" id="toc-comparable-annual-attention-shares" class="nav-link active" data-scroll-target="#comparable-annual-attention-shares"><span class="header-section-number">E.1</span> Comparable Annual Attention Shares</a></li>
+  <li><a href="#cross-sectional-comparison-of-attention" id="toc-cross-sectional-comparison-of-attention" class="nav-link" data-scroll-target="#cross-sectional-comparison-of-attention"><span class="header-section-number">E.2</span> Cross-Sectional Comparison of Attention</a></li>
+  <li><a href="#cross-correlation-across-lags" id="toc-cross-correlation-across-lags" class="nav-link" data-scroll-target="#cross-correlation-across-lags"><span class="header-section-number">E.3</span> Cross-Correlation Across Lags</a></li>
+  <li><a href="#circular-shift-permutation-test" id="toc-circular-shift-permutation-test" class="nav-link" data-scroll-target="#circular-shift-permutation-test"><span class="header-section-number">E.4</span> Circular-Shift Permutation Test</a></li>
+  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization"><span class="header-section-number">E.5</span> Visualization</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">E.6</span> Results</a>
+  <ul class="collapse">
+  <li><a href="#cross-sectional-differences-in-attention" id="toc-cross-sectional-differences-in-attention" class="nav-link" data-scroll-target="#cross-sectional-differences-in-attention"><span class="header-section-number">E.6.1</span> Cross-Sectional Differences in Attention</a></li>
+  <li><a href="#do-the-discrepancies-reflect-delayed-academic-attention" id="toc-do-the-discrepancies-reflect-delayed-academic-attention" class="nav-link" data-scroll-target="#do-the-discrepancies-reflect-delayed-academic-attention"><span class="header-section-number">E.6.2</span> Do the Discrepancies Reflect Delayed Academic Attention?</a></li>
+  </ul></li>
+  <li><a href="#cluster-level-attention-plots" id="toc-cluster-level-attention-plots" class="nav-link" data-scroll-target="#cluster-level-attention-plots"><span class="header-section-number">E.7</span> Cluster-Level Attention Plots</a></li>
+  <li><a href="#integrated-interpretation" id="toc-integrated-interpretation" class="nav-link" data-scroll-target="#integrated-interpretation"><span class="header-section-number">E.8</span> Integrated Interpretation</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../supplement/01-academic-corpus-analysis.html">Appendices</a></li><li class="breadcrumb-item"><a href="../supplement/04-lag-analysis.html"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Academic–Media Attention: Coverage Differences and Temporal Alignment</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-lag-analysis" class="quarto-section-identifier">Appendix E — Academic–Media Attention: Coverage Differences and Temporal Alignment</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>We compared academic and media attention to the 16 technology clusters in two complementary steps. First, we examined how each corpus distributed attention across the clusters on average. This cross-sectional comparison identifies technology clusters that occupy a relatively larger share of academic or media discourse. Second, we examined whether annual changes in attention followed similar temporal trajectories and whether media attention tended to precede academic attention.</p>
+<p>The temporal analysis serves a specific interpretive purpose. A lower academic attention share could reflect a persistent difference in research coverage, but it could also arise because academic publication responds more slowly to developments that have already become visible in media discourse. We therefore use the lag analysis to assess whether the cross-sectional discrepancies can be explained by a general delay in academic attention.</p>
+<section id="comparable-annual-attention-shares" class="level2" data-number="E.1">
+<h2 data-number="E.1" class="anchored" data-anchor-id="comparable-annual-attention-shares"><span class="header-section-number">E.1</span> Comparable Annual Attention Shares</h2>
+<p>We reconstructed annual cluster-level series from the underlying academic and media files. We did not use the two-year aggregates created for the descriptive figures because the academic and media pipelines used different binning conventions.</p>
+<p>For each year and technology cluster, we counted academic technology mentions and summed Media Cloud mentions. We merged the two series by year and cluster and treated combinations absent from one corpus as zero in that corpus.</p>
+<p>The two corpora differ substantially in size and in what generates a count. Academic counts represent technology mentions in published articles, whereas media counts represent newspaper stories matched to the corresponding technology terms. We therefore converted both series into annual attention shares. For each year and corpus, we divided a cluster’s count by the total count across all 16 clusters in that year.</p>
+</section>
+<section id="cross-sectional-comparison-of-attention" class="level2" data-number="E.2">
+<h2 data-number="E.2" class="anchored" data-anchor-id="cross-sectional-comparison-of-attention"><span class="header-section-number">E.2</span> Cross-Sectional Comparison of Attention</h2>
+<p>We summarized the relative allocation of attention across 2008–2025, the period for which Media Cloud coverage is sufficiently systematic and the academic data cover complete publication years. For each cluster, we calculated its mean annual academic and media attention shares. Averaging annual shares gives each year equal weight and prevents the substantially larger publication and media volumes in recent years from dominating the comparison.</p>
+<p>We defined the academic–media attention gap as</p>
+<p><span class="math display">\[
+G_c = \overline{A}_c - \overline{M}_c,
+\]</span></p>
+<p>where <span class="math inline">\(\overline{A}_c\)</span> and <span class="math inline">\(\overline{M}_c\)</span> denote the mean annual academic and media attention shares for cluster <span class="math inline">\(c\)</span>. Positive values indicate that a cluster occupies a larger share of academic attention, whereas negative values indicate that it occupies a larger share of media attention.</p>
+<p>The gap is descriptive and relative. Media coverage does not provide a normative benchmark for the amount of academic attention a technology should receive. Instead, the comparison identifies technology clusters for which the distribution of attention differs most strongly across the two corpora.</p>
+<p>As a robustness check, we also calculated pooled attention shares by dividing each cluster’s total count across 2008–2025 by the total count across all clusters and years in the same corpus. Unlike the mean annual shares, the pooled estimates give greater weight to high-volume years.</p>
+</section>
+<section id="cross-correlation-across-lags" class="level2" data-number="E.3">
+<h2 data-number="E.3" class="anchored" data-anchor-id="cross-correlation-across-lags"><span class="header-section-number">E.3</span> Cross-Correlation Across Lags</h2>
+<p>The cross-sectional comparison identifies differences in average attention, but it cannot establish whether these discrepancies reflect persistent differences in coverage or delayed academic responses. We therefore evaluated the temporal correspondence between the annual academic and media attention-share series.</p>
+<p>For each of the 16 technology clusters, we calculated the Pearson correlation between academic and media attention shares at every integer lag from <span class="math inline">\(-5\)</span> to <span class="math inline">\(+5\)</span> years:</p>
+<p><span class="math display">\[
+r(L) = \operatorname{corr}(A_t, M_{t-L}),
+\]</span></p>
+<p>where <span class="math inline">\(A_t\)</span> is the academic attention share in year <span class="math inline">\(t\)</span>, <span class="math inline">\(M_t\)</span> is the media attention share, and <span class="math inline">\(L\)</span> is the tested lag.</p>
+<p>We interpret the lag as follows:</p>
+<ul>
+<li><span class="math inline">\(L &gt; 0\)</span>: media attention leads academic attention by <span class="math inline">\(L\)</span> years;</li>
+<li><span class="math inline">\(L = 0\)</span>: academic and media attention move concurrently;</li>
+<li><span class="math inline">\(L &lt; 0\)</span>: academic attention leads media attention by <span class="math inline">\(|L|\)</span> years.</li>
+</ul>
+<p>We calculated each correlation from all years for which both observations were available. We left a lag undefined when fewer than three paired years were available. For each cluster, we defined the best lag as the value of <span class="math inline">\(L\)</span> with the highest signed correlation. We also report the correlation at lag 0 for comparison.</p>
+</section>
+<section id="circular-shift-permutation-test" class="level2" data-number="E.4">
+<h2 data-number="E.4" class="anchored" data-anchor-id="circular-shift-permutation-test"><span class="header-section-number">E.4</span> Circular-Shift Permutation Test</h2>
+<p>A conventional Pearson test would overstate significance because annual attention shares are autocorrelated and because we searched across 11 lags before selecting the highest correlation. We therefore used a circular-shift permutation test.</p>
+<p>For each cluster, we shifted the media series by a randomly selected nonzero offset while preserving its internal order and autocorrelation. We then repeated the complete lag search and recorded the highest signed correlation. We repeated this procedure 1,000 times using a fixed random seed.</p>
+<p>The empirical permutation <span class="math inline">\(p\)</span>-value was</p>
+<p><span class="math display">\[
+p =
+\frac{
+1 + \#\{\text{permuted maxima} \geq \text{observed maximum}\}
+}{
+1 + \text{number of valid permutations}
+}.
+\]</span></p>
+<p>This test compares the observed best-lag correlation with a null distribution that incorporates both the autocorrelation of the media series and the search across all 11 lags.</p>
+</section>
+<section id="visualization" class="level2" data-number="E.5">
+<h2 data-number="E.5" class="anchored" data-anchor-id="visualization"><span class="header-section-number">E.5</span> Visualization</h2>
+<p>We visualize the cross-sectional comparison as a scatterplot of mean annual academic against media attention shares. A diagonal line represents equal attention shares in the two corpora, and the distance from that line represents the academic–media attention gap. A ranked gap plot provides a complementary display of the direction and magnitude of these differences.</p>
+<p>For the temporal comparison, we plot the annual academic and media attention shares together with their 3-year centered rolling averages. The rolling averages are used only for visualization; the correlations and permutation tests use the unsmoothed annual series.</p>
+</section>
+<section id="results" class="level2" data-number="E.6">
+<h2 data-number="E.6" class="anchored" data-anchor-id="results"><span class="header-section-number">E.6</span> Results</h2>
+<section id="cross-sectional-differences-in-attention" class="level3" data-number="E.6.1">
+<h3 data-number="E.6.1" class="anchored" data-anchor-id="cross-sectional-differences-in-attention"><span class="header-section-number">E.6.1</span> Cross-Sectional Differences in Attention</h3>
+<p><a href="#tbl-attention-gap" class="quarto-xref">Table&nbsp;<span>E.1</span></a> reports the mean annual attention shares and their differences for the 16 technology clusters. Academic attention exceeded media attention most strongly for <em>Generative AI</em> (5.1 percentage points), <em>Algorithms &amp; Recommendations</em> (4.7 percentage points), and <em>E-Commerce</em> (4.7 percentage points). Media attention exceeded academic attention most strongly for <em>Social Media</em> (9.6 percentage points), <em>Internet &amp; Broadcasting</em> (8.3 percentage points), and <em>Other</em> (3.7 percentage points). <em>Computers &amp; Software</em> showed the most similar mean attention shares across the two corpora.</p>
+<p>The ranking of the attention gaps was highly similar when we calculated shares from pooled counts rather than mean annual shares (Spearman’s <span class="math inline">\(\rho = 0.971\)</span>). The substantive pattern therefore does not depend strongly on whether each year receives equal weight or years are weighted by corpus volume.</p>
+<div class="cell">
+<div id="tbl-attention-gap" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-attention-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;E.1: Mean annual academic and media attention shares by technology cluster, 2008–2025. The academic–media gap equals academic share minus media share; positive values indicate a larger academic share.
+</figcaption>
+<div aria-describedby="tbl-attention-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed do-not-create-environment cell caption-top table-sm small">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Technology Cluster</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Mean Academic Share</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Mean Media Share</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Academic–Media Gap</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Generative AI</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(189, 201, 249, 255) !important;">9.3%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 236, 221, 255) !important;">4.3%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(166, 185, 247, 255) !important;">+5.1%</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Algorithms &amp; Recommendations</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(213, 220, 251, 255) !important;">6.0%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 249, 245, 255) !important;">1.3%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(172, 189, 247, 255) !important;">+4.7%</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">E-Commerce</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(215, 222, 252, 255) !important;">5.7%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 250, 247, 255) !important;">1.0%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(173, 190, 247, 255) !important;">+4.7%</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Tracking &amp; Wearables</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(227, 231, 253, 255) !important;">4.1%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 253, 251, 255) !important;">0.5%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(193, 204, 249, 255) !important;">+3.6%</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Gaming &amp; Digital Platforms</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(215, 222, 252, 255) !important;">5.7%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 245, 237, 255) !important;">2.3%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(196, 207, 250, 255) !important;">+3.4%</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Auctions &amp; Pricing</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(243, 244, 254, 255) !important;">1.8%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.0%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(225, 230, 252, 255) !important;">+1.8%</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Mobility &amp; Transportation</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(241, 243, 254, 255) !important;">2.0%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 252, 250, 255) !important;">0.6%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(232, 235, 253, 255) !important;">+1.4%</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Crypto &amp; Fintech</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(227, 231, 253, 255) !important;">4.0%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 242, 233, 255) !important;">2.8%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 237, 253, 255) !important;">+1.3%</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">AR, VR &amp; Robots</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(238, 240, 254, 255) !important;">2.5%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 247, 240, 255) !important;">1.9%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(244, 246, 254, 255) !important;">+0.6%</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Computers &amp; Software</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(192, 204, 249, 255) !important;">8.9%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 215, 185, 255) !important;">8.9%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254, 254, 255, 255) !important;">+0.1%</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Smartphones &amp; Apps</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(184, 198, 248, 255) !important;">10.0%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 207, 170, 255) !important;">10.8%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 246, 239, 255) !important;">-0.8%</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Search &amp; Advertising</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(196, 207, 250, 255) !important;">8.4%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 211, 177, 255) !important;">9.9%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 238, 225, 255) !important;">-1.6%</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Streaming, Audio &amp; Video</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(234, 237, 253, 255) !important;">3.0%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 229, 209, 255) !important;">5.8%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 225, 201, 255) !important;">-2.8%</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Other</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(208, 216, 251, 255) !important;">6.7%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 209, 173, 255) !important;">10.4%</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 215, 184, 255) !important;">-3.7%</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Internet &amp; Broadcasting</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(198, 208, 250, 255) !important;">8.1%</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(252, 183, 127, 255) !important;">16.4%</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(247, 167, 99, 255) !important;">-8.3%</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Social Media</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(155, 178, 246, 255) !important;">13.7%</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(242, 153, 74, 255) !important;">23.2%</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(242, 153, 74, 255) !important;">-9.6%</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>The cross-sectional comparison reveals a distinct academic attention profile rather than a uniform correspondence with media visibility. Themes receiving comparatively greater academic attention tend to involve bounded consumer interactions that can be instantiated, manipulated, or linked to observable outcomes. These include recommendations, online purchasing, self-tracking, gaming environments, and generative-AI interactions. Themes receiving comparatively greater media attention more often represent broad platforms, communication environments, or infrastructures.</p>
+<p>One possible explanation is methodological tractability. Technologies that can be represented as discrete interfaces, treatments, or decisions may be easier to operationalize within prevailing empirical designs than technologies whose consequences are diffuse, continuous, socially embedded, or cumulative. The present analysis does not measure operationalizability directly, so this interpretation remains provisional. The differences may also reflect the substantive scope of consumer-research journals, data access, editorial priorities, or differences in how mature technologies are named.</p>
+<p>The comparatively lower academic shares of several established technologies are also consistent with a potential normalization gap. Once technologies become embedded in ordinary consumer environments, researchers may no longer identify them as explicit objects of technology research. Conversely, the comparatively large academic share devoted to <em>Generative AI</em>, together with its rapid recent growth, is consistent with concentrated attention around a highly visible emerging technology. Neither pattern establishes that a theme is objectively over- or underresearched; instead, the comparison identifies discrepancies that require substantive interpretation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/compare/combined/coverage_scatter.png" class="img-fluid figure-img"></p>
+<figcaption>Mean annual academic and media attention shares by technology cluster, 2008–2025. The diagonal indicates equal attention shares; points above the line receive a larger academic share, whereas points below the line receive a larger media share.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/compare/combined/coverage_gap_ranked.png" class="img-fluid figure-img"></p>
+<figcaption>Academic–media attention gaps by technology cluster, 2008–2025. Positive values indicate a larger academic attention share; negative values indicate a larger media attention share.</figcaption>
+</figure>
+</div>
+</section>
+<section id="do-the-discrepancies-reflect-delayed-academic-attention" class="level3" data-number="E.6.2">
+<h3 data-number="E.6.2" class="anchored" data-anchor-id="do-the-discrepancies-reflect-delayed-academic-attention"><span class="header-section-number">E.6.2</span> Do the Discrepancies Reflect Delayed Academic Attention?</h3>
+<p>We assessed this using two attention-share bases (see “Comparable Annual Attention Shares” above): relative shares, where each cluster’s mentions are expressed as a share of tech-flagged mentions only, and absolute shares, where each cluster’s mentions are expressed as a share of all publications or newspaper articles that year, tech-related or not. The two bases can diverge if a cluster’s prominence among tech-flagged mentions does not match its footprint in the wider publication or news landscape.</p>
+<section id="relative-attention-shares" class="level4" data-number="E.6.2.1">
+<h4 data-number="E.6.2.1" class="anchored" data-anchor-id="relative-attention-shares"><span class="header-section-number">E.6.2.1</span> Relative Attention Shares</h4>
+<p><a href="#tbl-lag-summary-relative" class="quarto-xref">Table&nbsp;<span>E.2</span></a> summarizes the strongest lagged correspondence for each technology cluster on the relative-share basis. Only 2 of the 16 clusters reached <span class="math inline">\(p &lt; .05\)</span> under the circular-shift permutation test. The temporal analysis therefore provides little evidence that the cross-sectional discrepancies arise from a general tendency for academic attention to follow media attention after a consistent delay.</p>
+<p>The strongest lagged correspondence occurred for <em>Generative AI</em> (<span class="math inline">\(r = 0.907\)</span>, <span class="math inline">\(L = 4\)</span>, <span class="math inline">\(p = 0.001\)</span>), followed by <em>Crypto &amp; Fintech</em> and <em>AR, VR &amp; Robots</em>. However, the substantive meaning of the maximum depends on the surrounding lag profile.</p>
+<p>For <em>Generative AI</em>, the concurrent correlation was already high, and correlations remained strong across several tested lags. The maximum at a positive lag therefore does not identify a precise delay. Instead, it reflects a shared and unusually steep increase in academic and media attention. Combined with the cross-sectional result, this pattern indicates that both corpora responded to the same broader attention wave, while the academic corpus allocated a comparatively larger average share to the theme.</p>
+<p>By contrast, <em>AR, VR &amp; Robots</em> showed weak concurrent correspondence but substantially stronger correlations when media attention preceded academic attention by four to five years. This cluster provides the clearest evidence that media visibility developed before the corresponding academic attention trajectory.</p>
+<p>Several additional clusters displayed descriptively stronger correlations at positive lags, including <em>Crypto &amp; Fintech</em>, <em>Algorithms &amp; Recommendations</em>, and <em>Gaming &amp; Digital Platforms</em>. Their permutation tests were not significant, however, and the observed maxima cannot be distinguished reliably from chance patterns in autocorrelated annual series. The remaining clusters likewise provided no robust evidence of a stable temporal ordering.</p>
+<div class="cell">
+<div id="tbl-lag-summary-relative" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lag-summary-relative-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;E.2: Best-lag correlations between academic and media attention shares, relative basis (share of tech-flagged mentions only). Positive lags indicate that media attention leads academic attention; negative lags indicate that media attention follows academic attention.
+</figcaption>
+<div aria-describedby="tbl-lag-summary-relative-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed do-not-create-environment cell caption-top table-sm small">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Technology Cluster</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Best Lag</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Best-Lag Correlation</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Permutation p-value</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Lag-0 Correlation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Generative AI</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(92, 151, 89, 255) !important;">4</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(68, 137, 68, 255) !important;">0.907</span></td>
+<td style="text-align: right;"><span style=" font-weight: bold;    color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(49, 126, 52, 255) !important;">0.0010</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(77, 142, 76, 255) !important;">0.868</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Crypto &amp; Fintech</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(133, 176, 128, 255) !important;">3</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(106, 159, 102, 255) !important;">0.731</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.1748</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(201, 220, 198, 255) !important;">0.263</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">AR, VR &amp; Robots</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(92, 151, 89, 255) !important;">4</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(106, 160, 102, 255) !important;">0.730</span></td>
+<td style="text-align: right;"><span style=" font-weight: bold;    color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(49, 126, 52, 255) !important;">0.0010</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(230, 239, 229, 255) !important;">0.119</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Search &amp; Advertising</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(132, 176, 127, 255) !important;">0.604</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.2328</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(132, 176, 127, 255) !important;">0.604</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Algorithms &amp; Recommendations</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(133, 176, 128, 255) !important;">3</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(135, 178, 131, 255) !important;">0.588</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.1259</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(250, 252, 250, 255) !important;">0.024</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Gaming &amp; Digital Platforms</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(92, 151, 89, 255) !important;">4</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(135, 178, 131, 255) !important;">0.586</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(244, 248, 244, 255) !important;">0.0949</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(195, 217, 192, 255) !important;">0.289</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Smartphones &amp; Apps</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(46, 125, 50, 255) !important;">5</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(141, 181, 136, 255) !important;">0.560</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.6114</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(233, 241, 232, 255) !important;">0.106</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Tracking &amp; Wearables</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(198, 40, 40, 255) !important;">-5</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(159, 193, 155, 255) !important;">0.469</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.2687</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(195, 217, 192, 255) !important;">0.290</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Computers &amp; Software</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(244, 174, 163, 255) !important;">-2</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(176, 204, 173, 255) !important;">0.383</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.5654</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(246, 249, 246, 255) !important;">0.043</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Auctions &amp; Pricing</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(92, 151, 89, 255) !important;">4</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(180, 207, 177, 255) !important;">0.363</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.4595</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 247, 246, 255) !important;">-0.038</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Streaming, Audio &amp; Video</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(214, 228, 211, 255) !important;">1</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(182, 208, 178, 255) !important;">0.355</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.3167</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(196, 217, 193, 255) !important;">0.286</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">E-Commerce</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(233, 134, 120, 255) !important;">-3</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(183, 209, 179, 255) !important;">0.351</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.4476</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(244, 248, 244, 255) !important;">0.052</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Internet &amp; Broadcasting</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(46, 125, 50, 255) !important;">5</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(186, 211, 183, 255) !important;">0.334</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.5485</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254, 239, 237, 255) !important;">-0.077</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Social Media</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(92, 151, 89, 255) !important;">4</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(210, 226, 208, 255) !important;">0.217</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.8971</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254, 254, 254, 255) !important;">0.006</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Mobility &amp; Transportation</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(233, 134, 120, 255) !important;">-3</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(214, 229, 211, 255) !important;">0.200</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.6573</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(252, 213, 207, 255) !important;">-0.205</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Other</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(252, 215, 208, 255) !important;">-1</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(223, 235, 222, 255) !important;">0.152</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.7183</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 249, 248, 255) !important;">-0.030</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>In the summary tables, red indicates negative values, white indicates values near zero, and green indicates positive values. Lower permutation <span class="math inline">\(p\)</span>-values receive stronger green shading, and values below .05 appear in bold. This convention applies to both <a href="#tbl-lag-summary-relative" class="quarto-xref">Table&nbsp;<span>E.2</span></a> and <a href="#tbl-lag-summary-absolute" class="quarto-xref">Table&nbsp;<span>E.3</span></a> below.</p>
+</section>
+<section id="absolute-attention-shares" class="level4" data-number="E.6.2.2">
+<h4 data-number="E.6.2.2" class="anchored" data-anchor-id="absolute-attention-shares"><span class="header-section-number">E.6.2.2</span> Absolute Attention Shares</h4>
+<p><a href="#tbl-lag-summary-absolute" class="quarto-xref">Table&nbsp;<span>E.3</span></a> reports the same best-lag analysis computed on the absolute-share basis — each cluster’s share of all publications or newspaper articles that year, not just its tech-flagged mentions. 4 of the 16 clusters reached <span class="math inline">\(p &lt; .05\)</span> under the circular-shift permutation test.</p>
+<p>The strongest lagged correspondence on this basis occurred for <em>Generative AI</em> (<span class="math inline">\(r = 0.957\)</span>, <span class="math inline">\(L = 5\)</span>, <span class="math inline">\(p = 0.001\)</span>), followed by <em>Crypto &amp; Fintech</em> and <em>Algorithms &amp; Recommendations</em>. The weakest correspondence occurred for <em>Search &amp; Advertising</em>.</p>
+<div class="cell">
+<div id="tbl-lag-summary-absolute" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lag-summary-absolute-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;E.3: Best-lag correlations between academic and media attention shares, absolute basis (share of all publications/articles that year). Positive lags indicate that media attention leads academic attention; negative lags indicate that media attention follows academic attention.
+</figcaption>
+<div aria-describedby="tbl-lag-summary-absolute-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed do-not-create-environment cell caption-top table-sm small">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Technology Cluster</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Best Lag</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Best-Lag Correlation</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Permutation p-value</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Lag-0 Correlation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Generative AI</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(46, 125, 50, 255) !important;">5</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(57, 130, 58, 255) !important;">0.957</span></td>
+<td style="text-align: right;"><span style=" font-weight: bold;    color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(49, 126, 52, 255) !important;">0.0010</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(60, 132, 61, 255) !important;">0.944</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Crypto &amp; Fintech</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(92, 151, 89, 255) !important;">4</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(76, 141, 74, 255) !important;">0.874</span></td>
+<td style="text-align: right;"><span style=" font-weight: bold;    color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(49, 126, 52, 255) !important;">0.0010</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(161, 195, 157, 255) !important;">0.457</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Algorithms &amp; Recommendations</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(133, 176, 128, 255) !important;">3</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(95, 152, 92, 255) !important;">0.785</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.1259</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(152, 189, 148, 255) !important;">0.504</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Gaming &amp; Digital Platforms</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(92, 151, 89, 255) !important;">4</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(96, 153, 93, 255) !important;">0.780</span></td>
+<td style="text-align: right;"><span style=" font-weight: bold;    color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(49, 126, 52, 255) !important;">0.0010</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(137, 179, 133, 255) !important;">0.576</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Streaming, Audio &amp; Video</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(173, 202, 169, 255) !important;">2</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(106, 159, 102, 255) !important;">0.732</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.1119</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(128, 173, 124, 255) !important;">0.623</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">AR, VR &amp; Robots</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(92, 151, 89, 255) !important;">4</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(106, 159, 102, 255) !important;">0.732</span></td>
+<td style="text-align: right;"><span style=" font-weight: bold;    color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(49, 126, 52, 255) !important;">0.0010</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(140, 181, 136, 255) !important;">0.563</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Internet &amp; Broadcasting</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(244, 174, 163, 255) !important;">-2</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(145, 185, 141, 255) !important;">0.536</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.4046</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(235, 242, 234, 255) !important;">0.095</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">E-Commerce</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(173, 202, 169, 255) !important;">2</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(150, 187, 145, 255) !important;">0.515</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.4885</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(202, 221, 199, 255) !important;">0.258</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Other</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(46, 125, 50, 255) !important;">5</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(153, 189, 148, 255) !important;">0.500</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.2827</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(254, 229, 225, 255) !important;">-0.128</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Smartphones &amp; Apps</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(46, 125, 50, 255) !important;">5</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(156, 191, 152, 255) !important;">0.483</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.7033</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(251, 208, 200, 255) !important;">-0.235</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Mobility &amp; Transportation</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(133, 176, 128, 255) !important;">3</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(157, 192, 152, 255) !important;">0.480</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.2907</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(223, 234, 221, 255) !important;">0.157</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Tracking &amp; Wearables</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(46, 125, 50, 255) !important;">5</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(158, 192, 153, 255) !important;">0.476</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.3976</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(163, 196, 159, 255) !important;">0.450</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Computers &amp; Software</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(244, 174, 163, 255) !important;">-2</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(171, 201, 168, 255) !important;">0.407</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.6244</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(196, 217, 193, 255) !important;">0.286</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Auctions &amp; Pricing</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(92, 151, 89, 255) !important;">4</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(174, 203, 170, 255) !important;">0.395</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">0.5734</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(225, 236, 224, 255) !important;">0.144</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Social Media</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(252, 215, 208, 255) !important;">-1</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 254, 254, 255) !important;">-0.003</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">1.0000</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(252, 217, 210, 255) !important;">-0.190</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style="  font-style: italic;   ">Search &amp; Advertising</span></td>
+<td style="text-align: right;"><span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(198, 40, 40, 255) !important;">-5</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 245, 243, 255) !important;">-0.050</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(255, 255, 255, 255) !important;">1.0000</span></td>
+<td style="text-align: right;"><span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: rgba(247, 187, 177, 255) !important;">-0.335</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Taken together, the relative- and absolute-share analyses do not support a general explanation in which academic–media attention gaps primarily result from academia responding more slowly. With the exception of specific clusters, the discrepancies observed in the cross-sectional comparison appear to reflect differences in topic selection and relative emphasis rather than a uniform publication delay.</p>
+</section>
+</section>
+</section>
+<section id="cluster-level-attention-plots" class="level2" data-number="E.7">
+<h2 data-number="E.7" class="anchored" data-anchor-id="cluster-level-attention-plots"><span class="header-section-number">E.7</span> Cluster-Level Attention Plots</h2>
+<p><a href="#fig-lag-panels" class="quarto-xref">Figure&nbsp;<span>E.1</span></a> compares annual academic and media attention shares for all 16 technology clusters. Each cluster’s plot has two panels: Panel A (left) shows the relative-share basis (share of tech-flagged mentions only); Panel B (right) shows the absolute-share basis (share of all publications/articles that year). The faint points and lines show the annual values; the heavier lines show the 3-year centered rolling averages.</p>
+<div id="fig-lag-panels" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lag-panels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-lag-panels" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-lag-01" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-lag-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/media/cluster_plots/Algorithms___Recommendations.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-lag-panels">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-lag-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) <em>Algorithms &amp; Recommendations</em>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-lag-panels" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-lag-02" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-lag-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/media/cluster_plots/AR__VR___Robots.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-lag-panels">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-lag-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) <em>AR, VR &amp; Robots</em>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-lag-panels" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-lag-03" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-lag-03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/media/cluster_plots/Auctions___Pricing.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-lag-panels">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-lag-03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) <em>Auctions &amp; Pricing</em>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-lag-panels" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-lag-04" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-lag-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/media/cluster_plots/Computers___Software.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-lag-panels">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-lag-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) <em>Computers &amp; Software</em>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-lag-panels" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-lag-05" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-lag-05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/media/cluster_plots/Crypto___Fintech.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-lag-panels">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-lag-05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(e) <em>Crypto &amp; Fintech</em>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-lag-panels" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-lag-06" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-lag-06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/media/cluster_plots/E_Commerce.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-lag-panels">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-lag-06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(f) <em>E-Commerce</em>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-lag-panels" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-lag-07" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-lag-07-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/media/cluster_plots/Gaming___Digital_Platforms.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-lag-panels">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-lag-07-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(g) <em>Gaming &amp; Digital Platforms</em>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-lag-panels" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-lag-08" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-lag-08-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/media/cluster_plots/Generative_AI.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-lag-panels">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-lag-08-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(h) <em>Generative AI</em>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-lag-panels" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-lag-09" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-lag-09-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/media/cluster_plots/Internet___Broadcasting.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-lag-panels">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-lag-09-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(i) <em>Internet &amp; Broadcasting</em>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-lag-panels" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-lag-10" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-lag-10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/media/cluster_plots/Mobility___Transportation.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-lag-panels">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-lag-10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(j) <em>Mobility &amp; Transportation</em>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-lag-panels" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-lag-11" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-lag-11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/media/cluster_plots/Search___Advertising.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-lag-panels">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-lag-11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(k) <em>Search &amp; Advertising</em>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-lag-panels" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-lag-12" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-lag-12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/media/cluster_plots/Smartphones___Apps.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-lag-panels">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-lag-12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(l) <em>Smartphones &amp; Apps</em>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-lag-panels" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-lag-13" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-lag-13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/media/cluster_plots/Social_Media.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-lag-panels">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-lag-13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(m) <em>Social Media</em>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-lag-panels" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-lag-14" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-lag-14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/media/cluster_plots/Streaming__Audio___Video.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-lag-panels">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-lag-14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(n) <em>Streaming, Audio &amp; Video</em>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-lag-panels" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-lag-15" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-lag-15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/media/cluster_plots/Tracking___Wearables.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-lag-panels">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-lag-15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(o) <em>Tracking &amp; Wearables</em>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-lag-panels" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-lag-16" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-lag-16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figures/media/cluster_plots/Other.png" class="img-fluid figure-img" style="width:100.0%" data-ref-parent="fig-lag-panels">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-lag-16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(p) <em>Other</em>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lag-panels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;E.1: Academic and media attention shares for the 16 technology clusters. Each cluster’s figure shows annual values and 3-year centered rolling averages on both the relative (Panel A) and absolute (Panel B) attention-share bases.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="integrated-interpretation" class="level2" data-number="E.8">
+<h2 data-number="E.8" class="anchored" data-anchor-id="integrated-interpretation"><span class="header-section-number">E.8</span> Integrated Interpretation</h2>
+<p>The cross-sectional and temporal analyses address two linked explanations for academic–media discrepancies. The cross-sectional comparison shows that the two corpora allocate attention differently across technology clusters. The lag analysis then tests whether these discrepancies can be explained by academic attention arriving later.</p>
+<p>The temporal results provide little support for a general lag explanation. Most clusters did not show statistically reliable correspondence at any tested lag. <em>Generative AI</em> reflects a shared attention surge rather than a clearly identified delay, whereas <em>AR, VR &amp; Robots</em> provides the clearest case in which media attention preceded academic attention.</p>
+<p>The combined evidence therefore indicates that academic–media discrepancies primarily reflect differences in the selection and relative emphasis of technology themes rather than a uniform delay in academic response. Temporal displacement contributes to particular cases, but it does not account for the broader pattern of attention gaps.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../supplement/03-media-frame-analysis.html" class="pagination-link" aria-label="Media Frame Analysis: Analysis Pipeline">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Media Frame Analysis: Analysis Pipeline</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

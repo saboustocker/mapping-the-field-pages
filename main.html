@@ -380,6 +380,7 @@ E = 04-lag-analysis
 -->
 <section id="abstract" class="level1 unnumbered unlisted">
 <h1 class="unnumbered unlisted">Abstract</h1>
+<p>Consumer-facing technologies increasingly shape everyday life, yet research on them remains fragmented across labels, domains, and time. We map the evolution of empirical consumer-technology research published between 2000 and June 2026 in seven leading marketing and consumer-behavior journals. Using a two-stage large-language-model based screening procedure, we identified 1,102 articles examining consumer-facing technologies. We standardized the extracted technology terms, represented them as semantic embeddings, and grouped 901 canonical technologies into 16 clusters using UMAP and k-means clustering. We then examined changes in cluster prevalence over time and compared academic attention with U.S. news coverage of consumer-facing technologies under academic study. Consumer-technology research expanded sharply after 2013, while its focus shows clear patterns of emphasizing specific technologies, most recently generative AI. Academic attention was uneven across clusters, with marketer-relevant and emerging technologies receiving disproportionate emphasis compared to U.S. news coverage. These patterns suggest that the field often follows technological novelty and public visibility, while mature or diffuse technologies may become less visible as research objects. Our map reduces fragmentation and supports more cumulative research across related technologies. We call for stronger emphasis on defragmenting the research landscape of consumer-technology, renewed attention to normalized technologies, and closer scrutiny of whether visible technologies warrant dominance or merely reflect short-lived novelty.</p>
 <!-- 
 Abstract
 You are required to provide a concise and factual abstract which does not exceed 250 words. The abstract should briefly state the purpose of your research, principal results and major conclusions. Some guidelines:
@@ -423,7 +424,6 @@ Preferred file types for graphical abstracts are TIFF, EPS, PDF or MS Office fil
 
 More information, examples and a template can be found in the graphical abstract guidelines.
 -->
-<p>[Abstract placeholder]</p>
 <!-- 
 General Recommendations: 
 
@@ -526,24 +526,40 @@ If there are preprints that are central to your work or that cover crucial devel
 </section>
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p><strong>Background</strong></p>
+<p>Background</p>
 <ul>
 <li>Consumer-facing technologies increasingly shape how people choose, communicate, work, travel, access services, and manage everyday life.</li>
 <li>quantify “shape” with economic impact -&gt; tech-millionaires, consumer-tech adoption, …</li>
+<li>lead over to that this also naturally increases the research interest to understand how consumers and technologies interact</li>
 </ul>
-<p><strong>Problem</strong></p>
+<p>Problem</p>
 <ul>
 <li>Research on these technologies has expanded rapidly, but it is distributed and hard to parsimonoiusly express</li>
-<li>What has the domain of consumer-technology-research been over the past 26 years?
+<li>What has the domain of consumer-technology-research been up to over the past 26 years?
 <ul>
 <li>What do we study?</li>
 <li>When do we study it?</li>
 </ul></li>
-<li>Aim of this review article: By conducting a bibliometric and semantic corpus-analysis of seven leading journals in the marketing and consumer-behavior domain, this review article aims to provide an overview over the evolving landscape of empirical consumer-technology-research over the last 25 years.</li>
+<li>Aim of this review article: By conducting a bibliometric and semantic corpus-analysis of seven leading journals in the marketing and consumer-behavior domain, this review article aims to provide an overview over the evolving landscape of empirical consumer-technology-research over the last 26 years.</li>
 </ul>
-<p><strong>Contribution</strong></p>
+<p>Contribution</p>
 <ul>
-<li>The problem with fragmentation: Hard to provide a comprehensive overview if you don’t know what is out there. Our first contribution is therefore a systematic overview that comes bottom-up, meaning that we hope to not miss anything we studied
+<li>Use novel methods to defragment a landscape</li>
+<li>Disentangle academic interest temporally and overall over 26 years of research</li>
+<li>Compare academic focus against media discourse to identify if what we study is what matters to consumers</li>
+<li>Overall contribution: Show where we came from, what we are doing, and point towards what we could be doing in the future</li>
+</ul>
+</section>
+<section id="theoretical-background" class="level1">
+<h1>Theoretical Background</h1>
+<p>What do we mean, when we say, we study consumer-technologies</p>
+<ul>
+<li>Define technology as scientific knowledge and its application for firms or consumers that can influence value creation and exchange <span class="citation" data-cites="hoffmanRiseNewTechnologies2022">[<a href="#ref-hoffmanRiseNewTechnologies2022" role="doc-biblioref">1</a>]</span>.</li>
+<li>Define consumer-facing technologies as technologies that consumers directly use, encounter, or experience.</li>
+</ul>
+<p>Why can’t we just google-scholar “consumer-tech”?</p>
+<ul>
+<li>The problem with fragmentation: Hard to provide a comprehensive overview if you don’t know what is out there.
 <ul>
 <li>jingle-jangle fallacy</li>
 <li>Without consolidating related labels, a field-level review may misrepresent both the size and the boundaries of research areas.</li>
@@ -554,19 +570,9 @@ If there are preprints that are central to your work or that cover crucial devel
 <ul>
 <li>reference tech-traps paper?</li>
 </ul></li>
-<li>The problem with disconnect from the public discourse: Is the devotion to certain topics given by academics appropriate when looking at what “real consumers out there” are interested in? Our third contribution is that we compare academic discourse with the attention the media gives these themes</li>
-<li>Overall contribution: Show where we came from, what we are doing, and point towards what we could be doing in the future</li>
+<li>The problem with disconnect from the public discourse: Is the devotion to certain topics given by academics appropriate when looking at what “real consumers out there” are interested in?</li>
 </ul>
-</section>
-<section id="theoretical-background" class="level1">
-<h1>Theoretical Background</h1>
-<p><strong>What do we mean, when we say, we study consumer-technologies</strong></p>
-<ul>
-<li>Define technology as scientific knowledge and its application for firms or consumers that can influence value creation and exchange <span class="citation" data-cites="hoffmanRiseNewTechnologies2022">[<a href="#ref-hoffmanRiseNewTechnologies2022" role="doc-biblioref">1</a>]</span>.</li>
-<li>Define <strong>consumer-facing technologies</strong> as technologies that consumers directly use, encounter, or experience.</li>
-<li>Empirical articles, because The objective is to map where empirical research attention has accumulated, Empirical articles provide a comparable basis for assessing the coverage of different technologies., Conceptual, normative, legal, and design-oriented work remain important but address a different review question.</li>
-</ul>
-<p><strong>Methodological Background</strong></p>
+<p>Methodological Background</p>
 <ul>
 <li>Jingle jangle fallacy as an example of what we do</li>
 <li>bibliometric analysis as a way to map a field <span class="citation" data-cites="ariaBibliometrixRtoolComprehensive2017 xuBibliometricAnalysisTechnology2021">[<a href="#ref-ariaBibliometrixRtoolComprehensive2017" role="doc-biblioref">2</a>,<a href="#ref-xuBibliometricAnalysisTechnology2021" role="doc-biblioref">3</a>, and others]</span></li>
@@ -594,7 +600,7 @@ If there are preprints that are central to your work or that cover crucial devel
 </section>
 <section id="results" class="level1">
 <h1>Results</h1>
-<p><a href="#fig-technology-map" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-technology-map</span></a> shows the thematic structure of the 901 canonical technologies by reducing the 10-dimensional UMAP representation used for clustering to two dimensions. Technologies that appear closer together on the map are more similar in the embedding space, while the labeled bubbles indicate the centers of the 16 clusters. <a href="#tbl-academic-clusters" class="quarto-xref">Table&nbsp;<span class="quarto-unresolved-ref">tbl-academic-clusters</span></a> reports all individual technologies and their assignment to the 16 clusters. Clusters occupy recognizable thematic regions, although the transitions between them are gradual rather than sharply defined, demonstrating the reality of consumer-technology research that categories of consumer-technologies overlap and many technologies under studies may arguably fall under several higher-order clusters depending on the context. The number of academic articles assigned to each cluster is uneven across the 16 technology clusters, visualizing the concentration academic attention in some parts of the technological landscape, whereas other areas receive comparatively less attention. <em>Generative AI</em> was mentioned most frequently (<span class="math inline">\(n=225\)</span>), followed by <em>Social Media</em> (<span class="math inline">\(n=182\)</span>) and <em>Smartphones and Apps</em> (<span class="math inline">\(n=148\)</span>). The least frequently mentioned clusters were <em>Auctions and Pricing</em> (<span class="math inline">\(n=26\)</span>), <em>Mobility and Transportation</em> (<span class="math inline">\(n=27\)</span>), and <em>AR, VR, and Robots</em> (<span class="math inline">\(n=54\)</span>).</p>
+<p><a href="#fig-technology-map" class="quarto-xref">Figure&nbsp;<span>4.1</span></a> shows the thematic structure of the 901 canonical technologies by reducing the 10-dimensional UMAP representation used for clustering to two dimensions. Technologies that appear closer together on the map are more similar in the embedding space, while the labeled bubbles indicate the centers of the 16 clusters. <a href="#tbl-academic-clusters" class="quarto-xref">Table&nbsp;<span>5.1</span></a> reports all individual technologies and their assignment to the 16 clusters. Clusters occupy recognizable thematic regions, although the transitions between them are gradual rather than sharply defined, demonstrating the reality of consumer-technology research that categories of consumer-technologies overlap and many technologies under studies may arguably fall under several higher-order clusters depending on the context. The number of academic articles assigned to each cluster is uneven across the 16 technology clusters, visualizing the concentration academic attention in some parts of the technological landscape, whereas other areas receive comparatively less attention. <em>Generative AI</em> was mentioned most frequently (<span class="math inline">\(n=225\)</span>), followed by <em>Social Media</em> (<span class="math inline">\(n=182\)</span>) and <em>Smartphones and Apps</em> (<span class="math inline">\(n=148\)</span>). The least frequently mentioned clusters were <em>Auctions and Pricing</em> (<span class="math inline">\(n=26\)</span>), <em>Mobility and Transportation</em> (<span class="math inline">\(n=27\)</span>), and <em>AR, VR, and Robots</em> (<span class="math inline">\(n=54\)</span>).</p>
 <div id="fig-technology-map" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-technology-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -605,7 +611,7 @@ Figure&nbsp;4.1: Semantic map of consumer-facing technology clusters in the acad
 </figcaption>
 </figure>
 </div>
-<p>Mapping the field of consumers and technology provides insight into the boundaries of the domain and the extent to which its different areas overlap. However, it reveals less about how academic attention to consumer-facing technologies has developed within marketing and consumer-behavior research over time. We therefore complement the field map with a temporal analysis of how these technologies have been studied over the past 25 years. <a href="#fig-academic-panels" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-academic-panels</span></a> shows both the annual number of mentions on consumer-facing technologies and the relative prevalence of the 16 technology clusters over time.</p>
+<p>Mapping the field of consumers and technology provides insight into the boundaries of the domain and the extent to which its different areas overlap. However, it reveals less about how academic attention to consumer-facing technologies has developed within marketing and consumer-behavior research over time. We therefore complement the field map with a temporal analysis of how these technologies have been studied over the past 25 years. <a href="#fig-academic-panels" class="quarto-xref">Figure&nbsp;<span>4.2</span></a> shows both the annual number of mentions on consumer-facing technologies and the relative prevalence of the 16 technology clusters over time.</p>
 <p>Two patterns stand out. First, publication activity increased sharply after 2013. Articles published before 2014 accounted for 403 (24.7%) observations, whereas 1231 (75.3%) were published between 2014 and June 2026. Second, the composition of the academic corpus changed alongside major technological developments. Until 2012, <em>Computers and Software</em> and <em>Internet and Broadcasting</em> were prominent. During this period, computer ownership and internet access expanded substantially in U.S. households <span class="citation" data-cites="file2013computerInternet">[<a href="#ref-file2013computerInternet" role="doc-biblioref">12</a>]</span>. From 2013 onward, <em>Social Media</em> gained prominence following the rapid expansion of social-network use among U.S. adults <span class="citation" data-cites="perrin2015socialMedia pewSocialMediaFactSheet">[<a href="#ref-perrin2015socialMedia" role="doc-biblioref">13</a>,<a href="#ref-pewSocialMediaFactSheet" role="doc-biblioref">14</a>]</span>. After 2022, <em>Generative AI</em> replaced <em>Social Media</em> as the most prevalent cluster. The number of articles increased sharply following the public release of ChatGPT on November 30, 2022 <span class="citation" data-cites="openai2022chatgpt">[<a href="#ref-openai2022chatgpt" role="doc-biblioref">15</a>]</span>. <em>Generative AI</em> accounted for 22.5% of articles published in 2023–2024 and 25.8% of articles published in the first half of 2026, making up about one fourth of academic publications within the domain of consumer-technology research, despite being only one of many technologies under study. Taken together, these results show that consumer-technology research has expanded considerably over the past 25 years, while its substantive focus has shifted alongside the emergence of new technologies.</p>
 <div id="fig-academic-panels" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -621,7 +627,7 @@ Figure&nbsp;4.2: Academic articles on consumer-facing technologies over time, 20
 <h2 class="anchored" data-anchor-id="media-coverage-of-consumer-facing-technologies">Media Coverage of Consumer-Facing Technologies</h2>
 <p>The academic corpus presented captures how consumer-facing technologies are selected and studied within marketing and consumer-behavior research. It does however not reveal whether these patterns correspond to the technologies receiving attention outside academia. We therefore turn to media coverage as a complementary representation of attention to consumer-facing technologies and compare the prevalence and development of the technology clusters across the two domains.</p>
 <p>To place the academic map in a broader context, we examined U.S. news coverage of the 901 canonical technologies using the Media Cloud API <span class="citation" data-cites="roberts2021mediacloud bermejoMediaCloud202026">[<a href="#ref-roberts2021mediacloud" role="doc-biblioref">16</a>,<a href="#ref-bermejoMediaCloud202026" role="doc-biblioref">17</a>]</span>. We searched the <em>United States–National</em> collection, comprising 247 national U.S. news sources, from January 1, 2000, through June 30, 2026, querying these 247 media sources for mentions of each of the 901 identified technologies discussed in academic discourse. Across the full collection, we identified <span class="math inline">\(n = 4,714,445\)</span> technology mentions from <span class="math inline">\(n = 4,074,851\)</span> unique articles (for details on the full media coverage analysis, see <a href="./supplement/03-media-frame-analysis.html#sec-mediacloud-analysis" class="content-visible" data-when-format="html">supplementary materials D</a>). Because Media Cloud coverage is sparse before 2008, we restricted subsequently reported comparative analyses to the time period between January 2008 and June 2026.</p>
-<p>As the volume of academic articles and media coverage differs substantially, we compared technology clusters using two complementary attention-share bases (<a href="#fig-academic-media-comparison" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-academic-media-comparison</span></a>): an absolute basis, in which each cluster’s mentions are expressed as a share of <em>all</em> publications or news articles published that year, and a relative basis, in which mentions are expressed as a share of technology-related mentions only. On the absolute basis, academic articles devoted a comparatively larger share of attention to essentially every technology cluster than media coverage did, and by a wide margin for <em>Generative AI</em> (see <a href="#fig-academic-media-comparison" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-academic-media-comparison</span></a> Panel A). Within technology-related discourse however, the two corpora diverge in how they distribute the share of technology-related attention. Descriptively, several patterns emerge: Technologies that account for a large share of academic attention are generally also discussed extensively in the media. <em>Social Media</em>, <em>Internet &amp; Broadcasting</em>, and <em>Smartphones &amp; Apps</em> illustrate that academic research and media attention do share some directional patterns in prioritizing discourse on certain technologies. Nevertheless, academic research assigns a comparatively smaller share of attention to several widely adopted and ubiquitous technologies, particularly <em>Social Media</em> and <em>Internet &amp; Broadcasting</em>. Instead, comparatively greater attention is paid to more marketer-relevant themes, including <em>E-Commerce</em>, <em>Algorithms &amp; Recommendations</em>, and <em>Auctions &amp; Pricing</em>. Academic literature also devotes a comparatively larger share of attention to technologies that are still developing or have not yet reached widespread consumer use, including <em>AR, VR &amp; Robots</em> and <em>Mobility &amp; Transportation</em>, particularly autonomous vehicles.</p>
+<p>As the volume of academic articles and media coverage differs substantially, we compared technology clusters using two complementary attention-share bases (<a href="#fig-academic-media-comparison" class="quarto-xref">Figure&nbsp;<span>4.3</span></a>): an absolute basis, in which each cluster’s mentions are expressed as a share of <em>all</em> publications or news articles published that year, and a relative basis, in which mentions are expressed as a share of technology-related mentions only. On the absolute basis, academic articles devoted a comparatively larger share of attention to essentially every technology cluster than media coverage did, and by a wide margin for <em>Generative AI</em> (see <a href="#fig-academic-media-comparison" class="quarto-xref">Figure&nbsp;<span>4.3</span></a> Panel A). Within technology-related discourse however, the two corpora diverge in how they distribute the share of technology-related attention. Descriptively, several patterns emerge: Technologies that account for a large share of academic attention are generally also discussed extensively in the media. <em>Social Media</em>, <em>Internet &amp; Broadcasting</em>, and <em>Smartphones &amp; Apps</em> illustrate that academic research and media attention do share some directional patterns in prioritizing discourse on certain technologies. Nevertheless, academic research assigns a comparatively smaller share of attention to several widely adopted and ubiquitous technologies, particularly <em>Social Media</em> and <em>Internet &amp; Broadcasting</em>. Instead, comparatively greater attention is paid to more marketer-relevant themes, including <em>E-Commerce</em>, <em>Algorithms &amp; Recommendations</em>, and <em>Auctions &amp; Pricing</em>. Academic literature also devotes a comparatively larger share of attention to technologies that are still developing or have not yet reached widespread consumer use, including <em>AR, VR &amp; Robots</em> and <em>Mobility &amp; Transportation</em>, particularly autonomous vehicles.</p>
 <p>To examine whether these differences reflect temporal differences in academic and media discourse, we correlated their annual attention shares across lags from −5 to +5 years on both bases (for details on the method and results for individual technologies on both bases, see <a href="./supplement/04-lag-analysis.html#sec-lag-analysis" class="content-visible" data-when-format="html">supplementary materials E</a>). Both on an absolute basis as well as on a relative basis, the strongest correspondence for most clusters occurred at a positive lag—usually between 3 and 5 years—suggesting that academic attention generally followed media attention. By contrast, academic attention preceded media attention for <em>Tracking &amp; Wearables</em>, <em>E-Commerce</em>, and <em>Mobility &amp; Transportation</em>. <em>Generative AI</em> was the only cluster which showed a similar and essentially concurrent attention trajectory over time.</p>
 <p>Comparing media coverage with academic articles in the fashion we do must be treated cautiously however: First, our pipeline only matches media coverage against technologies discussed in academic articles since 2000, meaning that technologies that are simply not discussed in academic discourse are missed. Second, although the data volume is substantive, lag analyses on 11 total lags are to be interpreted cautiously, as they are vulnerable to outliers and autocorrelation.</p>
 <div id="fig-academic-media-comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -646,22 +652,20 @@ Figure&nbsp;4.3: Mean annual academic and media attention shares across technolo
 <ul>
 <li>novelty-effects: whatever is coming, or up and coming gets the biggest slice of the cake
 <ul>
-<li>this can be okay but it should not just follow the next shiny prize
-<ul>
+<li>this can be okay but it should not just follow the next shiny prize</li>
+</ul></li>
+</ul></li>
 <li>pick up the idea of studying the essence of a technology &amp; question</li>
 <li>The differences may also reflect journal scope, data availability, editorial priorities, public news values, or the tendency for established technologies to become less visible as explicit research objects once they are integrated into everyday life</li>
-<li>find a recently published paper that demonstrates this well</li>
-</ul></li>
-</ul></li>
+<li>find a recently published paper that demonstrates this well
+<ul>
 <li>ease of methodological tractability. Academic research may preferentially examine technologies that can be operationalized as bounded interfaces, treatments, or consumer decisions and linked to immediately observable outcomes. Technologies that function as diffuse platforms, infrastructures, or continuous social environments may be harder to isolate within prevailing empirical designs
 <ul>
 <li>show one paper that does this well, and maybe also add DICE as an example to show that it is possible?</li>
 </ul></li>
 </ul></li>
 </ul>
-<p><strong>Recommendations</strong> - Improve consistency in naming and describing consumer-facing technologies. - Report both specific technology labels and broader technology families. - Build cumulative research across related technologies rather than treating every new label as an isolated domain. - Revisit mature technologies whose effects may be obscured by normalization. - Examine themes that remain weakly covered despite substantial consumer reach or public visibility. - Track whether attention to highly visible technologies persists beyond their initial surge.</p>
-<ul>
-<li><strong>Limitations</strong>
+<p>Limitations</p>
 <ul>
 <li>The academic corpus is restricted to seven consumer-research journals and does not represent all psychological or interdisciplinary technology research.</li>
 <li>The focus on empirical articles excludes conceptual, normative, legal, and design-oriented contributions.</li>
@@ -670,9 +674,17 @@ Figure&nbsp;4.3: Mean annual academic and media attention shares across technolo
 <li>Media Cloud coverage varies across sources and years, particularly before 2008.</li>
 <li>Media coverage indicates visibility rather than adoption or societal importance.</li>
 <li>Temporal and media comparisons are exploratory</li>
-</ul></li>
-<li><strong>Conclusion</strong></li>
 </ul>
+<p>Recommendations</p>
+<ul>
+<li>Improve consistency in naming and describing consumer-facing technologies.</li>
+<li>Report both specific technology labels and broader technology families, and make sure the research doesn’t focus overly narrow on one specific flavor of technology.</li>
+<li>Build cumulative research across related technologies rather than treating every new label as an isolated domain.</li>
+<li>Revisit mature technologies whose effects may be obscured by normalization.</li>
+<li>Examine themes that remain weakly covered despite substantial consumer reach or public visibility.</li>
+<li>Track whether attention to highly visible technologies persists beyond their initial surge.</li>
+</ul>
+<p>conclusion</p>
 <!--
 ### Role of the Annotated Bibliography
 
