@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.26">
+
+  <meta name="author" content="Sabou Rani Stocker, Emanuel de Bellis, Ana Valenzuela, Anne-Kathrin Klesse">
+  <meta name="dcterms.date" content="2026-09-16">
+  <title>Mapping the Field</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-a284c44b35491b1e0d2a6afcaea413e7.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Mapping the Field</h1>
+  <p class="subtitle">Learnings from a Quarter-Century of Consumer-Technology Research and the Case of Generative AI</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Sabou Rani Stocker, Emanuel de Bellis, Ana Valenzuela, Anne-Kathrin Klesse 
+</div>
+</div>
+</div>
+
+  <p class="date">2026-09-16</p>
+</section>
+<section id="about-today" class="slide level2 center" data-background-image="../../11_semantic_mapping_output/1_semantic_map16.png" data-background-size="cover" data-background-opacity="0.25">
+<h2>About Today</h2>
+<ol type="1">
+<li>Presentation of project: <strong>Mapping the Field – Learnings from a Quarter-Century of Consumer-Technology Research and the Case of Generative AI</strong></li>
+<li>Discussion of project scope and narrative</li>
+<li>Discussion of presentation content and structure</li>
+</ol>
+<style>
+.metrics-table table { font-size: 0.7em; }
+.metrics-table table th:last-child,
+.metrics-table table td:last-child { white-space: nowrap; }
+.wide-table table { font-size: 0.5em; }
+.recap { font-size: 0.7em; color: #73a5af; }
+.glightbox-container .gdesc-inner h4 {
+  font-size: 0.9em;
+  font-family: sans-serif;
+  color: #0a5f2d;
+  line-height: 1.4;
+}
+</style>
+<aside class="notes">
+<ul>
+<li>intro only meant for colloquium on Wednesday</li>
+<li>quickly tell them about the project:
+<ul>
+<li>how it started</li>
+<li>this is what came from my last colloquium</li>
+<li>we would like to submit to IJRM soon</li>
+<li>I will present this at Psych of AI lab in a week</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section" class="slide level2 center-middle">
+<h2></h2>
+<div class="fragment fade-in-then-semi-out">
+<p><img data-src="../..\99_writing/slides/images/special_issue_yb.png"></p>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<p><img data-src="../..\99_writing/slides/images/hbr_sp.png"></p>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<p><img data-src="../..\99_writing/slides/images/wharton_genai_sp.png"></p>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<p><img data-src="../..\99_writing/slides/images/academic_cillo.png"></p>
+</div>
+<aside class="notes">
+<ul>
+<li>what topic do you think we discussed most in marketing and consumer behavior journals in the last couple of years?</li>
+<li>special issues?</li>
+<li>proclaimed disruption to both research and application</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-case-of-generative-ai" class="slide level2">
+<h2>The Case of Generative AI</h2>
+<div class="columns">
+<div class="column fragment" style="width:50%;">
+<p>Generative AI…</p>
+<ul>
+<li>permeated consumers’, marketers’, and researchers’ lifes rapidly and profoundly <span class="citation" data-cites="grewalHowGenerativeAI2025 cilloGenerativeAIInnovation2025">(<a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Cillo &amp; Rubera, 2025</a>; <a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Grewal et al., 2025</a>)</span></li>
+<li>changes how consumers (will) interact with technology <span class="citation" data-cites="mogajiHowGenerativeAI2024 muzumdarDeadInternetTheory2025">(<a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Mogaji &amp; Jain, 2024</a>; <a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Muzumdar et al., 2025</a>)</span></li>
+<li>changes the research process itself <span class="citation" data-cites="gartenbergMoreBetterArtificial2026">(<a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Gartenberg et al., 2026</a>)</span></li>
+</ul>
+</div><div class="column fragment" style="width:50%;">
+<ul>
+<li>rapid increase in publications <em>on</em> Generative AI <span class="citation" data-cites="riandhiAIConsumerBehavior2025">(<a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Riandhi et al., 2025</a>)</span></li>
+<li>… and <em>with</em> Generative AI<span class="citation" data-cites="gartenbergMoreBetterArtificial2026">(<a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Gartenberg et al., 2026</a>)</span></li>
+<li>Special issues and focus in top journals <span class="citation" data-cites="specialissue2026 wangEditorialChangingLandscape2026">(<a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Bart et al., 2026</a>; <a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Wang, 2026</a>)</span></li>
+</ul>
+</div></div>
+<p><b class="blue-p"><span class="math inline">\(\Rightarrow\)</span> Is Generative AI as a new consumer technology different from what our field has studied before?</b></p>
+</section>
+<section id="different-in-terms-of-what" class="slide level2">
+<h2>… Different in Terms of What?</h2>
+<p><br> <br></p>
+<div class="columns">
+<div id="vcenter" class="column" style="width:20%;">
+<p><b style="font-size:4em;">(1)</b></p>
+</div><div id="vcenter" class="column" style="width:80%;">
+<p><b>Attention Diffusion</b></p>
+<ul>
+<li>research has limited attention to distribute …
+<ul>
+<li>publishing process <span class="citation" data-cites="ellisonSlowdownEconomicsPublishing2002 bjorkPublishingDelayScholarly2013">(<a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Björk &amp; Solomon, 2013</a>; <a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Ellison, 2002</a>)</span></li>
+<li>funding opportunities <span class="citation" data-cites="kaltenbrunnerManagingBudgetaryUncertainty2020 fabbriInfluenceIndustrySponsorship2018">(<a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Fabbri et al., 2018</a>; <a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Kaltenbrunner, 2020</a>)</span></li>
+<li>limited time of researchers</li>
+</ul></li>
+<li>… but the field evolved faster than we keep up <span class="citation" data-cites="hoffmanRiseNewTechnologies2022 VisibleMeasurableImmediate">(<a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">de Bellis et al., 2026</a>; <a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Hoffman et al., 2022</a>)</span></li>
+</ul>
+<p><span class="math inline">\(\Rightarrow\)</span> How does our field allocate attention to consumer technologies, and does Generative AI disrupt these patterns?</p>
+</div></div>
+</section>
+<section id="different-in-terms-of-what-1" class="slide level2 smaller scrollable" data-visibility="uncounted">
+<h2>… Different in Terms of What?</h2>
+<p><br> <br></p>
+<div class="columns">
+<div id="vcenter" class="column" style="width:20%;">
+<p><b style="font-size:4em;">(2)</b></p>
+</div><div id="vcenter" class="column" style="width:80%;">
+<p><b>Attention Diffusion</b></p>
+<ul>
+<li>research has limited attention to distribute …
+<ul>
+<li>publishing process <span class="citation" data-cites="ellisonSlowdownEconomicsPublishing2002 bjorkPublishingDelayScholarly2013">(<a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Björk &amp; Solomon, 2013</a>; <a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Ellison, 2002</a>)</span></li>
+<li>funding opportunities <span class="citation" data-cites="kaltenbrunnerManagingBudgetaryUncertainty2020 fabbriInfluenceIndustrySponsorship2018">(<a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Fabbri et al., 2018</a>; <a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Kaltenbrunner, 2020</a>)</span></li>
+<li>limited time of researchers</li>
+</ul></li>
+<li>… but the field evolved faster than we keep up <span class="citation" data-cites="hoffmanRiseNewTechnologies2022 VisibleMeasurableImmediate">(<a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">de Bellis et al., 2026</a>; <a href="#/different-in-terms-of-what-1" role="doc-biblioref" onclick="">Hoffman et al., 2022</a>)</span></li>
+</ul>
+<p><span class="math inline">\(\Rightarrow\)</span> How does our field allocate attention to consumer technologies, and does Generative AI disrupt these patterns?</p>
+</div></div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-specialissue2026" class="csl-entry" role="listitem">
+Bart, Y., Naik, P. A., &amp; Peters, K. (2026). <em>The <span>Transformative Role</span> of <span>Artificial Intelligence</span> in <span>Marketing Theory</span> and <span>Practice</span></em>. Call for papers; International Journal of Research in Marketing. <a href="https://www.sciencedirect.com/special-issue/334595/the-transformative-role-of-artificial-intelligence-in-marketing-theory-and-practice">https://www.sciencedirect.com/special-issue/334595/the-transformative-role-of-artificial-intelligence-in-marketing-theory-and-practice</a>
+</div>
+<div id="ref-bjorkPublishingDelayScholarly2013" class="csl-entry" role="listitem">
+Björk, B.-C., &amp; Solomon, D. (2013). The publishing delay in scholarly peer-reviewed journals. <em>Journal of Informetrics</em>, <em>7</em>(4), 914–923. <a href="https://doi.org/10.1016/j.joi.2013.09.001">https://doi.org/10.1016/j.joi.2013.09.001</a>
+</div>
+<div id="ref-cilloGenerativeAIInnovation2025" class="csl-entry" role="listitem">
+Cillo, P., &amp; Rubera, G. (2025). Generative <span>AI</span> in innovation and marketing processes: <span>A</span> roadmap of research opportunities. <em>Journal of the Academy of Marketing Science</em>, <em>53</em>(3), 684–701. <a href="https://doi.org/10.1007/s11747-024-01044-7">https://doi.org/10.1007/s11747-024-01044-7</a>
+</div>
+<div id="ref-VisibleMeasurableImmediate" class="csl-entry" role="listitem">
+de Bellis, E., Klesse, A.-K., &amp; Valenzuela, A. (2026). <em>The <span>Visible</span>, the <span>Measurable</span>, and the <span>Immediate</span></em> [Unpublished manuscript].
+</div>
+<div id="ref-ellisonSlowdownEconomicsPublishing2002" class="csl-entry" role="listitem">
+Ellison, G. (2002). The slowdown of the economics publishing process. <em>Journal of Political Economy</em>, <em>110</em>(5), 947–993. <a href="https://doi.org/10.1086/341868">https://doi.org/10.1086/341868</a>
+</div>
+<div id="ref-fabbriInfluenceIndustrySponsorship2018" class="csl-entry" role="listitem">
+Fabbri, A., Lai, A., Grundy, Q., &amp; Bero, L. A. (2018). The <span>Influence</span> of <span>Industry Sponsorship</span> on the <span>Research Agenda</span>: <span>A Scoping Review</span>. <em>American Journal of Public Health</em>, <em>108</em>(11), e9–e16. <a href="https://doi.org/10.2105/AJPH.2018.304677">https://doi.org/10.2105/AJPH.2018.304677</a>
+</div>
+<div id="ref-gartenbergMoreBetterArtificial2026" class="csl-entry" role="listitem">
+Gartenberg, C., Hasan, S., Murray, A., &amp; Pierce, L. (2026). More <span>Versus Better</span>: <span>Artificial Intelligence</span>, <span>Incentives</span>, and the <span>Emerging Crisis</span> in <span>Peer Review</span>. <em>Organization Science</em>, <em>37</em>(3), 795–812. <a href="https://doi.org/10.1287/orsc.2026.ed.v37.n3">https://doi.org/10.1287/orsc.2026.ed.v37.n3</a>
+</div>
+<div id="ref-grewalHowGenerativeAI2025" class="csl-entry" role="listitem">
+Grewal, D., Satornino, C. B., Davenport, T., &amp; Guha, A. (2025). How generative <span>AI Is</span> shaping the future of marketing. <em>Journal of the Academy of Marketing Science</em>, <em>53</em>(3), 702–722. <a href="https://doi.org/10.1007/s11747-024-01064-3">https://doi.org/10.1007/s11747-024-01064-3</a>
+</div>
+<div id="ref-hoffmanRiseNewTechnologies2022" class="csl-entry" role="listitem">
+Hoffman, D. L., Moreau, C. P., Stremersch, S., &amp; Wedel, M. (2022). The <span>Rise</span> of <span>New Technologies</span> in <span>Marketing</span>: <span>A Framework</span> and <span>Outlook</span>. <em>Journal of Marketing</em>, <em>86</em>(1), 1–6. <a href="https://doi.org/10.1177/00222429211061636">https://doi.org/10.1177/00222429211061636</a>
+</div>
+<div id="ref-kaltenbrunnerManagingBudgetaryUncertainty2020" class="csl-entry" role="listitem">
+Kaltenbrunner, W. (2020). Managing budgetary uncertainty, interpreting policy. <span>How</span> researchers integrate <span>“grand challenges”</span> funding programs into their research agendas. <em>Journal of Responsible Innovation</em>, <em>7</em>(3), 320–341. <a href="https://doi.org/10.1080/23299460.2020.1744401">https://doi.org/10.1080/23299460.2020.1744401</a>
+</div>
+<div id="ref-mogajiHowGenerativeAI2024" class="csl-entry" role="listitem">
+Mogaji, E., &amp; Jain, V. (2024). How generative <span><span class="smallcaps">AI</span></span> is (will) change consumer behaviour: <span>Postulating</span> the potential impact and implications for research, practice, and policy. <em>Journal of Consumer Behaviour</em>, <em>23</em>(5), 2379–2389. <a href="https://doi.org/10.1002/cb.2345">https://doi.org/10.1002/cb.2345</a>
+</div>
+<div id="ref-muzumdarDeadInternetTheory2025" class="csl-entry" role="listitem">
+Muzumdar, P., Cheemalapati, S., RamiReddy, S. R., Singh, K., Kurian, G., &amp; Muley, A. (2025). The <span>Dead Internet Theory</span>: <span>A Survey</span> on <span>Artificial Interactions</span> and the <span>Future</span> of <span>Social Media</span>. <em>Asian Journal of Research in Computer Science</em>, <em>18</em>(1), 67–73. <a href="https://doi.org/10.9734/ajrcos/2025/v18i1549">https://doi.org/10.9734/ajrcos/2025/v18i1549</a>
+</div>
+<div id="ref-riandhiAIConsumerBehavior2025" class="csl-entry" role="listitem">
+Riandhi, A. N., Arviansyah, M. R., &amp; Sondari, M. C. (2025). <span>AI</span> and consumer behavior: <span>Trends</span>, technologies, and future directions from a scopus-based systematic review. <em>Cogent Business &amp; Management</em>, <em>12</em>(1), 2544984. <a href="https://doi.org/10.1080/23311975.2025.2544984">https://doi.org/10.1080/23311975.2025.2544984</a>
+</div>
+<div id="ref-wangEditorialChangingLandscape2026" class="csl-entry" role="listitem">
+Wang, C. L. (2026). Editorial: <span>The</span> changing landscape of marketing research in the <span>AI</span> era: Prospects and challenges. <em>Journal of Research in Interactive Marketing</em>, <em>20</em>(1), 1–10. <a href="https://doi.org/10.1108/JRIM-02-2026-766">https://doi.org/10.1108/JRIM-02-2026-766</a>
+</div>
+</div>
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../../../_extensions/saboustocker/unisg-slides/assets/logos/HSG_Logo_EN_RGB.svg" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script>
+    (function () {
+      var MIN = 0.15;
+      var MAX = 6;
+      var STEPS = 14;
+      var SLACK = 0.5;
+
+      function flexible(sec) {
+        var out = [];
+        sec.querySelectorAll("img").forEach(function (e) {
+          if (!e.classList.contains("slide-logo")) out.push(e);
+        });
+        sec.querySelectorAll("table").forEach(function (e) { out.push(e); });
+        return out.filter(function (e) {
+          var r = e.getBoundingClientRect();
+          return r.width > 0 && r.height > 0;
+        });
+      }
+
+      function scopeOf(el, sec) {
+        var e = el.parentElement;
+        while (e && e !== sec) {
+          if (e.classList.contains("column")) return e;
+          if (e.parentElement && e.parentElement.classList.contains("r-stack")) return e;
+          e = e.parentElement;
+        }
+        return sec;
+      }
+
+      function reset(el) {
+        if (el.tagName === "IMG") el.style.maxHeight = "";
+        else el.style.zoom = "";
+      }
+
+      function apply(el, natural, f, scale) {
+        if (el.tagName === "IMG") {
+          el.style.width = "auto";
+          el.style.height = "auto";
+          el.style.maxHeight = (natural * f) / scale + "px";
+        } else {
+          el.style.zoom = f;
+        }
+      }
+
+      function box(sec) {
+        var rect = sec.getBoundingClientRect();
+        if (!sec.offsetHeight || rect.height <= 0) return null;
+        var scale = rect.height / sec.offsetHeight;
+        if (!(scale > 0)) return null;
+        var cs = getComputedStyle(sec);
+        var padB = (parseFloat(cs.paddingBottom) || 0) * scale;
+        var padR = (parseFloat(cs.paddingRight) || 0) * scale;
+        return {
+          bottom: rect.bottom - padB,
+          right: rect.right - padR,
+          scale: scale
+        };
+      }
+
+      function extent(scope, includeSelf) {
+        var bottom = -Infinity;
+        var right = -Infinity;
+        if (includeSelf) {
+          var own = scope.getBoundingClientRect();
+          bottom = own.bottom;
+          right = own.right;
+        }
+        scope.querySelectorAll("*").forEach(function (e) {
+          var r = e.getBoundingClientRect();
+          if (!r.width && !r.height) return;
+          if (r.bottom > bottom) bottom = r.bottom;
+          if (r.right > right) right = r.right;
+        });
+        return { bottom: bottom, right: right };
+      }
+
+      function fitScope(scope, els, slide) {
+        els.forEach(reset);
+
+        var natural = els.map(function (e) { return e.getBoundingClientRect().height; });
+        if (natural.some(function (h) { return !(h > 0); })) return;
+
+        var limitRight = slide.right;
+        if (scope.classList && scope.classList.contains("column")) {
+          limitRight = Math.min(limitRight, scope.getBoundingClientRect().right);
+        }
+
+        var boxed = !!(scope.classList && (scope.classList.contains("column") ||
+          (scope.parentElement && scope.parentElement.classList.contains("r-stack"))));
+
+        function fits(f) {
+          for (var i = 0; i < els.length; i++) apply(els[i], natural[i], f, slide.scale);
+          var e = extent(scope, boxed);
+          return e.bottom <= slide.bottom + SLACK && e.right <= limitRight + SLACK;
+        }
+
+        var ceiling = els.some(function (e) { return e.tagName === "TABLE"; }) ? 1 : MAX;
+
+        var lo = MIN;
+        var hi = ceiling;
+        if (fits(ceiling)) {
+          lo = ceiling;
+        } else if (!fits(MIN)) {
+          lo = MIN;
+        } else {
+          for (var n = 0; n < STEPS; n++) {
+            var mid = (lo + hi) / 2;
+            if (fits(mid)) lo = mid; else hi = mid;
+          }
+        }
+
+        for (var j = 0; j < els.length; j++) {
+          if (lo >= 0.999 && lo <= 1.001) reset(els[j]);
+          else apply(els[j], natural[j], lo, slide.scale);
+        }
+      }
+
+      function fitSlide(sec) {
+        if (!sec || !sec.clientHeight) return;
+        var slide = box(sec);
+        if (!slide) return;
+
+        var els = flexible(sec);
+        if (!els.length) return;
+
+        var groups = new Map();
+        els.forEach(function (el) {
+          var s = scopeOf(el, sec);
+          if (!groups.has(s)) groups.set(s, []);
+          groups.get(s).push(el);
+        });
+        groups.forEach(function (list, scope) { fitScope(scope, list, slide); });
+        groups.forEach(function (list, scope) { fitScope(scope, list, slide); });
+      }
+
+      function current() {
+        return document.querySelector(".reveal .slides section.present:not(.stack)");
+      }
+
+      function run() {
+        fitSlide(current());
+      }
+
+      function schedule() {
+        requestAnimationFrame(function () { requestAnimationFrame(run); });
+        setTimeout(run, 200);
+        setTimeout(run, 600);
+      }
+
+      function watchImages() {
+        document.querySelectorAll(".reveal .slides img").forEach(function (i) {
+          if (i.dataset.fitWatched) return;
+          i.dataset.fitWatched = "1";
+          i.addEventListener("load", schedule);
+        });
+      }
+
+      window.addEventListener("load", function () { watchImages(); schedule(); });
+      window.addEventListener("resize", schedule);
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.Reveal) {
+          Reveal.on("ready", function () { watchImages(); schedule(); });
+          Reveal.on("slidechanged", function () { watchImages(); schedule(); });
+          Reveal.on("resize", schedule);
+        }
+      });
+    })();
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

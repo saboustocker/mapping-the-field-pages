@@ -1,5 +1,12 @@
 [
   {
+    "listing": "/99_writing/slides_index.html",
+    "items": [
+      "/99_writing/slides/2026-09-16_Colloqium.html",
+      "/99_writing/slides/2026-09-16_Colloquium-final.html"
+    ]
+  },
+  {
     "listing": "/99_writing/appendix_index.html",
     "items": [
       "/99_writing/appendices/A_model-choice.html",
@@ -7,12 +14,6 @@
       "/99_writing/appendices/C_additional-analysis-2.html",
       "/99_writing/appendices/D_additional-analysis-2b.html",
       "/99_writing/appendices/E_additional-analysis-3.html"
-    ]
-  },
-  {
-    "listing": "/99_writing/slides_index.html",
-    "items": [
-      "/99_writing/slides/2026-09-16_Colloqium.html"
     ]
   }
 ]
