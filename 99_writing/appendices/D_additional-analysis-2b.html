@@ -482,8 +482,8 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Overall, across all 16 technology clusters:
 <ul>
-<li>Within Corpus: <em>[coefficient and p-value to be added]</em></li>
-<li>Total: <em>[coefficient and p-value to be added]</em></li>
+<li>Within Corpus: early_adopter_score -0.003134 0.021278 -0.147 0.882911 cluster_citeability 0.004960 0.001293 3.836 0.000125</li>
+<li>Total: early_adopter_score 0.020702 0.019261 1.075 0.282 cluster_citeability 0.008278 0.001139 7.271 3.57e-13</li>
 </ul></li>
 <li><a href="#tbl-impact-early-adoption" class="quarto-xref">Table&nbsp;1</a> reports the same model fitted separately per cluster.</li>
 <li>Rows are the 16 technology clusters; cells give the coefficient with its p-value in parentheses.</li>
@@ -635,11 +635,16 @@ Table&nbsp;1: Impact of early adoption within each technology cluster. Cells rep
 <ul>
 <li>Overall, across all 16 technology clusters:
 <ul>
-<li>Within Corpus, wi: <em>[coefficient and p-value to be added]</em></li>
-<li>Within Corpus, ac: <em>[coefficient and p-value to be added]</em></li>
-<li>Total, wi: <em>[coefficient and p-value to be added]</em></li>
-<li>Total, ac: <em>[coefficient and p-value to be added]</em></li>
-</ul></li>
+<li>Within Corpus, wi:</li>
+</ul>
+Parametric coefficients: Estimate Std. Error z value Pr(&gt;|z|)<br>
+(Intercept) 0.104035 0.146593 0.710 0.478<br>
+wi_cluster_std 1.418637 0.291929 4.860 1.18e-06 <strong><em> ac_cluster_std 17.244420 3.052572 5.649 1.61e-08 </em></strong> cluster_citeability 0.004577 0.001152 3.973 7.11e-05 ***</li>
+</ul>
+<p>Formula: global_citations ~ wi_cluster_std + ac_cluster_std + cluster_citeability + s(age, k = k_all)</p>
+<p>Parametric coefficients: Estimate Std. Error z value Pr(&gt;|z|)<br>
+(Intercept) 3.157637 0.127931 24.682 &lt; 2e-16 <strong><em> wi_cluster_std 1.946047 0.277679 7.008 2.41e-12 </em></strong> ac_cluster_std 17.784233 3.006934 5.914 3.33e-09 <strong><em> cluster_citeability 0.006462 0.001013 6.377 1.81e-10 </em></strong></p>
+<ul>
 <li><a href="#tbl-impact-citations" class="quarto-xref">Table&nbsp;2</a> reports the same model fitted separately per cluster.</li>
 <li>Rows are the 16 technology clusters; four columns give wi and ac for each of the two outcomes.</li>
 <li>Cells give the coefficient with its p-value in parentheses.</li>

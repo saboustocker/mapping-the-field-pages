@@ -915,8 +915,8 @@ Table&nbsp;2: The shared knowledge foundation of the corpus as a whole. The firs
 <p>In Analysis 3, we contrast the academic attention devoted to consumer technologies with the media attention devoted to these same technologies. Our goal in this study is to identify and quantify the relationship between interests in research, and what concerns the public.</p>
 <section id="the-field-at-large-2" class="level3">
 <h3 class="anchored" data-anchor-id="the-field-at-large-2">The field at large</h3>
-<p>Across <span class="math inline">\(901\)</span> queries, we retrieve a total of <span class="math inline">\(4,714,445\)</span> media stories from <span class="math inline">\(4,074,851\)</span> unique media titles. Across all sixteen technology clusters, academic attention is spread differently from media attention (<span class="math inline">\(G(15) = 1033.62\)</span>, <span class="math inline">\(p &lt; .001\)</span>, <span class="math inline">\(w = .86\)</span>). Nine of the sixteen clusters hold a larger share in academic attention, seven in media attention. Measured in percentage points, the largest differences on the media side are Internet &amp; Broadcasting (<span class="math inline">\(-10.6\)</span> pp) and Social Media (<span class="math inline">\(-8.5\)</span> pp), and on the academic side Generative AI (<span class="math inline">\(+10.1\)</span> pp) and Algorithms &amp; Recommendations (<span class="math inline">\(+5.3\)</span> pp). <a href="#fig-coverage-gap" class="quarto-xref">Figure&nbsp;4</a> reports all clusters. All gaps diverge credibly from the media distribution, which is used as the prior. The gaps are not uniform across journals, since not all journals focus on the clusters equally.</p>
-<p>Across the sixteen clusters, the cross-correlations between the annual academic and media shares range from <span class="math inline">\(-0.52\)</span> to <span class="math inline">\(0.90\)</span>. The lag at which the correlation is highest is positive for ten clusters, zero for one, and negative for five, falling at the boundary of the tested range for three. A lag of four years is the most frequent, being the highest-correlating lag for five clusters, indicating that media attention generally precedes academic publications by several years. The relationship is nonetheless weak for most clusters: nine of the sixteen peak below <span class="math inline">\(r = .40\)</span>, and three peak at the boundary of the tested window, so their true lag may lie outside the range examined. <a href="#tbl-lag-pvalues" class="quarto-xref">Table&nbsp;3</a> reports the correlation at every lag for all clusters. We compare the duration between peak academic and media attention for all clusters. The median difference between academic and media peaks is largest for the Journal of Marketing, with a median lag of <span class="math inline">\(-5\)</span>. Both JAMS and IJRM are ahead by a median of <span class="math inline">\(1\)</span> compared to media attention.</p>
+<p>Across <span class="math inline">\(901\)</span> queries, we retrieve a total of <span class="math inline">\(4,714,445\)</span> media stories from <span class="math inline">\(4,074,851\)</span> unique media titles. Across all sixteen technology clusters, academic attention is spread differently from media attention. Nine of the sixteen clusters hold a larger share in academic attention, seven in media attention. Measured in percentage points, the largest differences on the media side are Internet &amp; Broadcasting (<span class="math inline">\(-10.6\)</span> pp) and Social Media (<span class="math inline">\(-8.5\)</span> pp), and on the academic side Generative AI (<span class="math inline">\(+10.1\)</span> pp) and Algorithms &amp; Recommendations (<span class="math inline">\(+5.3\)</span> pp). <a href="#fig-coverage-gap" class="quarto-xref">Figure&nbsp;4</a> and <a href="#tbl-coverage-gap" class="quarto-xref">Table&nbsp;3</a> report all clusters. All gaps diverge credibly from the media distribution, which is used as the prior. The gaps are not uniform across journals, since not all journals focus on the clusters equally.</p>
+<p>Across the sixteen clusters, the cross-correlations between the annual academic and media shares range from <span class="math inline">\(-0.52\)</span> to <span class="math inline">\(0.90\)</span>. The lag at which the correlation is highest is positive for ten clusters, zero for one, and negative for five, falling at the boundary of the tested range for three. A lag of four years is the most frequent, being the highest-correlating lag for five clusters, indicating that media attention generally precedes academic publications by several years. The relationship is nonetheless weak for most clusters: nine of the sixteen peak below <span class="math inline">\(r = .40\)</span>, and three peak at the boundary of the tested window, so their true lag may lie outside the range examined. <a href="#tbl-lag-pvalues" class="quarto-xref">Table&nbsp;4</a> reports the correlation at every lag for all clusters. We compare the duration between peak academic and media attention for all clusters. The median difference between academic and media peaks is largest for the Journal of Marketing, with a median lag of <span class="math inline">\(-5\)</span>. Both JAMS and IJRM are ahead by a median of <span class="math inline">\(1\)</span> compared to media attention.</p>
 <p>We report the full measures for all comparisons and robustness checks comparing overall media attention (i.e.&nbsp;share of technology articles compared to all articles) against overall academic attention in <a href="../99_writing/appendices/E_additional-analysis-3.html#sec-mediacloud-analysis" class="content-visible" data-when-format="html">Appendix E</a>.</p>
 <div id="fig-coverage-gap" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -928,11 +928,170 @@ Figure&nbsp;4: Academic and media attention by technology cluster, 2008-2026. Ea
 </figcaption>
 </figure>
 </div>
+<div id="tbl-coverage-gap" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-coverage-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Academic and media attention to consumer-technology clusters, 2008–2026. Academic share and media share are the pooled share of attention that each cluster received within all consumer-technology mentions of its respective corpus, pooled across the whole period rather than averaged over years. The gap is the academic share minus the media share, in percentage points. The ratio divides each cluster’s share of all academic technology mentions by its share of all media technology mentions; values above 1 indicate a cluster that draws more academic than media attention and values below 1 the reverse. For each cluster we draw a Dirichlet posterior of the academic share vector, using the media distribution as the baseline; Credibly higher marks a cluster whose 95% credible interval for the academic-to-media ratio lies entirely above 1, Credibly lower one that lies entirely below it.
+</figcaption>
+<div aria-describedby="tbl-coverage-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Technology cluster</th>
+<th style="text-align: right;">Academic share</th>
+<th style="text-align: right;">Media share</th>
+<th style="text-align: right;">Gap</th>
+<th style="text-align: right;">Ratio</th>
+<th style="text-align: center;">Mark</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AR, VR &amp; Robots</td>
+<td style="text-align: right;">3.72%</td>
+<td style="text-align: right;">2.18%</td>
+<td style="text-align: right;">+1.5</td>
+<td style="text-align: right;">1.70</td>
+<td style="text-align: center;">Credibly higher</td>
+</tr>
+<tr class="even">
+<td>Algorithms &amp; Recommendations</td>
+<td style="text-align: right;">6.58%</td>
+<td style="text-align: right;">1.32%</td>
+<td style="text-align: right;">+5.3</td>
+<td style="text-align: right;">4.97</td>
+<td style="text-align: center;">Credibly higher</td>
+</tr>
+<tr class="odd">
+<td>Auctions &amp; Pricing</td>
+<td style="text-align: right;">1.29%</td>
+<td style="text-align: right;">0.02%</td>
+<td style="text-align: right;">+1.3</td>
+<td style="text-align: right;">57.10</td>
+<td style="text-align: center;">Credibly higher</td>
+</tr>
+<tr class="even">
+<td>Computers &amp; Software</td>
+<td style="text-align: right;">7.01%</td>
+<td style="text-align: right;">9.21%</td>
+<td style="text-align: right;">-2.2</td>
+<td style="text-align: right;">0.76</td>
+<td style="text-align: center;">Credibly lower</td>
+</tr>
+<tr class="odd">
+<td>Crypto &amp; Fintech</td>
+<td style="text-align: right;">6.22%</td>
+<td style="text-align: right;">3.15%</td>
+<td style="text-align: right;">+3.1</td>
+<td style="text-align: right;">1.97</td>
+<td style="text-align: center;">Credibly higher</td>
+</tr>
+<tr class="even">
+<td>E-Commerce</td>
+<td style="text-align: right;">4.51%</td>
+<td style="text-align: right;">1.10%</td>
+<td style="text-align: right;">+3.4</td>
+<td style="text-align: right;">4.11</td>
+<td style="text-align: center;">Credibly higher</td>
+</tr>
+<tr class="odd">
+<td>Gaming &amp; Digital Platforms</td>
+<td style="text-align: right;">7.15%</td>
+<td style="text-align: right;">2.37%</td>
+<td style="text-align: right;">+4.8</td>
+<td style="text-align: right;">3.02</td>
+<td style="text-align: center;">Credibly higher</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td style="text-align: right;">15.52%</td>
+<td style="text-align: right;">5.44%</td>
+<td style="text-align: right;">+10.1</td>
+<td style="text-align: right;">2.85</td>
+<td style="text-align: center;">Credibly higher</td>
+</tr>
+<tr class="odd">
+<td>Internet &amp; Broadcasting</td>
+<td style="text-align: right;">6.22%</td>
+<td style="text-align: right;">16.79%</td>
+<td style="text-align: right;">-10.6</td>
+<td style="text-align: right;">0.37</td>
+<td style="text-align: center;">Credibly lower</td>
+</tr>
+<tr class="even">
+<td>Mobility &amp; Transportation</td>
+<td style="text-align: right;">1.79%</td>
+<td style="text-align: right;">0.73%</td>
+<td style="text-align: right;">+1.1</td>
+<td style="text-align: right;">2.45</td>
+<td style="text-align: center;">Credibly higher</td>
+</tr>
+<tr class="odd">
+<td>Search &amp; Advertising</td>
+<td style="text-align: right;">5.94%</td>
+<td style="text-align: right;">7.61%</td>
+<td style="text-align: right;">-1.7</td>
+<td style="text-align: right;">0.78</td>
+<td style="text-align: center;">Credibly lower</td>
+</tr>
+<tr class="even">
+<td>Smartphones &amp; Apps</td>
+<td style="text-align: right;">8.08%</td>
+<td style="text-align: right;">10.80%</td>
+<td style="text-align: right;">-2.7</td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: center;">Credibly lower</td>
+</tr>
+<tr class="odd">
+<td>Social Media</td>
+<td style="text-align: right;">12.95%</td>
+<td style="text-align: right;">21.42%</td>
+<td style="text-align: right;">-8.5</td>
+<td style="text-align: right;">0.60</td>
+<td style="text-align: center;">Credibly lower</td>
+</tr>
+<tr class="even">
+<td>Streaming, Audio &amp; Video</td>
+<td style="text-align: right;">3.79%</td>
+<td style="text-align: right;">6.47%</td>
+<td style="text-align: right;">-2.7</td>
+<td style="text-align: right;">0.59</td>
+<td style="text-align: center;">Credibly lower</td>
+</tr>
+<tr class="odd">
+<td>Tracking &amp; Wearables</td>
+<td style="text-align: right;">3.65%</td>
+<td style="text-align: right;">0.53%</td>
+<td style="text-align: right;">+3.1</td>
+<td style="text-align: right;">6.85</td>
+<td style="text-align: center;">Credibly higher</td>
+</tr>
+<tr class="even">
+<td>Other</td>
+<td style="text-align: right;">5.58%</td>
+<td style="text-align: right;">10.84%</td>
+<td style="text-align: right;">-5.3</td>
+<td style="text-align: right;">0.51</td>
+<td style="text-align: center;">Credibly lower</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 <div class="landscape">
 <div id="tbl-lag-pvalues" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lag-pvalues-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3: Correlation between annual academic and media attention at each lag, with the exact two-sided circular-shift permutation p-value in parentheses. The highest correlation in each row is set in bold and corresponds to the best lag. The smallest attainable p-value ranges from .053 at lag 0 to .071 at lag -5 and +5.
+Table&nbsp;4: Correlation between annual academic and media attention at each lag, with the exact two-sided circular-shift permutation p-value in parentheses. The highest correlation in each row is set in bold and corresponds to the best lag. The smallest attainable p-value ranges from .053 at lag 0 to .071 at lag -5 and +5.
 </figcaption>
 <div aria-describedby="tbl-lag-pvalues-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -1218,7 +1377,7 @@ Table&nbsp;3: Correlation between annual academic and media attention at each la
 </section>
 <section id="the-case-of-generative-ai-2" class="level3">
 <h3 class="anchored" data-anchor-id="the-case-of-generative-ai-2">The case of Generative AI</h3>
-<p>Generative AI is the cluster with the largest academic over-representation, holding the largest academic share of any cluster (<span class="math inline">\(14.1\%\)</span> overall, and <span class="math inline">\(30.2\%\)</span> at its current peak annual share in 2026, see <a href="#tbl-peaks" class="quarto-xref">Table&nbsp;1</a>) and the largest positive gap of any cluster (<span class="math inline">\(+10.1\)</span> pp, <span class="math inline">\(q &lt; .001\)</span>). Media attention towards Generative AI has rapidly increased in recent years, but not at the pace seen in our corpus, where it became the most discussed cluster overall and more dominant still in the current publication agenda. It is also the only cluster whose annual academic and media series correlate above <span class="math inline">\(.65\)</span> at every lag examined, from <span class="math inline">\(.657\)</span> to <span class="math inline">\(.905\)</span>, against a maximum of <span class="math inline">\(.724\)</span> for any other cluster, indicating that the two trajectories rise together rather than one tracking the other.</p>
+<p>Generative AI is the cluster with the largest academic over-representation, holding the largest academic share of any cluster (<span class="math inline">\(14.1\%\)</span> overall, and <span class="math inline">\(30.2\%\)</span> at its current peak annual share in 2026, see <a href="#tbl-peaks" class="quarto-xref">Table&nbsp;1</a>) and the largest positive gap of any cluster (<span class="math inline">\(+10.1\)</span> pp, ratio <span class="math inline">\(2.85\)</span>, credibly higher). Media attention towards Generative AI has rapidly increased in recent years, but not at the pace seen in our corpus, where it became the most discussed cluster overall and more dominant still in the current publication agenda. It is also the only cluster whose annual academic and media series correlate above <span class="math inline">\(.65\)</span> at every lag examined, from <span class="math inline">\(.657\)</span> to <span class="math inline">\(.905\)</span>, against a maximum of <span class="math inline">\(.724\)</span> for any other cluster, indicating that the two trajectories rise together rather than one tracking the other.</p>
 <div style="page-break-after: always;"></div>
 </section>
 </section>

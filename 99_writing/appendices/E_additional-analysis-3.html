@@ -6850,9 +6850,9 @@ Figure&nbsp;3: Share of all newspaper articles per technology cluster over time,
 </section>
 <section id="rank-order-agreement-between-the-two-corpora" class="level2">
 <h2 class="anchored" data-anchor-id="rank-order-agreement-between-the-two-corpora">Rank-Order Agreement Between the Two Corpora</h2>
-<p>The cross-sectional comparison in the main text contrasts the attention shares themselves. This section reports the same contrast on the ordering of the clusters alone, which asks whether the two corpora agree on which technologies matter most, irrespective of how much attention separates them. Each cluster is ranked within each corpus on its pooled share over the whole period, with rank 1 the cluster holding the largest share, and the two orderings are compared with Spearman’s <span class="math inline">\(\rho\)</span> and Kendall’s <span class="math inline">\(\tau\)</span>. Ties are averaged. As with the <span class="math inline">\(G\)</span> test, both corpora are censuses of their retrieval frames rather than random samples, so the <span class="math inline">\(p\)</span>-values quantify the discrepancy against the null of no rank association rather than sampling error.</p>
+<p>The cross-sectional comparison in the main text contrasts the attention shares themselves. This section reports the same contrast on the ordering of the clusters alone, which asks whether the two corpora agree on which technologies matter most, irrespective of how much attention separates them. Each cluster is ranked within each corpus on its pooled share over the whole period, with rank 1 the cluster holding the largest share, and the two orderings are compared with Spearman’s <span class="math inline">\(\rho\)</span> and Kendall’s <span class="math inline">\(\tau\)</span>. Ties are averaged. Both corpora are censuses of their retrieval frames rather than random samples, so the <span class="math inline">\(p\)</span>-values quantify the discrepancy against the null of no rank association rather than sampling error.</p>
 <p>The two orderings agree moderately, <span class="math inline">\(\rho = .634\)</span>, <span class="math inline">\(p = .008\)</span>, <span class="math inline">\(\tau = .494\)</span>, <span class="math inline">\(p = .008\)</span>, with a mean absolute rank difference of 3.1 positions across the sixteen clusters. Generative AI carries the largest positive difference, ranking first in the academic corpus against eighth in the media corpus, followed by Gaming &amp; Digital Platforms and Algorithms &amp; Recommendations at six positions each. The largest negative differences are Other and Internet &amp; Broadcasting, which the media corpus ranks third and second against tenth and joint seventh in the academic corpus. Two clusters occupy the same rank in both corpora, Computers &amp; Software at five and Auctions &amp; Pricing at sixteen. <a href="#tbl-rank-order" class="quarto-xref">Table&nbsp;2</a> reports all clusters.</p>
-<p>Ranks depend only on the ordering of the pooled counts within each corpus, and both attention bases divide those counts by a denominator that is constant across clusters. The rank order, the rank differences and the two coefficients are therefore identical on the within-technology and the overall basis, and <a href="#tbl-rank-order-overall" class="quarto-xref">Table&nbsp;6</a> reproduces <a href="#tbl-rank-order" class="quarto-xref">Table&nbsp;2</a> for completeness with the shares restated on the overall basis.</p>
+<p>Ranks depend only on the ordering of the pooled counts within each corpus, and both attention bases divide those counts by a denominator that is constant across clusters. The rank order, the rank differences and the two coefficients are therefore identical on the within-technology and the overall basis, and <a href="#tbl-rank-order-overall" class="quarto-xref">Table&nbsp;7</a> reproduces <a href="#tbl-rank-order" class="quarto-xref">Table&nbsp;2</a> for completeness with the shares restated on the overall basis.</p>
 <div class="landscape">
 <div id="tbl-rank-order" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -7020,13 +7020,13 @@ Table&nbsp;2: Rank order of the technology clusters in the academic and the medi
 <p>The comparisons above treat the academic corpus as one body. This section splits it by outlet and asks the same two questions of each of the seven journals separately: how its allocation of attention across the sixteen clusters departs from the media allocation, and how closely its attention peaks track the media peaks. Both use the 2008–2026 window and the within-technology basis. Denominators are the journal’s own technology mentions, so a journal is compared with the media benchmark and not with the other journals.</p>
 <section id="attention-gap-by-journal" class="level3">
 <h3 class="anchored" data-anchor-id="attention-gap-by-journal">Attention Gap by Journal</h3>
-<p><a href="#tbl-journal-gap" class="quarto-xref">Table&nbsp;3</a> reports one row per cluster, with an Overall column for the pooled corpus and one column per journal. Each cell gives the academic minus media share in percentage points, the media rank minus the academic rank in parentheses, and stars for the Benjamini-Hochberg corrected binomial <span class="math inline">\(q\)</span>-value computed across the sixteen clusters within that column.</p>
+<p><a href="#tbl-journal-gap" class="quarto-xref">Table&nbsp;3</a> reports one row per cluster, with an Overall column for the pooled corpus and one column per journal. Each cell gives the academic minus media share in percentage points and the media rank minus the academic rank in parentheses.</p>
 <p>The direction of the field-level gaps is shared by nearly every journal. Generative AI is over-covered in all seven, from <span class="math inline">\(+3.5\)</span> percentage points in <em>Journal of Marketing Research</em> to <span class="math inline">\(+17.8\)</span> in <em>Journal of Consumer Psychology</em>, and Internet &amp; Broadcasting is under-covered in all seven, between <span class="math inline">\(-8.4\)</span> and <span class="math inline">\(-14.8\)</span> points. Algorithms &amp; Recommendations is over-covered in all seven and Social Media under-covered in all seven. Departures from the shared pattern are few: Search &amp; Advertising is under-covered everywhere except <em>Marketing Science</em>, where it is over-covered by <span class="math inline">\(3.0\)</span> points, and Computers &amp; Software is under-covered everywhere except <em>Journal of Consumer Research</em>.</p>
 <div class="landscape">
 <div id="tbl-journal-gap" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-journal-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3: Attention gap per technology cluster, overall and by journal, 2008-2026. Each cell gives the academic minus media share in percentage points and, in parentheses, the media rank minus the academic rank; positive values mark clusters covered more than the media covers them. Stars mark the Benjamini-Hochberg corrected binomial q-value: * q &lt; .05, ** q &lt; .01, *** q &lt; .001. In this table, q means: if this journal had allocated its articles across the 16 technologies in exactly the proportions the media did, how often would you see a gap this large in this cluster by chance alone?
+Table&nbsp;3: Attention gap per technology cluster, overall and by journal, 2008-2026. Each cell gives the academic minus media share in percentage points and, in parentheses, the media rank minus the academic rank; positive values mark clusters covered more than the media covers them.
 </figcaption>
 <div aria-describedby="tbl-journal-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -7057,128 +7057,128 @@ Table&nbsp;3: Attention gap per technology cluster, overall and by journal, 2008
 <tbody>
 <tr class="odd">
 <td>AR, VR &amp; Robots</td>
-<td style="text-align: right;">+1.5% (-2)***</td>
+<td style="text-align: right;">+1.5% (-2)</td>
 <td style="text-align: right;">+0.6% (-2)</td>
-<td style="text-align: right;">+4.9% (+5)*</td>
+<td style="text-align: right;">+4.9% (+5)</td>
 <td style="text-align: right;">+0.1% (-1.5)</td>
 <td style="text-align: right;">+1.2% (-1)</td>
 <td style="text-align: right;">+1.6% (-2)</td>
-<td style="text-align: right;">+6.7% (+8)***</td>
+<td style="text-align: right;">+6.7% (+8)</td>
 <td style="text-align: right;">-1.5% (-5)</td>
 </tr>
 <tr class="even">
 <td>Algorithms &amp; Recommendations</td>
-<td style="text-align: right;">+5.3% (+6)***</td>
-<td style="text-align: right;">+1.8% (+0)*</td>
-<td style="text-align: right;">+11.8% (+10)***</td>
-<td style="text-align: right;">+6.3% (+5.5)***</td>
-<td style="text-align: right;">+5.4% (+6)***</td>
-<td style="text-align: right;">+4.3% (+2)***</td>
-<td style="text-align: right;">+3.1% (+3.5)**</td>
-<td style="text-align: right;">+7.6% (+7)***</td>
+<td style="text-align: right;">+5.3% (+6)</td>
+<td style="text-align: right;">+1.8% (+0)</td>
+<td style="text-align: right;">+11.8% (+10)</td>
+<td style="text-align: right;">+6.3% (+5.5)</td>
+<td style="text-align: right;">+5.4% (+6)</td>
+<td style="text-align: right;">+4.3% (+2)</td>
+<td style="text-align: right;">+3.1% (+3.5)</td>
+<td style="text-align: right;">+7.6% (+7)</td>
 </tr>
 <tr class="odd">
 <td>Auctions &amp; Pricing</td>
-<td style="text-align: right;">+1.3% (+0)***</td>
-<td style="text-align: right;">+1.2% (+1)***</td>
+<td style="text-align: right;">+1.3% (+0)</td>
+<td style="text-align: right;">+1.2% (+1)</td>
 <td style="text-align: right;">-0.0% (+0)</td>
 <td style="text-align: right;">-0.0% (+0.5)</td>
-<td style="text-align: right;">+0.9% (+0)**</td>
+<td style="text-align: right;">+0.9% (+0)</td>
 <td style="text-align: right;">-0.0% (+0)</td>
-<td style="text-align: right;">+1.0% (+0)**</td>
-<td style="text-align: right;">+3.8% (+3.5)***</td>
+<td style="text-align: right;">+1.0% (+0)</td>
+<td style="text-align: right;">+3.8% (+3.5)</td>
 </tr>
 <tr class="even">
 <td>Computers &amp; Software</td>
-<td style="text-align: right;">-2.2% (+0)**</td>
+<td style="text-align: right;">-2.2% (+0)</td>
 <td style="text-align: right;">-1.3% (+0)</td>
 <td style="text-align: right;">-1.1% (+1)</td>
 <td style="text-align: right;">+2.2% (+2)</td>
 <td style="text-align: right;">-3.9% (-3)</td>
 <td style="text-align: right;">-2.6% (-2.5)</td>
 <td style="text-align: right;">-1.8% (+0)</td>
-<td style="text-align: right;">-4.1% (-5)*</td>
+<td style="text-align: right;">-4.1% (-5)</td>
 </tr>
 <tr class="odd">
 <td>Crypto &amp; Fintech</td>
-<td style="text-align: right;">+3.1% (+1.5)***</td>
-<td style="text-align: right;">+7.1% (+6)***</td>
+<td style="text-align: right;">+3.1% (+1.5)</td>
+<td style="text-align: right;">+7.1% (+6)</td>
 <td style="text-align: right;">+1.9% (+0)</td>
-<td style="text-align: right;">+6.0% (+4)**</td>
+<td style="text-align: right;">+6.0% (+4)</td>
 <td style="text-align: right;">+1.2% (-0.5)</td>
-<td style="text-align: right;">+3.9% (+3)**</td>
+<td style="text-align: right;">+3.9% (+3)</td>
 <td style="text-align: right;">+1.3% (+0.5)</td>
 <td style="text-align: right;">+0.6% (-3.5)</td>
 </tr>
 <tr class="even">
 <td>E-Commerce</td>
-<td style="text-align: right;">+3.4% (+2)***</td>
-<td style="text-align: right;">+4.0% (+4)***</td>
+<td style="text-align: right;">+3.4% (+2)</td>
+<td style="text-align: right;">+4.0% (+4)</td>
 <td style="text-align: right;">-0.1% (-1)</td>
 <td style="text-align: right;">-1.1% (-2.5)</td>
-<td style="text-align: right;">+4.6% (+6)***</td>
-<td style="text-align: right;">+4.1% (+1)***</td>
+<td style="text-align: right;">+4.6% (+6)</td>
+<td style="text-align: right;">+4.1% (+1)</td>
 <td style="text-align: right;">+1.4% (+0)</td>
-<td style="text-align: right;">+6.1% (+7)***</td>
+<td style="text-align: right;">+6.1% (+7)</td>
 </tr>
 <tr class="odd">
 <td>Gaming &amp; Digital Platforms</td>
-<td style="text-align: right;">+4.8% (+6)***</td>
-<td style="text-align: right;">+5.1% (+4)***</td>
+<td style="text-align: right;">+4.8% (+6)</td>
+<td style="text-align: right;">+5.1% (+4)</td>
 <td style="text-align: right;">+0.7% (-1)</td>
 <td style="text-align: right;">+2.2% (+0)</td>
-<td style="text-align: right;">+5.3% (+6)***</td>
-<td style="text-align: right;">+6.1% (+5.5)***</td>
-<td style="text-align: right;">+3.0% (+3)*</td>
-<td style="text-align: right;">+6.9% (+6)***</td>
+<td style="text-align: right;">+5.3% (+6)</td>
+<td style="text-align: right;">+6.1% (+5.5)</td>
+<td style="text-align: right;">+3.0% (+3)</td>
+<td style="text-align: right;">+6.9% (+6)</td>
 </tr>
 <tr class="even">
 <td>Generative AI</td>
-<td style="text-align: right;">+10.1% (+7)***</td>
-<td style="text-align: right;">+13.5% (+7)***</td>
-<td style="text-align: right;">+17.8% (+7)***</td>
-<td style="text-align: right;">+9.8% (+7)***</td>
-<td style="text-align: right;">+9.9% (+6)***</td>
-<td style="text-align: right;">+3.5% (+5)*</td>
-<td style="text-align: right;">+15.2% (+7)***</td>
-<td style="text-align: right;">+5.9% (+6)***</td>
+<td style="text-align: right;">+10.1% (+7)</td>
+<td style="text-align: right;">+13.5% (+7)</td>
+<td style="text-align: right;">+17.8% (+7)</td>
+<td style="text-align: right;">+9.8% (+7)</td>
+<td style="text-align: right;">+9.9% (+6)</td>
+<td style="text-align: right;">+3.5% (+5)</td>
+<td style="text-align: right;">+15.2% (+7)</td>
+<td style="text-align: right;">+5.9% (+6)</td>
 </tr>
 <tr class="odd">
 <td>Internet &amp; Broadcasting</td>
-<td style="text-align: right;">-10.6% (-5.5)***</td>
-<td style="text-align: right;">-10.5% (-5)***</td>
-<td style="text-align: right;">-14.8% (-10)***</td>
-<td style="text-align: right;">-10.7% (-6.5)**</td>
-<td style="text-align: right;">-9.6% (-3)***</td>
-<td style="text-align: right;">-11.1% (-8)***</td>
-<td style="text-align: right;">-8.4% (-2)**</td>
-<td style="text-align: right;">-10.9% (-7)***</td>
+<td style="text-align: right;">-10.6% (-5.5)</td>
+<td style="text-align: right;">-10.5% (-5)</td>
+<td style="text-align: right;">-14.8% (-10)</td>
+<td style="text-align: right;">-10.7% (-6.5)</td>
+<td style="text-align: right;">-9.6% (-3)</td>
+<td style="text-align: right;">-11.1% (-8)</td>
+<td style="text-align: right;">-8.4% (-2)</td>
+<td style="text-align: right;">-10.9% (-7)</td>
 </tr>
 <tr class="even">
 <td>Mobility &amp; Transportation</td>
-<td style="text-align: right;">+1.1% (-1)***</td>
+<td style="text-align: right;">+1.1% (-1)</td>
 <td style="text-align: right;">-0.3% (-2)</td>
 <td style="text-align: right;">+0.3% (+0)</td>
 <td style="text-align: right;">+1.6% (+1.5)</td>
-<td style="text-align: right;">+1.7% (-0.5)*</td>
-<td style="text-align: right;">+2.1% (-0.5)**</td>
+<td style="text-align: right;">+1.7% (-0.5)</td>
+<td style="text-align: right;">+2.1% (-0.5)</td>
 <td style="text-align: right;">+0.7% (-1)</td>
-<td style="text-align: right;">+1.3% (-0.5)*</td>
+<td style="text-align: right;">+1.3% (-0.5)</td>
 </tr>
 <tr class="odd">
 <td>Other</td>
-<td style="text-align: right;">-5.3% (-7)***</td>
-<td style="text-align: right;">-7.3% (-8)***</td>
+<td style="text-align: right;">-5.3% (-7)</td>
+<td style="text-align: right;">-7.3% (-8)</td>
 <td style="text-align: right;">+0.3% (+0)</td>
 <td style="text-align: right;">-0.9% (-1)</td>
-<td style="text-align: right;">-7.0% (-8)**</td>
-<td style="text-align: right;">-5.2% (-7)*</td>
-<td style="text-align: right;">-7.9% (-8.5)***</td>
-<td style="text-align: right;">-4.3% (-4.5)*</td>
+<td style="text-align: right;">-7.0% (-8)</td>
+<td style="text-align: right;">-5.2% (-7)</td>
+<td style="text-align: right;">-7.9% (-8.5)</td>
+<td style="text-align: right;">-4.3% (-4.5)</td>
 </tr>
 <tr class="even">
 <td>Search &amp; Advertising</td>
-<td style="text-align: right;">-1.7% (-3)*</td>
+<td style="text-align: right;">-1.7% (-3)</td>
 <td style="text-align: right;">-3.3% (-4)</td>
 <td style="text-align: right;">-2.6% (-3)</td>
 <td style="text-align: right;">-3.8% (-5)</td>
@@ -7189,47 +7189,47 @@ Table&nbsp;3: Attention gap per technology cluster, overall and by journal, 2008
 </tr>
 <tr class="odd">
 <td>Smartphones &amp; Apps</td>
-<td style="text-align: right;">-2.7% (+1)***</td>
+<td style="text-align: right;">-2.7% (+1)</td>
 <td style="text-align: right;">+0.7% (+2)</td>
 <td style="text-align: right;">-3.7% (-2)</td>
 <td style="text-align: right;">-3.2% (-2.5)</td>
 <td style="text-align: right;">-0.3% (+1)</td>
 <td style="text-align: right;">-1.4% (+2)</td>
-<td style="text-align: right;">-4.9% (-2)*</td>
-<td style="text-align: right;">-6.3% (-7)***</td>
+<td style="text-align: right;">-4.9% (-2)</td>
+<td style="text-align: right;">-6.3% (-7)</td>
 </tr>
 <tr class="even">
 <td>Social Media</td>
-<td style="text-align: right;">-8.5% (-1)***</td>
-<td style="text-align: right;">-11.5% (-3)***</td>
-<td style="text-align: right;">-14.4% (-5)***</td>
-<td style="text-align: right;">-9.2% (-1)*</td>
+<td style="text-align: right;">-8.5% (-1)</td>
+<td style="text-align: right;">-11.5% (-3)</td>
+<td style="text-align: right;">-14.4% (-5)</td>
+<td style="text-align: right;">-9.2% (-1)</td>
 <td style="text-align: right;">-4.2% (+0)</td>
-<td style="text-align: right;">-8.7% (+0)**</td>
+<td style="text-align: right;">-8.7% (+0)</td>
 <td style="text-align: right;">-3.7% (-1)</td>
-<td style="text-align: right;">-9.7% (+0)***</td>
+<td style="text-align: right;">-9.7% (+0)</td>
 </tr>
 <tr class="odd">
 <td>Streaming, Audio &amp; Video</td>
-<td style="text-align: right;">-2.7% (-5)***</td>
+<td style="text-align: right;">-2.7% (-5)</td>
 <td style="text-align: right;">-0.9% (-1)</td>
 <td style="text-align: right;">-5.5% (-7)</td>
-<td style="text-align: right;">-4.9% (-7)*</td>
-<td style="text-align: right;">-4.1% (-7.5)*</td>
-<td style="text-align: right;">-3.6% (-7.5)*</td>
+<td style="text-align: right;">-4.9% (-7)</td>
+<td style="text-align: right;">-4.1% (-7.5)</td>
+<td style="text-align: right;">-3.6% (-7.5)</td>
 <td style="text-align: right;">-3.5% (-4.5)</td>
 <td style="text-align: right;">+0.1% (-0.5)</td>
 </tr>
 <tr class="even">
 <td>Tracking &amp; Wearables</td>
-<td style="text-align: right;">+3.1% (+1)***</td>
+<td style="text-align: right;">+3.1% (+1)</td>
 <td style="text-align: right;">+1.0% (+1)</td>
-<td style="text-align: right;">+4.5% (+6)***</td>
-<td style="text-align: right;">+5.6% (+6.5)***</td>
-<td style="text-align: right;">+2.3% (+2)**</td>
-<td style="text-align: right;">+8.0% (+10.5)***</td>
-<td style="text-align: right;">+1.4% (+1)*</td>
-<td style="text-align: right;">+1.5% (+0.5)**</td>
+<td style="text-align: right;">+4.5% (+6)</td>
+<td style="text-align: right;">+5.6% (+6.5)</td>
+<td style="text-align: right;">+2.3% (+2)</td>
+<td style="text-align: right;">+8.0% (+10.5)</td>
+<td style="text-align: right;">+1.4% (+1)</td>
+<td style="text-align: right;">+1.5% (+0.5)</td>
 </tr>
 </tbody>
 </table>
@@ -7543,9 +7543,15 @@ Table&nbsp;5: Rank-order agreement between the media peak years of the 16 techno
 <p>The main manuscript reports attention shares computed within technology-related output only, so that each cluster’s share is measured against the other fifteen clusters. As a robustness check, we recomputed both analyses on an overall basis, in which each cluster’s share is measured against all publications and all newspaper articles of the period, whether technology-related or not. Shares are pooled across the whole period rather than averaged over years, on both bases. The two bases differ only in their denominator; the underlying counts are identical.</p>
 <section id="cross-sectional-comparison" class="level3">
 <h3 class="anchored" data-anchor-id="cross-sectional-comparison">Cross-Sectional Comparison</h3>
-<p>We applied the same procedure as in the main text. The <span class="math inline">\(G\)</span> test requires the reference proportions to sum to one, so the overall basis adds a residual “not tech-related” category to the sixteen clusters, giving 17 categories and <span class="math inline">\(n = 7{,}864\)</span> academic publications.</p>
-<p>On this basis, the distribution of academic publications departs from the corresponding media proportions, <span class="math inline">\(G(16) = 2153.96\)</span>, <span class="math inline">\(p &lt; .001\)</span>, <span class="math inline">\(w = .52\)</span>, with a total variation distance of <span class="math inline">\(.11\)</span>. Fifteen of the sixteen clusters hold a larger share of academic than of media attention and one holds a smaller share. The ratio of academic to media share ranges from <span class="math inline">\(1.00\)</span> for Internet &amp; Broadcasting to <span class="math inline">\(153.66\)</span> for Auctions &amp; Pricing. Fifteen cluster-level tests remain significant after correction; Internet &amp; Broadcasting does not (<span class="math inline">\(q = 1.00\)</span>).</p>
+<p>We applied the same procedure as in the main text, with each cluster’s share measured against all publications and all newspaper articles of the period.</p>
+<p>On this basis, fifteen of the sixteen clusters hold a larger share of academic than of media attention. The ratio of academic to media share ranges from <span class="math inline">\(1.00\)</span> for Internet &amp; Broadcasting to <span class="math inline">\(153.66\)</span> for Auctions &amp; Pricing. Fifteen clusters are credibly higher; Internet &amp; Broadcasting does not credibly diverge from the media share.</p>
 <div class="landscape">
+<div id="tbl-coverage-gap-overall" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-coverage-gap-overall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6: Academic and media attention to consumer-technology clusters, 2008–2026. Academic share and media share are the pooled share of all publications and all news articles over the whole period that each cluster accounted for, pooled across the whole period rather than averaged over years. The gap is the academic share minus the media share, in percentage points. The ratio divides each cluster’s share of all academic technology mentions by its share of all media technology mentions; values above 1 indicate a cluster that draws more academic than media attention and values below 1 the reverse. For each cluster we draw a Dirichlet posterior of the academic share vector, using the media distribution as the baseline; Credibly higher marks a cluster whose 95% credible interval for the academic-to-media ratio lies entirely above 1, Credibly lower one that lies entirely below it.
+</figcaption>
+<div aria-describedby="tbl-coverage-gap-overall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 12%">
@@ -7696,17 +7702,19 @@ Table&nbsp;5: Rank-order agreement between the media peak years of the 16 techno
 </tr>
 </tbody>
 </table>
-<p>Academic and media attention to consumer-technology clusters, 2008–2026. Academic share and media share are the pooled share of all publications and all news articles over the whole period that each cluster accounted for, pooled across the whole period rather than averaged over years. The gap is the academic share minus the media share, in percentage points. The ratio divides each cluster’s share of all academic technology mentions by its share of all media technology mentions; values above 1 indicate a cluster that draws more academic than media attention and values below 1 the reverse. For each cluster we draw a Dirichlet posterior of the academic share vector, using the media distribution as the baseline; Credibly higher marks a cluster whose 95% credible interval for the academic-to-media ratio lies entirely above 1, Credibly lower one that lies entirely below it. {#tbl-coverage-gap-overall}</p>
+</div>
+</figure>
+</div>
 </div>
 </section>
 <section id="rank-order-agreement" class="level3">
 <h3 class="anchored" data-anchor-id="rank-order-agreement">Rank-Order Agreement</h3>
-<p>The rank order of the clusters is unchanged on this basis, for the reason given above, and <a href="#tbl-rank-order-overall" class="quarto-xref">Table&nbsp;6</a> restates it with the shares measured against all publications and all news articles.</p>
+<p>The rank order of the clusters is unchanged on this basis, for the reason given above, and <a href="#tbl-rank-order-overall" class="quarto-xref">Table&nbsp;7</a> restates it with the shares measured against all publications and all news articles.</p>
 <div class="landscape">
 <div id="tbl-rank-order-overall" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rank-order-overall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;6: Rank order of the technology clusters in the academic and the media corpus, 2008–2026. Academic share and media share are the pooled share of all publications and all news articles over the whole period that each cluster accounted for, pooled across the whole period rather than averaged over years. Ranks are assigned on those shares, with 1 the cluster holding the largest share of its corpus. The rank difference is the media rank minus the academic rank, so positive values indicate a cluster the field ranks higher than the public does and negative values the reverse. Across the 16 clusters the two orderings agree at <span class="math inline">\(\rho = .634\)</span> (<span class="math inline">\(p = .008\)</span>) and <span class="math inline">\(\tau = .494\)</span> (<span class="math inline">\(p = .008\)</span>), with a mean absolute rank difference of 3.1 positions and a maximum of 7. Half ranks indicate ties.
+Table&nbsp;7: Rank order of the technology clusters in the academic and the media corpus, 2008–2026. Academic share and media share are the pooled share of all publications and all news articles over the whole period that each cluster accounted for, pooled across the whole period rather than averaged over years. Ranks are assigned on those shares, with 1 the cluster holding the largest share of its corpus. The rank difference is the media rank minus the academic rank, so positive values indicate a cluster the field ranks higher than the public does and negative values the reverse. Across the 16 clusters the two orderings agree at <span class="math inline">\(\rho = .634\)</span> (<span class="math inline">\(p = .008\)</span>) and <span class="math inline">\(\tau = .494\)</span> (<span class="math inline">\(p = .008\)</span>), with a mean absolute rank difference of 3.1 positions and a maximum of 7. Half ranks indicate ties.
 </figcaption>
 <div aria-describedby="tbl-rank-order-overall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -7874,14 +7882,14 @@ p = \frac{1 + \#\{\text{shifted correlations with } |r| \geq |r_{\text{obs}}|\}}
 \]</span></p>
 <p>and we enumerated every available shift rather than sampling from them, which makes the test exact and removes any dependence on a random seed.</p>
 <p>Enumeration also fixes the resolution of the test. A series of <span class="math inline">\(n\)</span> observations admits exactly <span class="math inline">\(n\)</span> circular shifts, one of which is the identity, so the smallest attainable <span class="math inline">\(p\)</span>-value is <span class="math inline">\(1/n\)</span>. Aligning at lag <span class="math inline">\(L\)</span> reduces the overlap to <span class="math inline">\(19 - |L|\)</span> years, and the number of available shifts equals that overlap. The lower bound therefore depends on the lag: <span class="math inline">\(1/19 = .053\)</span> at lag 0, rising to <span class="math inline">\(1/14 = .071\)</span> at lags <span class="math inline">\(-5\)</span> and <span class="math inline">\(+5\)</span>. No cell in either table can fall below <span class="math inline">\(.05\)</span>, and drawing more permutations than the number of available shifts does not lower this bound, because additional draws only repeat the same arrangements.</p>
-<p>The within-technology basis is reported in the main manuscript and <a href="#tbl-lag-pvalues-overall" class="quarto-xref">Table&nbsp;7</a> reports the overall basis, each giving the correlation at every lag with its <span class="math inline">\(p\)</span>-value in parentheses and the highest correlation in each row set in bold.</p>
+<p>The within-technology basis is reported in the main manuscript and <a href="#tbl-lag-pvalues-overall" class="quarto-xref">Table&nbsp;8</a> reports the overall basis, each giving the correlation at every lag with its <span class="math inline">\(p\)</span>-value in parentheses and the highest correlation in each row set in bold.</p>
 <p>On the within-technology basis, the smallest values occur for Generative AI and Search &amp; Advertising, which sit at the per-lag lower bound across a contiguous run of lags. All remaining values lie above <span class="math inline">\(.05\)</span>.</p>
 <p>On the overall basis, Generative AI sits at the lower bound at every lag, and Gaming &amp; Digital Platforms and Streaming, Audio &amp; Video sit at or near it across the positive lags. All remaining values lie above <span class="math inline">\(.05\)</span>.</p>
 <div class="landscape">
 <div id="tbl-lag-pvalues-overall" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lag-pvalues-overall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;7: Correlation between annual academic and media attention at each lag, with the exact two-sided circular-shift permutation p-value in parentheses. The highest correlation in each row is set in bold and corresponds to the best lag. The smallest attainable p-value ranges from .053 at lag 0 to .071 at lag -5 and +5.
+Table&nbsp;8: Correlation between annual academic and media attention at each lag, with the exact two-sided circular-shift permutation p-value in parentheses. The highest correlation in each row is set in bold and corresponds to the best lag. The smallest attainable p-value ranges from .053 at lag 0 to .071 at lag -5 and +5.
 </figcaption>
 <div aria-describedby="tbl-lag-pvalues-overall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
