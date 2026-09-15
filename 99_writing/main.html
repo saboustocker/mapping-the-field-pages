@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,16 @@
 
 <title>Mapping the Field</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -57,19 +63,18 @@ div.csl-indent {
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5d0a0f05823af1cb3a437d3851f55379.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-e7e6f724ee2e007fd0caf4ca673a5621.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5d0a0f05823af1cb3a437d3851f55379.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2a573a22b376d011974acbd750bd6779.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d1a1cc0e78a522636e8de0e3679d9964.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2a573a22b376d011974acbd750bd6779.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9a9dff6c6ccd6ffb365aebbfca9c3e9e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-e6c4065cf2be3eb6c9585882c3f1f0dd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-9a9dff6c6ccd6ffb365aebbfca9c3e9e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-28bfa436920035aec3295b9beccaf3e3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-632cac142708b530a6f51e9517c442f0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-28bfa436920035aec3295b9beccaf3e3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -194,7 +199,7 @@ div.csl-indent {
 </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -573,7 +578,7 @@ window.Quarto = {
 <div id="fig-inclusion" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-inclusion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="..\99_writing/figures/inclusionexclusion.svg" class="img-fluid figure-img">
+<img src="../99_writing/figures/inclusionexclusion.svg" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-inclusion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Inclusion and exclusion pipeline. <span class="math inline">\(n_\text{articles}\)</span> describes the number of articles included in the respective steps, <span class="math inline">\(n_\text{articles+}\)</span> describes the number of articles fitting the positive inclusion criterion, <span class="math inline">\(n_\text{articles-}\)</span> describes the number of articles fitting the negative exclusion criterion (no technology). <span class="math inline">\(n_\text{tech-mentions}\)</span> describes the number of technology mentions for each step, as one article can mention more than one technology in its title and abstract.
@@ -594,7 +599,7 @@ Figure&nbsp;1: Inclusion and exclusion pipeline. <span class="math inline">\(n_\
 </section>
 <section id="media-benchmark" class="level2">
 <h2 class="anchored" data-anchor-id="media-benchmark">Media Benchmark</h2>
-<p>To understand what matters to the beneficiaries of our research, we need to understand what the public devotes its attention to. Media presence influences what consumers think about, and in turn is influenced by what matters to consumers, i.e.&nbsp;what gets read <span class="citation" data-cites="scheufeleFramingTheoryMedia1999">(<a href="#ref-scheufeleFramingTheoryMedia1999" role="doc-biblioref">Scheufele, 1999</a>)</span>. We construct a proxy for public attention using media stories on consumer technologies relying on MediaCloud, an open source collection of global news on the open web <span class="citation" data-cites="roberts2021mediacloud">(<a href="#ref-roberts2021mediacloud" role="doc-biblioref">Roberts et al., 2021</a>)</span>. For our analysis, we use the US News collection (ID: 34412234) indexing 247 US news sources <span class="citation" data-cites="bermejoMediaCloud202026">(<a href="#ref-bermejoMediaCloud202026" role="doc-biblioref">Bermejo et al., 2026</a>)</span>. We transform every consumer technology identified in our academic corpus (<span class="math inline">\(n = 901\)</span>) into a regular-expression search query using wildcards and spelling alternatives, and query the MediaCloud API on all media story titles queried since 2008<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. We are interested in which consumer technologies hold focal attention in consumer’s minds, which is why we search for mentions of these technologies in the indexed story titles. We count the number of stories mentioning each consumer technology, removing duplicate-stories within technologies, and aggregate the counts to the clusters identified through semantic modeling.</p>
+<p>To understand what matters to the beneficiaries of our research, we need to understand what the public devotes its attention to. Media presence influences what consumers think about, and in turn is influenced by what matters to consumers, i.e.&nbsp;what gets read <span class="citation" data-cites="scheufeleFramingTheoryMedia1999">(<a href="#ref-scheufeleFramingTheoryMedia1999" role="doc-biblioref">Scheufele, 1999</a>)</span>. We construct a proxy for public attention using media stories on consumer technologies relying on MediaCloud, an open source collection of global news on the open web <span class="citation" data-cites="roberts2021mediacloud">(<a href="#ref-roberts2021mediacloud" role="doc-biblioref"><span class="nocase">Roberts et al.</span>, 2021</a>)</span>. For our analysis, we use the US News collection (ID: 34412234) indexing 247 US news sources <span class="citation" data-cites="bermejoMediaCloud202026">(<a href="#ref-bermejoMediaCloud202026" role="doc-biblioref">Bermejo et al., 2026</a>)</span>. We transform every consumer technology identified in our academic corpus (<span class="math inline">\(n = 901\)</span>) into a regular-expression search query using wildcards and spelling alternatives, and query the MediaCloud API on all media story titles queried since 2008<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. We are interested in which consumer technologies hold focal attention in consumer’s minds, which is why we search for mentions of these technologies in the indexed story titles. We count the number of stories mentioning each consumer technology, removing duplicate-stories within technologies, and aggregate the counts to the clusters identified through semantic modeling.</p>
 <p>We then compare the share of attention devoted to each technology cluster in academic articles and media stories over the entire period from January 1st, 2008 until June 30th, 2026, by counting the mentions of that cluster across the whole period and dividing by the total number of hits across all sixteen clusters. We treat the media shares as the baseline and test whether the share of academic attention devoted to each cluster credibly diverges from it, using Dirichlet posteriors <span class="citation" data-cites="andrewBayesianDataAnalysis">(<a href="#ref-andrewBayesianDataAnalysis" role="doc-biblioref">Andrew, 2010</a>)</span> with the media distribution as the prior. For each cluster we compute the ratio of its academic to its media share, and treat a cluster as diverging when the ratio’s 95% credible interval excludes 1, i.e.&nbsp;is credibly higher (<span class="math inline">\(r &gt; 1\)</span>) or credibly lower (<span class="math inline">\(r &lt; 1\)</span>) than the media representation.</p>
 <p>We compare the temporal trajectory of academic and media attention by correlating the annual academic and media share at lags ranging from <span class="math inline">\(-5\)</span> years (share of academic attention prior to media attention) to <span class="math inline">\(+5\)</span> years (share of academic attention following media attention), with <span class="math inline">\(0\)</span> as concurrent attention. Because annual attention shares are autocorrelated, conventional tests of these correlations do not apply, and we instead compute an exact two-sided permutation test that shifts the media series circularly against the academic series, enumerating every available shift. The procedure is described in full in <a href="../99_writing/appendices/E_additional-analysis-3.html#sec-mediacloud-analysis" class="content-visible" data-when-format="html">Appendix E</a>. At 19 lags, p-values for each permutation can range from <span class="math inline">\(.053\)</span> at lag <span class="math inline">\(0\)</span> to <span class="math inline">\(.071\)</span> at the boundary lags, the tests are therefore only limitedly informative.</p>
 <div style="page-break-after: always;"></div>
@@ -612,7 +617,7 @@ Figure&nbsp;1: Inclusion and exclusion pipeline. <span class="math inline">\(n_\
 <div id="fig-map" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="..\11_semantic_mapping_output/1_semantic_map16.png" class="img-fluid figure-img">
+<img src="../11_semantic_mapping_output/1_semantic_map16.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Semantic map visualizing all 901 technologies through further reduction of 10 UMAP dimensions to two. Colors indicate the assignment to the respective clusters.
@@ -758,7 +763,7 @@ Table&nbsp;1: Total mentions, peak year and peak share of each technology cluste
 <div id="fig-temp" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-temp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="..\11_semantic_mapping_output/7_progression_panels_AB_k16.png" class="img-fluid figure-img">
+<img src="../11_semantic_mapping_output/7_progression_panels_AB_k16.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-temp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: Temporal progression of the sixteen technology clusters in two-year intervals. Panel A shows each cluster as a share of all articles published in the seven journals in that interval; Panel B shows each cluster as a share of all consumer technology mentions in that interval.
@@ -916,7 +921,7 @@ Table&nbsp;2: The shared knowledge foundation of the corpus as a whole. The firs
 <div id="fig-coverage-gap" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-coverage-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="..\21_mediacloud_benchmark_output/coverage_gap_outputs/within_tech/coverage_scatter.png" class="img-fluid figure-img" style="width:100.0%">
+<img src="../21_mediacloud_benchmark_output/coverage_gap_outputs/within_tech/coverage_scatter.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-coverage-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4: Academic and media attention by technology cluster, 2008-2026. Each point is a technology cluster, positioned by its pooled share of all media technology mentions and its pooled share of all academic technology mentions. The dashed line marks equal shares, so clusters above it hold a larger share of academic than of media attention and clusters below it the reverse.
@@ -1351,7 +1356,7 @@ Reimers, N., &amp; Gurevych, I. (2019). Sentence-<span>BERT</span>: <span>Senten
 Riandhi, A. N., Arviansyah, M. R., &amp; Sondari, M. C. (2025). <span>AI</span> and consumer behavior: <span>Trends</span>, technologies, and future directions from a scopus-based systematic review. <em>Cogent Business &amp; Management</em>, <em>12</em>(1), 2544984. <a href="https://doi.org/10.1080/23311975.2025.2544984">https://doi.org/10.1080/23311975.2025.2544984</a>
 </div>
 <div id="ref-roberts2021mediacloud" class="csl-entry" role="listitem">
-Roberts, H., Bhargava, R., Valiukas, L., Jen, D., Malik, M. M., Bishop, C. S., Ndulue, E. B., Dave, A., Clark, J., Etling, B., et al. (2021). Media cloud: <span>Massive</span> open source collection of global news on the open web. <em>Proceedings of the International <span>AAAI</span> Conference on Web and Social Media</em>, <em>15</em>, 1034–1045. <a href="https://doi.org/10.1609/icwsm.v15i1.18127">https://doi.org/10.1609/icwsm.v15i1.18127</a>
+<span class="nocase">Roberts, H., Bhargava, R., Valiukas, L., Jen, D., Malik, M. M., Bishop, C. S., Ndulue, E. B., Dave, A., Clark, J., Etling, B., et al.</span> (2021). Media cloud: <span>Massive</span> open source collection of global news on the open web. <em>Proceedings of the International <span>AAAI</span> Conference on Web and Social Media</em>, <em>15</em>, 1034–1045. <a href="https://doi.org/10.1609/icwsm.v15i1.18127">https://doi.org/10.1609/icwsm.v15i1.18127</a>
 </div>
 <div id="ref-roggenkampEXPRESSDICEAdvancing2025" class="csl-entry" role="listitem">
 Roggenkamp, H., Boegershausen, J., &amp; Hildebrand, C. (2025). <span>EXPRESS</span>: <span>DICE</span>: <span>Advancing Social Media Research</span> through <span>Digital In-Context Experiments</span>. <em>Journal of Marketing</em>, 00222429251371702. <a href="https://doi.org/10.1177/00222429251371702">https://doi.org/10.1177/00222429251371702</a>
