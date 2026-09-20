@@ -393,16 +393,12 @@ window.Quarto = {
 <span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../99_writing/main.html"> 
-<span class="menu-text">Manuscript</span></a>
+    <a class="nav-link" href="../../99_writing/slides_index.html"> 
+<span class="menu-text">Slides</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../99_writing/appendix_index.html"> 
 <span class="menu-text">Appendix</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../99_writing/slides_index.html"> 
-<span class="menu-text">Slides</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -537,7 +533,7 @@ Figure&nbsp;1: Direct citation network within the corpus. Nodes are corpus artic
 <div id="tbl-cluster-citation-cites" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cluster-citation-cites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: How the citations each technology cluster makes are distributed across the clusters. Cells report the number of citations the row cluster <span class="math inline">\(i\)</span> makes to the column cluster <span class="math inline">\(j\)</span>, the cross-citation share <span class="math inline">\(CC_{ij}\)</span> of all citations <span class="math inline">\(i\)</span> makes within the corpus, and the ratio <span class="math inline">\(r_{ij} = CC_{ij} / \overline{CC}_j\)</span>, where <span class="math inline">\(\overline{CC}_j\)</span> is the average share the fifteen other clusters direct at <span class="math inline">\(j\)</span>. A ratio of 1 means the row cluster gives the column cluster its usual amount of attention and 2 twice as much. Rows sum to 100%. The diagonal reports citations within the row cluster itself.
+Table&nbsp;1: How the citations each technology cluster makes are distributed across the clusters. Cells report the number of citations the row cluster <span class="math inline">\(i\)</span> makes to the column cluster <span class="math inline">\(j\)</span>, the cross-citation share <span class="math inline">\(CC_{ij}\)</span> of all citations <span class="math inline">\(i\)</span> makes within the corpus, and the ratio <span class="math inline">\(r_{ij} = CC_{ij} / \overline{CC}_j\)</span>, where <span class="math inline">\(\overline{CC}_j\)</span> is the average share the fifteen other clusters direct at <span class="math inline">\(j\)</span>. A ratio of 1 means the row cluster gives the column cluster its usual amount of attention and 2 twice as much. Rows sum to 100%. The diagonal reports citations within the row cluster itself. Marks come from Dirichlet posteriors on each row’s citation profile: <sup>1</sup> a share whose 95% credible interval lies entirely above the baseline share, <sup>2</sup> one that lies entirely below it, blank no credible deviation. Off the diagonal the baseline is the share of the column cluster among all corpus papers published up to each of the row cluster’s papers, averaged over those papers, so it reflects what the row could cite given publication years; on the diagonal it is the average self-citation share of the other clusters.
 </figcaption>
 <div aria-describedby="tbl-cluster-citation-cites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -571,7 +567,7 @@ Table&nbsp;1: How the citations each technology cluster makes are distributed ac
 <th>Crypto &amp; Fintech</th>
 <th>E-Commerce</th>
 <th>Gaming &amp; Digital Platforms</th>
-<th>Generative AI</th>
+<th>(Generative) AI</th>
 <th>Internet &amp; Broadcasting</th>
 <th>Mobility &amp; Transportation</th>
 <th>Search &amp; Advertising</th>
@@ -586,41 +582,41 @@ Table&nbsp;1: How the citations each technology cluster makes are distributed ac
 <tbody>
 <tr class="odd">
 <td>Algorithms &amp; Recommendations</td>
-<td>185(40.7%, 10.42)</td>
-<td>19(4.2%, 1.91)</td>
+<td>186(40.8%, 10.44)</td>
+<td>19(4.2%, 1.91)<sup>1</sup></td>
 <td>5(1.1%, 2.43)</td>
-<td>22(4.8%, 0.98)</td>
+<td>22(4.8%, 0.98)<sup>2</sup></td>
 <td>9(2%, 0.87)</td>
 <td>11(2.4%, 0.55)</td>
-<td>8(1.8%, 0.37)</td>
-<td>89(19.6%, 2.69)</td>
-<td>17(3.7%, 0.46)</td>
+<td>8(1.8%, 0.37)<sup>2</sup></td>
+<td>90(19.7%, 2.7)<sup>1</sup></td>
+<td>17(3.7%, 0.46)<sup>2</sup></td>
 <td>2(0.4%, 1)</td>
 <td>30(6.6%, 1.27)</td>
-<td>8(1.8%, 0.3)</td>
-<td>33(7.3%, 0.88)</td>
+<td>8(1.8%, 0.3)<sup>2</sup></td>
+<td>33(7.2%, 0.87)</td>
 <td>4(0.9%, 0.36)</td>
 <td>7(1.5%, 0.82)</td>
-<td>5(1.1%, 0.44)</td>
+<td>5(1.1%, 0.44)<sup>2</sup></td>
 <td>3.9%</td>
 </tr>
 <tr class="even">
 <td>AR, VR &amp; Robots</td>
 <td>18(5.1%, 1.31)</td>
-<td>113(31.9%, 14.5)</td>
-<td>0(0%, 0)</td>
-<td>14(4%, 0.82)</td>
-<td>6(1.7%, 0.74)</td>
+<td>113(31.9%, 14.5)<sup>2</sup></td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>14(4%, 0.82)<sup>2</sup></td>
+<td>6(1.7%, 0.74)<sup>2</sup></td>
 <td>17(4.8%, 1.11)</td>
-<td>7(2%, 0.41)</td>
-<td>78(22%, 3.02)</td>
-<td>16(4.5%, 0.56)</td>
+<td>7(2%, 0.41)<sup>2</sup></td>
+<td>78(22%, 3.01)<sup>1</sup></td>
+<td>16(4.5%, 0.56)<sup>2</sup></td>
 <td>1(0.3%, 0.75)</td>
 <td>11(3.1%, 0.6)</td>
 <td>15(4.2%, 0.71)</td>
-<td>40(11.3%, 1.36)</td>
+<td>40(11.3%, 1.36)<sup>1</sup></td>
 <td>7(2%, 0.8)</td>
-<td>3(0.8%, 0.44)</td>
+<td>3(0.8%, 0.44)<sup>2</sup></td>
 <td>8(2.3%, 0.92)</td>
 <td>4.5%</td>
 </tr>
@@ -628,9 +624,9 @@ Table&nbsp;1: How the citations each technology cluster makes are distributed ac
 <td>Auctions &amp; Pricing</td>
 <td>3(4.9%, 1.25)</td>
 <td>0(0%, 0)</td>
-<td>35(57.4%, 126.62)</td>
-<td>0(0%, 0)</td>
-<td>8(13.1%, 5.7)</td>
+<td>35(57.4%, 126.62)<sup>1</sup></td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>8(13.1%, 5.7)<sup>1</sup></td>
 <td>1(1.6%, 0.37)</td>
 <td>0(0%, 0)</td>
 <td>2(3.3%, 0.45)</td>
@@ -647,17 +643,17 @@ Table&nbsp;1: How the citations each technology cluster makes are distributed ac
 <tr class="even">
 <td>Computers &amp; Software</td>
 <td>15(3.3%, 0.84)</td>
-<td>12(2.6%, 1.18)</td>
-<td>1(0.2%, 0.44)</td>
+<td>12(2.6%, 1.18)<sup>1</sup></td>
+<td>1(0.2%, 0.44)<sup>2</sup></td>
 <td>180(39.4%, 8.05)</td>
-<td>3(0.7%, 0.3)</td>
+<td>3(0.7%, 0.3)<sup>2</sup></td>
 <td>15(3.3%, 0.76)</td>
 <td>21(4.6%, 0.95)</td>
-<td>57(12.5%, 1.71)</td>
-<td>38(8.3%, 1.04)</td>
-<td>1(0.2%, 0.5)</td>
-<td>9(2%, 0.39)</td>
-<td>51(11.2%, 1.89)</td>
+<td>57(12.5%, 1.71)<sup>1</sup></td>
+<td>38(8.3%, 1.04)<sup>2</sup></td>
+<td>1(0.2%, 0.5)<sup>2</sup></td>
+<td>9(2%, 0.39)<sup>2</sup></td>
+<td>51(11.2%, 1.89)<sup>1</sup></td>
 <td>17(3.7%, 0.45)</td>
 <td>9(2%, 0.8)</td>
 <td>8(1.8%, 0.99)</td>
@@ -669,97 +665,97 @@ Table&nbsp;1: How the citations each technology cluster makes are distributed ac
 <td>8(2.5%, 0.64)</td>
 <td>8(2.5%, 1.14)</td>
 <td>2(0.6%, 1.32)</td>
-<td>9(2.8%, 0.57)</td>
+<td>9(2.8%, 0.57)<sup>2</sup></td>
 <td>138(42.7%, 18.57)</td>
 <td>9(2.8%, 0.65)</td>
-<td>30(9.3%, 1.91)</td>
+<td>30(9.3%, 1.91)<sup>1</sup></td>
 <td>26(8%, 1.1)</td>
 <td>17(5.3%, 0.67)</td>
 <td>3(0.9%, 2.25)</td>
 <td>14(4.3%, 0.83)</td>
 <td>11(3.4%, 0.57)</td>
-<td>31(9.6%, 1.16)</td>
+<td>31(9.6%, 1.16)<sup>1</sup></td>
 <td>9(2.8%, 1.11)</td>
 <td>6(1.9%, 1.04)</td>
-<td>2(0.6%, 0.24)</td>
+<td>2(0.6%, 0.24)<sup>2</sup></td>
 <td>3.8%</td>
 </tr>
 <tr class="even">
 <td>E-Commerce</td>
-<td>27(7.7%, 1.97)</td>
+<td>27(7.7%, 1.97)<sup>1</sup></td>
 <td>3(0.9%, 0.41)</td>
 <td>5(1.4%, 3.09)</td>
-<td>22(6.3%, 1.29)</td>
-<td>5(1.4%, 0.61)</td>
-<td>100(28.6%, 6.61)</td>
+<td>22(6.3%, 1.29)<sup>2</sup></td>
+<td>5(1.4%, 0.61)<sup>2</sup></td>
+<td>100(28.6%, 6.61)<sup>2</sup></td>
 <td>19(5.4%, 1.11)</td>
 <td>19(5.4%, 0.74)</td>
 <td>49(14%, 1.76)</td>
-<td>0(0%, 0)</td>
+<td>0(0%, 0)<sup>2</sup></td>
 <td>27(7.7%, 1.49)</td>
 <td>22(6.3%, 1.06)</td>
-<td>33(9.4%, 1.13)</td>
+<td>33(9.4%, 1.14)<sup>1</sup></td>
 <td>6(1.7%, 0.68)</td>
 <td>7(2%, 1.09)</td>
-<td>6(1.7%, 0.68)</td>
+<td>6(1.7%, 0.68)<sup>2</sup></td>
 <td>4.8%</td>
 </tr>
 <tr class="odd">
 <td>Gaming &amp; Digital Platforms</td>
 <td>18(3.6%, 0.92)</td>
 <td>8(1.6%, 0.73)</td>
-<td>2(0.4%, 0.88)</td>
+<td>2(0.4%, 0.88)<sup>2</sup></td>
 <td>33(6.5%, 1.33)</td>
-<td>9(1.8%, 0.78)</td>
-<td>37(7.3%, 1.69)</td>
-<td>162(32.1%, 6.6)</td>
-<td>16(3.2%, 0.44)</td>
+<td>9(1.8%, 0.78)<sup>2</sup></td>
+<td>37(7.3%, 1.69)<sup>1</sup></td>
+<td>162(32.1%, 6.6)<sup>2</sup></td>
+<td>16(3.2%, 0.44)<sup>2</sup></td>
 <td>38(7.5%, 0.94)</td>
 <td>5(1%, 2.5)</td>
 <td>30(6%, 1.16)</td>
 <td>34(6.7%, 1.13)</td>
-<td>79(15.7%, 1.89)</td>
-<td>19(3.8%, 1.51)</td>
-<td>7(1.4%, 0.77)</td>
-<td>7(1.4%, 0.56)</td>
+<td>79(15.7%, 1.9)<sup>1</sup></td>
+<td>19(3.8%, 1.51)<sup>1</sup></td>
+<td>7(1.4%, 0.77)<sup>2</sup></td>
+<td>7(1.4%, 0.56)<sup>2</sup></td>
 <td>4.5%</td>
 </tr>
 <tr class="even">
-<td>Generative AI</td>
-<td>113(8.9%, 2.28)</td>
-<td>105(8.2%, 3.73)</td>
-<td>3(0.2%, 0.44)</td>
-<td>65(5.1%, 1.04)</td>
-<td>13(1%, 0.43)</td>
-<td>32(2.5%, 0.58)</td>
-<td>37(2.9%, 0.6)</td>
-<td>549(43.1%, 5.91)</td>
+<td>(Generative) AI</td>
+<td>114(8.9%, 2.28)<sup>1</sup></td>
+<td>105(8.2%, 3.73)<sup>1</sup></td>
+<td>3(0.2%, 0.44)<sup>2</sup></td>
+<td>65(5.1%, 1.04)<sup>2</sup></td>
+<td>13(1%, 0.43)<sup>2</sup></td>
+<td>32(2.5%, 0.58)<sup>2</sup></td>
+<td>37(2.9%, 0.6)<sup>2</sup></td>
+<td>550(43.1%, 5.9)<sup>1</sup></td>
 <td>74(5.8%, 0.73)</td>
-<td>3(0.2%, 0.5)</td>
+<td>3(0.2%, 0.5)<sup>2</sup></td>
 <td>54(4.2%, 0.81)</td>
-<td>53(4.2%, 0.71)</td>
-<td>107(8.4%, 1.01)</td>
+<td>53(4.2%, 0.71)<sup>2</sup></td>
+<td>107(8.4%, 1.01)<sup>1</sup></td>
 <td>21(1.6%, 0.64)</td>
 <td>28(2.2%, 1.2)</td>
-<td>16(1.3%, 0.52)</td>
+<td>16(1.3%, 0.52)<sup>2</sup></td>
 <td>3.8%</td>
 </tr>
 <tr class="odd">
 <td>Internet &amp; Broadcasting</td>
 <td>24(4.8%, 1.23)</td>
 <td>8(1.6%, 0.73)</td>
-<td>3(0.6%, 1.32)</td>
-<td>38(7.6%, 1.55)</td>
+<td>3(0.6%, 1.32)<sup>2</sup></td>
+<td>38(7.6%, 1.55)<sup>2</sup></td>
 <td>9(1.8%, 0.78)</td>
 <td>31(6.2%, 1.43)</td>
-<td>31(6.2%, 1.27)</td>
+<td>31(6.2%, 1.27)<sup>1</sup></td>
 <td>28(5.6%, 0.77)</td>
 <td>189(37.9%, 4.76)</td>
 <td>4(0.8%, 2)</td>
 <td>30(6%, 1.16)</td>
-<td>23(4.6%, 0.78)</td>
-<td>36(7.2%, 0.87)</td>
-<td>23(4.6%, 1.83)</td>
+<td>23(4.6%, 0.78)<sup>2</sup></td>
+<td>36(7.2%, 0.87)<sup>1</sup></td>
+<td>23(4.6%, 1.83)<sup>1</sup></td>
 <td>7(1.4%, 0.77)</td>
 <td>15(3%, 1.2)</td>
 <td>4.1%</td>
@@ -771,14 +767,14 @@ Table&nbsp;1: How the citations each technology cluster makes are distributed ac
 <td>0(0%, 0)</td>
 <td>3(4.8%, 0.98)</td>
 <td>2(3.2%, 1.39)</td>
-<td>7(11.3%, 2.61)</td>
-<td>7(11.3%, 2.32)</td>
+<td>7(11.3%, 2.61)<sup>1</sup></td>
+<td>7(11.3%, 2.32)<sup>1</sup></td>
 <td>2(3.2%, 0.44)</td>
 <td>5(8.1%, 1.02)</td>
 <td>24(38.7%, 96.75)</td>
 <td>1(1.6%, 0.31)</td>
 <td>5(8.1%, 1.37)</td>
-<td>0(0%, 0)</td>
+<td>0(0%, 0)<sup>2</sup></td>
 <td>2(3.2%, 1.27)</td>
 <td>0(0%, 0)</td>
 <td>3(4.8%, 1.91)</td>
@@ -789,28 +785,28 @@ Table&nbsp;1: How the citations each technology cluster makes are distributed ac
 <td>17(4.5%, 1.15)</td>
 <td>4(1%, 0.45)</td>
 <td>4(1%, 2.21)</td>
-<td>15(3.9%, 0.8)</td>
-<td>5(1.3%, 0.57)</td>
+<td>15(3.9%, 0.8)<sup>2</sup></td>
+<td>5(1.3%, 0.57)<sup>2</sup></td>
 <td>16(4.2%, 0.97)</td>
 <td>21(5.5%, 1.13)</td>
 <td>17(4.5%, 0.62)</td>
 <td>43(11.3%, 1.42)</td>
-<td>1(0.3%, 0.75)</td>
+<td>1(0.3%, 0.75)<sup>2</sup></td>
 <td>134(35.1%, 6.78)</td>
 <td>27(7.1%, 1.2)</td>
-<td>49(12.8%, 1.54)</td>
-<td>16(4.2%, 1.67)</td>
+<td>49(12.8%, 1.55)<sup>1</sup></td>
+<td>16(4.2%, 1.67)<sup>1</sup></td>
 <td>8(2.1%, 1.15)</td>
-<td>5(1.3%, 0.52)</td>
+<td>5(1.3%, 0.52)<sup>2</sup></td>
 <td>4.3%</td>
 </tr>
 <tr class="even">
 <td>Smartphones &amp; Apps</td>
 <td>13(2.1%, 0.54)</td>
 <td>6(1%, 0.45)</td>
-<td>3(0.5%, 1.1)</td>
+<td>3(0.5%, 1.1)<sup>2</sup></td>
 <td>57(9.3%, 1.9)</td>
-<td>6(1%, 0.43)</td>
+<td>6(1%, 0.43)<sup>2</sup></td>
 <td>24(3.9%, 0.9)</td>
 <td>29(4.7%, 0.97)</td>
 <td>28(4.5%, 0.62)</td>
@@ -818,7 +814,7 @@ Table&nbsp;1: How the citations each technology cluster makes are distributed ac
 <td>3(0.5%, 1.25)</td>
 <td>37(6%, 1.16)</td>
 <td>244(39.6%, 6.69)</td>
-<td>54(8.8%, 1.06)</td>
+<td>54(8.8%, 1.06)<sup>1</sup></td>
 <td>9(1.5%, 0.6)</td>
 <td>18(2.9%, 1.59)</td>
 <td>28(4.5%, 1.8)</td>
@@ -828,72 +824,72 @@ Table&nbsp;1: How the citations each technology cluster makes are distributed ac
 <td>Social Media</td>
 <td>27(2.6%, 0.67)</td>
 <td>16(1.5%, 0.68)</td>
-<td>1(0.1%, 0.22)</td>
-<td>29(2.8%, 0.57)</td>
-<td>12(1.1%, 0.48)</td>
+<td>1(0.1%, 0.22)<sup>2</sup></td>
+<td>29(2.8%, 0.57)<sup>2</sup></td>
+<td>12(1.1%, 0.48)<sup>2</sup></td>
 <td>42(4%, 0.92)</td>
-<td>69(6.6%, 1.36)</td>
+<td>69(6.6%, 1.36)<sup>1</sup></td>
 <td>32(3%, 0.41)</td>
 <td>80(7.6%, 0.95)</td>
-<td>3(0.3%, 0.75)</td>
-<td>67(6.4%, 1.24)</td>
+<td>3(0.3%, 0.75)<sup>2</sup></td>
+<td>67(6.4%, 1.24)<sup>1</sup></td>
 <td>46(4.4%, 0.74)</td>
-<td>549(52.3%, 6.31)</td>
-<td>43(4.1%, 1.63)</td>
+<td>549(52.3%, 6.32)<sup>1</sup></td>
+<td>43(4.1%, 1.63)<sup>1</sup></td>
 <td>16(1.5%, 0.82)</td>
-<td>18(1.7%, 0.68)</td>
+<td>18(1.7%, 0.68)<sup>2</sup></td>
 <td>3.2%</td>
 </tr>
 <tr class="even">
 <td>Streaming, Audio &amp; Video</td>
 <td>7(2.4%, 0.61)</td>
 <td>4(1.4%, 0.64)</td>
-<td>1(0.3%, 0.66)</td>
-<td>13(4.5%, 0.92)</td>
+<td>1(0.3%, 0.66)<sup>2</sup></td>
+<td>13(4.5%, 0.92)<sup>2</sup></td>
 <td>7(2.4%, 1.04)</td>
 <td>13(4.5%, 1.04)</td>
-<td>21(7.3%, 1.5)</td>
+<td>21(7.3%, 1.5)<sup>1</sup></td>
 <td>12(4.2%, 0.58)</td>
-<td>47(16.4%, 2.06)</td>
+<td>47(16.4%, 2.06)<sup>1</sup></td>
 <td>1(0.3%, 0.75)</td>
 <td>15(5.2%, 1)</td>
 <td>14(4.9%, 0.83)</td>
-<td>36(12.5%, 1.51)</td>
-<td>79(27.5%, 10.94)</td>
+<td>36(12.5%, 1.51)<sup>1</sup></td>
+<td>79(27.5%, 10.94)<sup>2</sup></td>
 <td>12(4.2%, 2.3)</td>
-<td>5(1.7%, 0.68)</td>
+<td>5(1.7%, 0.68)<sup>2</sup></td>
 <td>4.8%</td>
 </tr>
 <tr class="odd">
 <td>Tracking &amp; Wearables</td>
 <td>5(2.5%, 0.64)</td>
 <td>3(1.5%, 0.68)</td>
-<td>0(0%, 0)</td>
-<td>7(3.5%, 0.72)</td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>7(3.5%, 0.72)<sup>2</sup></td>
 <td>4(2%, 0.87)</td>
 <td>3(1.5%, 0.35)</td>
 <td>5(2.5%, 0.51)</td>
 <td>11(5.4%, 0.74)</td>
 <td>9(4.5%, 0.56)</td>
-<td>0(0%, 0)</td>
-<td>16(7.9%, 1.53)</td>
-<td>20(9.9%, 1.67)</td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>16(7.9%, 1.53)<sup>1</sup></td>
+<td>20(9.9%, 1.67)<sup>1</sup></td>
 <td>13(6.4%, 0.77)</td>
 <td>4(2%, 0.8)</td>
-<td>93(46%, 25.18)</td>
+<td>93(46%, 25.18)<sup>1</sup></td>
 <td>9(4.5%, 1.8)</td>
 <td>3.6%</td>
 </tr>
 <tr class="even">
 <td>Other</td>
 <td>5(2.1%, 0.54)</td>
-<td>12(5%, 2.27)</td>
-<td>1(0.4%, 0.88)</td>
+<td>12(5%, 2.27)<sup>1</sup></td>
+<td>1(0.4%, 0.88)<sup>2</sup></td>
 <td>18(7.5%, 1.53)</td>
-<td>0(0%, 0)</td>
+<td>0(0%, 0)<sup>2</sup></td>
 <td>11(4.6%, 1.06)</td>
 <td>7(2.9%, 0.6)</td>
-<td>12(5%, 0.69)</td>
+<td>12(5%, 0.68)</td>
 <td>20(8.3%, 1.04)</td>
 <td>2(0.8%, 2)</td>
 <td>14(5.8%, 1.12)</td>
@@ -914,7 +910,7 @@ Table&nbsp;1: How the citations each technology cluster makes are distributed ac
 <div id="tbl-cluster-citation-cited-by" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cluster-citation-cited-by-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: How the citations each technology cluster receives are distributed across the clusters. Cells report the number of citations the row cluster <span class="math inline">\(i\)</span> receives from the column cluster <span class="math inline">\(j\)</span>, the cross-citation share <span class="math inline">\(CC_{ij}\)</span> of all citations <span class="math inline">\(i\)</span> receives within the corpus, and the ratio <span class="math inline">\(r_{ij} = CC_{ij} / \overline{CC}_j\)</span>, where <span class="math inline">\(\overline{CC}_j\)</span> is the average share the fifteen other clusters receive from <span class="math inline">\(j\)</span>. A ratio of 1 means the row cluster draws its usual amount from the column cluster and 2 twice as much. Rows sum to 100%. The diagonal reports citations within the row cluster itself.
+Table&nbsp;2: How the citations each technology cluster receives are distributed across the clusters. Cells report the number of citations the row cluster <span class="math inline">\(i\)</span> receives from the column cluster <span class="math inline">\(j\)</span>, the cross-citation share <span class="math inline">\(CC_{ij}\)</span> of all citations <span class="math inline">\(i\)</span> receives within the corpus, and the ratio <span class="math inline">\(r_{ij} = CC_{ij} / \overline{CC}_j\)</span>, where <span class="math inline">\(\overline{CC}_j\)</span> is the average share the fifteen other clusters receive from <span class="math inline">\(j\)</span>. A ratio of 1 means the row cluster draws its usual amount from the column cluster and 2 twice as much. Rows sum to 100%. The diagonal reports citations within the row cluster itself. Marks come from Dirichlet posteriors on each row’s citation profile: <sup>1</sup> a share whose 95% credible interval lies entirely above the baseline share, <sup>2</sup> one that lies entirely below it, blank no credible deviation. Off the diagonal the baseline is the share of the column cluster among all corpus papers published from each of the row cluster’s papers onwards, averaged over those papers, so it reflects who could cite the row given publication years; on the diagonal it is the average self-citation share of the other clusters.
 </figcaption>
 <div aria-describedby="tbl-cluster-citation-cited-by-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -948,7 +944,7 @@ Table&nbsp;2: How the citations each technology cluster receives are distributed
 <th>Crypto &amp; Fintech</th>
 <th>E-Commerce</th>
 <th>Gaming &amp; Digital Platforms</th>
-<th>Generative AI</th>
+<th>(Generative) AI</th>
 <th>Internet &amp; Broadcasting</th>
 <th>Mobility &amp; Transportation</th>
 <th>Search &amp; Advertising</th>
@@ -963,41 +959,41 @@ Table&nbsp;2: How the citations each technology cluster receives are distributed
 <tbody>
 <tr class="odd">
 <td>Algorithms &amp; Recommendations</td>
-<td>185(38.1%, 9.74)</td>
+<td>186(38.1%, 9.72)</td>
 <td>18(3.7%, 1.29)</td>
 <td>3(0.6%, 1.3)</td>
 <td>15(3.1%, 0.79)</td>
-<td>8(1.6%, 0.56)</td>
-<td>27(5.6%, 1.57)</td>
-<td>18(3.7%, 0.71)</td>
-<td>113(23.3%, 2.08)</td>
-<td>24(4.9%, 0.92)</td>
-<td>1(0.2%, 0.33)</td>
+<td>8(1.6%, 0.56)<sup>2</sup></td>
+<td>27(5.5%, 1.54)<sup>1</sup></td>
+<td>18(3.7%, 0.71)<sup>2</sup></td>
+<td>114(23.4%, 2.09)<sup>1</sup></td>
+<td>24(4.9%, 0.92)<sup>1</sup></td>
+<td>1(0.2%, 0.33)<sup>2</sup></td>
 <td>17(3.5%, 0.95)</td>
-<td>13(2.7%, 0.46)</td>
-<td>27(5.6%, 0.69)</td>
-<td>7(1.4%, 0.48)</td>
-<td>5(1%, 0.67)</td>
-<td>5(1%, 0.41)</td>
+<td>13(2.7%, 0.46)<sup>2</sup></td>
+<td>27(5.5%, 0.68)</td>
+<td>7(1.4%, 0.48)<sup>2</sup></td>
+<td>5(1%, 0.67)<sup>2</sup></td>
+<td>5(1%, 0.41)<sup>2</sup></td>
 <td>4.1%</td>
 </tr>
 <tr class="even">
 <td>AR, VR &amp; Robots</td>
 <td>19(5.9%, 1.51)</td>
 <td>113(35.2%, 12.28)</td>
-<td>0(0%, 0)</td>
+<td>0(0%, 0)<sup>2</sup></td>
 <td>12(3.7%, 0.94)</td>
-<td>8(2.5%, 0.88)</td>
+<td>8(2.5%, 0.88)<sup>2</sup></td>
 <td>3(0.9%, 0.25)</td>
-<td>8(2.5%, 0.48)</td>
-<td>105(32.7%, 2.92)</td>
+<td>8(2.5%, 0.48)<sup>2</sup></td>
+<td>105(32.7%, 2.92)<sup>1</sup></td>
 <td>8(2.5%, 0.47)</td>
-<td>0(0%, 0)</td>
-<td>4(1.2%, 0.33)</td>
-<td>6(1.9%, 0.32)</td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>4(1.2%, 0.33)<sup>2</sup></td>
+<td>6(1.9%, 0.32)<sup>2</sup></td>
 <td>16(5%, 0.62)</td>
-<td>4(1.2%, 0.42)</td>
-<td>3(0.9%, 0.6)</td>
+<td>4(1.2%, 0.42)<sup>2</sup></td>
+<td>3(0.9%, 0.6)<sup>2</sup></td>
 <td>12(3.7%, 1.5)</td>
 <td>4.3%</td>
 </tr>
@@ -1005,10 +1001,10 @@ Table&nbsp;2: How the citations each technology cluster receives are distributed
 <td>Auctions &amp; Pricing</td>
 <td>5(7.6%, 1.94)</td>
 <td>0(0%, 0)</td>
-<td>35(53%, 115.22)</td>
+<td>35(53%, 115.22)<sup>1</sup></td>
 <td>1(1.5%, 0.38)</td>
 <td>2(3%, 1.05)</td>
-<td>5(7.6%, 2.13)</td>
+<td>5(7.6%, 2.13)<sup>1</sup></td>
 <td>2(3%, 0.58)</td>
 <td>3(4.5%, 0.4)</td>
 <td>3(4.5%, 0.84)</td>
@@ -1025,19 +1021,19 @@ Table&nbsp;2: How the citations each technology cluster receives are distributed
 <td>Computers &amp; Software</td>
 <td>22(4.2%, 1.07)</td>
 <td>14(2.7%, 0.94)</td>
-<td>0(0%, 0)</td>
-<td>180(34.3%, 8.75)</td>
-<td>9(1.7%, 0.6)</td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>180(34.3%, 8.75)<sup>2</sup></td>
+<td>9(1.7%, 0.6)<sup>2</sup></td>
 <td>22(4.2%, 1.18)</td>
 <td>33(6.3%, 1.21)</td>
 <td>65(12.4%, 1.11)</td>
-<td>38(7.2%, 1.35)</td>
+<td>38(7.2%, 1.35)<sup>1</sup></td>
 <td>3(0.6%, 1)</td>
 <td>15(2.9%, 0.79)</td>
-<td>57(10.9%, 1.86)</td>
-<td>29(5.5%, 0.68)</td>
+<td>57(10.9%, 1.86)<sup>1</sup></td>
+<td>29(5.5%, 0.68)<sup>2</sup></td>
 <td>13(2.5%, 0.87)</td>
-<td>7(1.3%, 0.87)</td>
+<td>7(1.3%, 0.87)<sup>2</sup></td>
 <td>18(3.4%, 1.38)</td>
 <td>4.4%</td>
 </tr>
@@ -1045,20 +1041,20 @@ Table&nbsp;2: How the citations each technology cluster receives are distributed
 <td>Crypto &amp; Fintech</td>
 <td>9(3.8%, 0.97)</td>
 <td>6(2.5%, 0.87)</td>
-<td>8(3.4%, 7.39)</td>
+<td>8(3.4%, 7.39)<sup>1</sup></td>
 <td>3(1.3%, 0.33)</td>
-<td>138(58.5%, 20.55)</td>
+<td>138(58.5%, 20.55)<sup>1</sup></td>
 <td>5(2.1%, 0.59)</td>
 <td>9(3.8%, 0.73)</td>
-<td>13(5.5%, 0.49)</td>
-<td>9(3.8%, 0.71)</td>
+<td>13(5.5%, 0.49)<sup>2</sup></td>
+<td>9(3.8%, 0.71)<sup>1</sup></td>
 <td>2(0.8%, 1.33)</td>
 <td>5(2.1%, 0.57)</td>
 <td>6(2.5%, 0.43)</td>
 <td>12(5.1%, 0.63)</td>
 <td>7(3%, 1.04)</td>
 <td>4(1.7%, 1.13)</td>
-<td>0(0%, 0)</td>
+<td>0(0%, 0)<sup>2</sup></td>
 <td>2.8%</td>
 </tr>
 <tr class="even">
@@ -1067,77 +1063,77 @@ Table&nbsp;2: How the citations each technology cluster receives are distributed
 <td>17(4.6%, 1.6)</td>
 <td>1(0.3%, 0.65)</td>
 <td>15(4.1%, 1.05)</td>
-<td>9(2.4%, 0.84)</td>
-<td>100(27.1%, 7.6)</td>
-<td>37(10%, 1.92)</td>
-<td>32(8.7%, 0.78)</td>
-<td>31(8.4%, 1.58)</td>
+<td>9(2.4%, 0.84)<sup>2</sup></td>
+<td>100(27.1%, 7.61)<sup>2</sup></td>
+<td>37(10%, 1.92)<sup>1</sup></td>
+<td>32(8.7%, 0.78)<sup>2</sup></td>
+<td>31(8.4%, 1.58)<sup>1</sup></td>
 <td>7(1.9%, 3.17)</td>
 <td>16(4.3%, 1.17)</td>
 <td>24(6.5%, 1.11)</td>
-<td>42(11.4%, 1.4)</td>
+<td>42(11.4%, 1.41)</td>
 <td>13(3.5%, 1.21)</td>
-<td>3(0.8%, 0.53)</td>
+<td>3(0.8%, 0.53)<sup>2</sup></td>
 <td>11(3%, 1.22)</td>
 <td>4.9%</td>
 </tr>
 <tr class="odd">
 <td>Gaming &amp; Digital Platforms</td>
-<td>8(1.7%, 0.43)</td>
-<td>7(1.5%, 0.52)</td>
-<td>0(0%, 0)</td>
+<td>8(1.7%, 0.43)<sup>2</sup></td>
+<td>7(1.5%, 0.52)<sup>2</sup></td>
+<td>0(0%, 0)<sup>2</sup></td>
 <td>21(4.4%, 1.12)</td>
 <td>30(6.3%, 2.21)</td>
 <td>19(4%, 1.12)</td>
-<td>162(34.2%, 6.57)</td>
-<td>37(7.8%, 0.7)</td>
-<td>31(6.5%, 1.22)</td>
+<td>162(34.2%, 6.57)<sup>2</sup></td>
+<td>37(7.8%, 0.7)<sup>2</sup></td>
+<td>31(6.5%, 1.22)<sup>1</sup></td>
 <td>7(1.5%, 2.5)</td>
 <td>21(4.4%, 1.2)</td>
 <td>29(6.1%, 1.04)</td>
-<td>69(14.6%, 1.8)</td>
+<td>69(14.6%, 1.8)<sup>1</sup></td>
 <td>21(4.4%, 1.52)</td>
-<td>5(1.1%, 0.73)</td>
-<td>7(1.5%, 0.61)</td>
+<td>5(1.1%, 0.73)<sup>2</sup></td>
+<td>7(1.5%, 0.61)<sup>2</sup></td>
 <td>4.4%</td>
 </tr>
 <tr class="even">
-<td>Generative AI</td>
-<td>89(9.1%, 2.33)</td>
-<td>78(8%, 2.79)</td>
+<td>(Generative) AI</td>
+<td>90(9.2%, 2.35)<sup>1</sup></td>
+<td>78(8%, 2.79)<sup>1</sup></td>
 <td>2(0.2%, 0.43)</td>
-<td>57(5.8%, 1.48)</td>
-<td>26(2.7%, 0.95)</td>
+<td>57(5.8%, 1.48)<sup>1</sup></td>
+<td>26(2.7%, 0.95)<sup>2</sup></td>
 <td>19(1.9%, 0.53)</td>
-<td>16(1.6%, 0.31)</td>
-<td>549(56.1%, 5.01)</td>
-<td>28(2.9%, 0.54)</td>
-<td>2(0.2%, 0.33)</td>
-<td>17(1.7%, 0.46)</td>
+<td>16(1.6%, 0.31)<sup>2</sup></td>
+<td>550(56.1%, 5.01)<sup>1</sup></td>
+<td>28(2.9%, 0.54)<sup>1</sup></td>
+<td>2(0.2%, 0.33)<sup>2</sup></td>
+<td>17(1.7%, 0.46)<sup>2</sup></td>
 <td>28(2.9%, 0.5)</td>
-<td>32(3.3%, 0.41)</td>
-<td>12(1.2%, 0.42)</td>
-<td>11(1.1%, 0.73)</td>
-<td>12(1.2%, 0.49)</td>
+<td>32(3.3%, 0.41)<sup>2</sup></td>
+<td>12(1.2%, 0.42)<sup>2</sup></td>
+<td>11(1.1%, 0.73)<sup>2</sup></td>
+<td>12(1.2%, 0.49)<sup>2</sup></td>
 <td>2.9%</td>
 </tr>
 <tr class="odd">
 <td>Internet &amp; Broadcasting</td>
-<td>17(2.4%, 0.61)</td>
+<td>17(2.4%, 0.61)<sup>2</sup></td>
 <td>16(2.3%, 0.8)</td>
 <td>3(0.4%, 0.87)</td>
 <td>38(5.4%, 1.38)</td>
-<td>17(2.4%, 0.84)</td>
-<td>49(7%, 1.96)</td>
+<td>17(2.4%, 0.84)<sup>2</sup></td>
+<td>49(7%, 1.97)<sup>1</sup></td>
 <td>38(5.4%, 1.04)</td>
 <td>74(10.5%, 0.94)</td>
-<td>189(26.9%, 5.04)</td>
+<td>189(26.9%, 5.04)<sup>2</sup></td>
 <td>5(0.7%, 1.17)</td>
-<td>43(6.1%, 1.66)</td>
-<td>57(8.1%, 1.39)</td>
-<td>80(11.4%, 1.4)</td>
-<td>47(6.7%, 2.32)</td>
-<td>9(1.3%, 0.87)</td>
+<td>43(6.1%, 1.66)<sup>1</sup></td>
+<td>57(8.1%, 1.39)<sup>1</sup></td>
+<td>80(11.4%, 1.41)<sup>1</sup></td>
+<td>47(6.7%, 2.32)<sup>1</sup></td>
+<td>9(1.3%, 0.87)<sup>2</sup></td>
 <td>20(2.8%, 1.14)</td>
 <td>4.9%</td>
 </tr>
@@ -1166,16 +1162,16 @@ Table&nbsp;2: How the citations each technology cluster receives are distributed
 <td>30(6.1%, 1.56)</td>
 <td>11(2.2%, 0.77)</td>
 <td>3(0.6%, 1.3)</td>
-<td>9(1.8%, 0.46)</td>
-<td>14(2.8%, 0.98)</td>
-<td>27(5.5%, 1.54)</td>
+<td>9(1.8%, 0.46)<sup>2</sup></td>
+<td>14(2.8%, 0.98)<sup>2</sup></td>
+<td>27(5.5%, 1.54)<sup>1</sup></td>
 <td>30(6.1%, 1.17)</td>
-<td>54(11%, 0.98)</td>
-<td>30(6.1%, 1.14)</td>
-<td>1(0.2%, 0.33)</td>
-<td>134(27.2%, 7.4)</td>
+<td>54(11%, 0.98)<sup>2</sup></td>
+<td>30(6.1%, 1.14)<sup>1</sup></td>
+<td>1(0.2%, 0.33)<sup>2</sup></td>
+<td>134(27.2%, 7.4)<sup>2</sup></td>
 <td>37(7.5%, 1.28)</td>
-<td>67(13.6%, 1.67)</td>
+<td>67(13.6%, 1.68)<sup>1</sup></td>
 <td>15(3%, 1.04)</td>
 <td>16(3.3%, 2.2)</td>
 <td>14(2.8%, 1.14)</td>
@@ -1183,14 +1179,14 @@ Table&nbsp;2: How the citations each technology cluster receives are distributed
 </tr>
 <tr class="even">
 <td>Smartphones &amp; Apps</td>
-<td>8(1.3%, 0.33)</td>
+<td>8(1.3%, 0.33)<sup>2</sup></td>
 <td>15(2.5%, 0.87)</td>
 <td>2(0.3%, 0.65)</td>
-<td>51(8.6%, 2.19)</td>
-<td>11(1.8%, 0.63)</td>
+<td>51(8.6%, 2.19)<sup>1</sup></td>
+<td>11(1.8%, 0.63)<sup>2</sup></td>
 <td>22(3.7%, 1.04)</td>
 <td>34(5.7%, 1.09)</td>
-<td>53(8.9%, 0.8)</td>
+<td>53(8.9%, 0.79)<sup>2</sup></td>
 <td>23(3.9%, 0.73)</td>
 <td>5(0.8%, 1.33)</td>
 <td>27(4.5%, 1.23)</td>
@@ -1206,37 +1202,37 @@ Table&nbsp;2: How the citations each technology cluster receives are distributed
 <td>33(3%, 0.77)</td>
 <td>40(3.6%, 1.26)</td>
 <td>2(0.2%, 0.43)</td>
-<td>17(1.5%, 0.38)</td>
-<td>31(2.8%, 0.98)</td>
+<td>17(1.5%, 0.38)<sup>2</sup></td>
+<td>31(2.8%, 0.98)<sup>2</sup></td>
 <td>33(3%, 0.84)</td>
-<td>79(7.2%, 1.38)</td>
+<td>79(7.2%, 1.38)<sup>1</sup></td>
 <td>107(9.7%, 0.87)</td>
-<td>36(3.3%, 0.62)</td>
-<td>0(0%, 0)</td>
-<td>49(4.5%, 1.23)</td>
+<td>36(3.3%, 0.62)<sup>1</sup></td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>49(4.5%, 1.23)<sup>1</sup></td>
 <td>54(4.9%, 0.84)</td>
-<td>549(50%, 6.16)</td>
+<td>549(50%, 6.16)<sup>1</sup></td>
 <td>36(3.3%, 1.14)</td>
-<td>13(1.2%, 0.8)</td>
+<td>13(1.2%, 0.8)<sup>2</sup></td>
 <td>19(1.7%, 0.69)</td>
 <td>3.3%</td>
 </tr>
 <tr class="even">
 <td>Streaming, Audio &amp; Video</td>
-<td>4(1.5%, 0.38)</td>
+<td>4(1.5%, 0.38)<sup>2</sup></td>
 <td>7(2.7%, 0.94)</td>
-<td>0(0%, 0)</td>
+<td>0(0%, 0)<sup>2</sup></td>
 <td>9(3.5%, 0.89)</td>
 <td>9(3.5%, 1.23)</td>
-<td>6(2.3%, 0.64)</td>
+<td>6(2.3%, 0.65)</td>
 <td>19(7.3%, 1.4)</td>
-<td>21(8.1%, 0.72)</td>
-<td>23(8.9%, 1.67)</td>
+<td>21(8.1%, 0.72)<sup>2</sup></td>
+<td>23(8.9%, 1.67)<sup>1</sup></td>
 <td>2(0.8%, 1.33)</td>
 <td>16(6.2%, 1.69)</td>
 <td>9(3.5%, 0.6)</td>
-<td>43(16.6%, 2.04)</td>
-<td>79(30.5%, 10.57)</td>
+<td>43(16.6%, 2.05)<sup>1</sup></td>
+<td>79(30.5%, 10.57)<sup>2</sup></td>
 <td>4(1.5%, 1)</td>
 <td>8(3.1%, 1.26)</td>
 <td>4.6%</td>
@@ -1245,16 +1241,16 @@ Table&nbsp;2: How the citations each technology cluster receives are distributed
 <td>Tracking &amp; Wearables</td>
 <td>7(3.1%, 0.79)</td>
 <td>3(1.3%, 0.45)</td>
-<td>0(0%, 0)</td>
+<td>0(0%, 0)<sup>2</sup></td>
 <td>8(3.5%, 0.89)</td>
 <td>6(2.6%, 0.91)</td>
 <td>7(3.1%, 0.87)</td>
 <td>7(3.1%, 0.6)</td>
 <td>28(12.2%, 1.09)</td>
 <td>7(3.1%, 0.58)</td>
-<td>0(0%, 0)</td>
+<td>0(0%, 0)<sup>2</sup></td>
 <td>8(3.5%, 0.95)</td>
-<td>18(7.9%, 1.35)</td>
+<td>18(7.9%, 1.35)<sup>1</sup></td>
 <td>16(7%, 0.86)</td>
 <td>12(5.2%, 1.8)</td>
 <td>93(40.6%, 27.07)</td>
@@ -1266,15 +1262,15 @@ Table&nbsp;2: How the citations each technology cluster receives are distributed
 <td>5(2.2%, 0.56)</td>
 <td>8(3.5%, 1.22)</td>
 <td>2(0.9%, 1.96)</td>
-<td>20(8.7%, 2.22)</td>
-<td>2(0.9%, 0.32)</td>
+<td>20(8.7%, 2.22)<sup>1</sup></td>
+<td>2(0.9%, 0.32)<sup>2</sup></td>
 <td>6(2.6%, 0.73)</td>
-<td>7(3%, 0.58)</td>
-<td>16(6.9%, 0.62)</td>
-<td>15(6.5%, 1.22)</td>
+<td>7(3%, 0.58)<sup>2</sup></td>
+<td>16(6.9%, 0.62)<sup>2</sup></td>
+<td>15(6.5%, 1.22)<sup>1</sup></td>
 <td>3(1.3%, 2.17)</td>
 <td>5(2.2%, 0.6)</td>
-<td>28(12.1%, 2.07)</td>
+<td>28(12.1%, 2.07)<sup>1</sup></td>
 <td>18(7.8%, 0.96)</td>
 <td>5(2.2%, 0.76)</td>
 <td>9(3.9%, 2.6)</td>

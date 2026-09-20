@@ -418,16 +418,12 @@ window.Quarto = {
 <span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../99_writing/main.html" aria-current="page"> 
-<span class="menu-text">Manuscript</span></a>
+    <a class="nav-link" href="../99_writing/slides_index.html"> 
+<span class="menu-text">Slides</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../99_writing/appendix_index.html"> 
 <span class="menu-text">Appendix</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../99_writing/slides_index.html"> 
-<span class="menu-text">Slides</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -629,131 +625,192 @@ Figure&nbsp;2: Semantic map visualizing all 901 technologies through further red
 <div id="tbl-peaks" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-peaks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Total mentions, peak year and peak share of each technology cluster within consumer-technology research, estimated with a negative-binomial generalized additive model of yearly mentions on a smooth of publication year, offset by all technology mentions of that year. Mentions are the cluster’s total mentions across 2000-2026, counted once per article and technology. The peak is the maximum of the fitted curve; a peak in the first or last year of the observation period indicates a cluster that declines or rises throughout rather than one that crests within it. The <span class="math inline">\(p\)</span>-value tests the smooth against a flat trend. The fitted curves for all clusters are shown in Appendix B.
+Table&nbsp;1: Total mentions, peak year, observed and fitted share at the peak, effective degrees of freedom and <span class="math inline">\(p\)</span>-values of each technology cluster within consumer-technology research, estimated with one negative-binomial generalized additive model per cluster of yearly mentions on a smooth of publication year (k = 10), offset by all technology mentions of that year. Mentions are the cluster’s total mentions across 2000-2026. The peak is the maximum of the fitted curve. The <span class="math inline">\(p\)</span>-value tests the smooth against a flat trend; <span class="math inline">\(p\)</span><sub>BH</sub> is Benjamini-Hochberg adjusted across the 16 clusters.
 </figcaption>
 <div aria-describedby="tbl-peaks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Technology cluster</th>
+<th>edf</th>
+<th style="text-align: right;">Technology cluster</th>
 <th style="text-align: right;">Mentions</th>
 <th style="text-align: right;">Peak year</th>
-<th style="text-align: right;">Peak share</th>
+<th style="text-align: right;">Observed share</th>
+<th style="text-align: right;">Fitted share</th>
 <th style="text-align: right;"><em>p</em></th>
+<th style="text-align: right;"><em>p</em><sub>BH</sub></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Algorithms &amp; Recommendations</td>
+<td>1.30</td>
+<td style="text-align: right;">Algorithms &amp; Recommendations</td>
 <td style="text-align: right;">103</td>
 <td style="text-align: right;">2026</td>
+<td style="text-align: right;">4.2%</td>
 <td style="text-align: right;">7.2%</td>
-<td style="text-align: right;">.604</td>
+<td style="text-align: right;">.605</td>
+<td style="text-align: right;">.646</td>
 </tr>
 <tr class="even">
-<td>AR, VR &amp; Robots</td>
+<td>1.00</td>
+<td style="text-align: right;">AR, VR &amp; Robots</td>
 <td style="text-align: right;">54</td>
 <td style="text-align: right;">2026</td>
+<td style="text-align: right;">7.6%</td>
 <td style="text-align: right;">6.0%</td>
 <td style="text-align: right;">&lt; .001</td>
+<td style="text-align: right;">.003</td>
 </tr>
 <tr class="odd">
-<td>Auctions &amp; Pricing</td>
+<td>2.94</td>
+<td style="text-align: right;">Auctions &amp; Pricing</td>
 <td style="text-align: right;">26</td>
 <td style="text-align: right;">2007</td>
+<td style="text-align: right;">10.7%</td>
 <td style="text-align: right;">5.4%</td>
-<td style="text-align: right;">.004</td>
+<td style="text-align: right;">.006</td>
+<td style="text-align: right;">.011</td>
 </tr>
 <tr class="even">
-<td>Computers &amp; Software</td>
+<td>1.77</td>
+<td style="text-align: right;">Computers &amp; Software</td>
 <td style="text-align: right;">134</td>
 <td style="text-align: right;">2000</td>
+<td style="text-align: right;">19.2%</td>
 <td style="text-align: right;">21.5%</td>
 <td style="text-align: right;">&lt; .001</td>
+<td style="text-align: right;">&lt; .001</td>
 </tr>
 <tr class="odd">
-<td>Crypto &amp; Fintech</td>
+<td>2.16</td>
+<td style="text-align: right;">Crypto &amp; Fintech</td>
 <td style="text-align: right;">95</td>
 <td style="text-align: right;">2026</td>
-<td style="text-align: right;">10.5%</td>
-<td style="text-align: right;">.034</td>
+<td style="text-align: right;">7.6%</td>
+<td style="text-align: right;">10.4%</td>
+<td style="text-align: right;">.038</td>
+<td style="text-align: right;">.061</td>
 </tr>
 <tr class="even">
-<td>E-Commerce</td>
+<td>1.00</td>
+<td style="text-align: right;">E-Commerce</td>
 <td style="text-align: right;">81</td>
 <td style="text-align: right;">2000</td>
+<td style="text-align: right;">15.4%</td>
 <td style="text-align: right;">11.6%</td>
 <td style="text-align: right;">.001</td>
+<td style="text-align: right;">.003</td>
 </tr>
 <tr class="odd">
-<td>Gaming &amp; Digital Platforms</td>
+<td>1.00</td>
+<td style="text-align: right;">Gaming &amp; Digital Platforms</td>
 <td style="text-align: right;">106</td>
 <td style="text-align: right;">2026</td>
+<td style="text-align: right;">7.6%</td>
 <td style="text-align: right;">9.4%</td>
 <td style="text-align: right;">.002</td>
+<td style="text-align: right;">.006</td>
 </tr>
 <tr class="even">
-<td>Generative AI</td>
+<td>2.72</td>
+<td style="text-align: right;">(Generative) AI</td>
 <td style="text-align: right;">225</td>
 <td style="text-align: right;">2026</td>
-<td style="text-align: right;">30.2%</td>
+<td style="text-align: right;">28.6%</td>
+<td style="text-align: right;">29.7%</td>
+<td style="text-align: right;">&lt; .001</td>
 <td style="text-align: right;">&lt; .001</td>
 </tr>
 <tr class="odd">
-<td>Internet &amp; Broadcasting</td>
+<td>1.00</td>
+<td style="text-align: right;">Internet &amp; Broadcasting</td>
 <td style="text-align: right;">127</td>
 <td style="text-align: right;">2000</td>
+<td style="text-align: right;">23.1%</td>
 <td style="text-align: right;">29.4%</td>
+<td style="text-align: right;">&lt; .001</td>
 <td style="text-align: right;">&lt; .001</td>
 </tr>
 <tr class="even">
-<td>Mobility &amp; Transportation</td>
+<td>1.00</td>
+<td style="text-align: right;">Mobility &amp; Transportation</td>
 <td style="text-align: right;">27</td>
 <td style="text-align: right;">2000</td>
+<td style="text-align: right;">3.8%</td>
 <td style="text-align: right;">1.8%</td>
+<td style="text-align: right;">.942</td>
 <td style="text-align: right;">.942</td>
 </tr>
 <tr class="odd">
-<td>Search &amp; Advertising</td>
+<td>1.00</td>
+<td style="text-align: right;">Search &amp; Advertising</td>
 <td style="text-align: right;">99</td>
 <td style="text-align: right;">2000</td>
+<td style="text-align: right;">3.8%</td>
 <td style="text-align: right;">12.2%</td>
 <td style="text-align: right;">.012</td>
+<td style="text-align: right;">.022</td>
 </tr>
 <tr class="even">
-<td>Smartphones &amp; Apps</td>
+<td>3.35</td>
+<td style="text-align: right;">Smartphones &amp; Apps</td>
 <td style="text-align: right;">126</td>
-<td style="text-align: right;">2017</td>
-<td style="text-align: right;">11.9%</td>
-<td style="text-align: right;">.041</td>
+<td style="text-align: right;">2018</td>
+<td style="text-align: right;">15.6%</td>
+<td style="text-align: right;">12.4%</td>
+<td style="text-align: right;">.048</td>
+<td style="text-align: right;">.069</td>
 </tr>
 <tr class="odd">
-<td>Social Media</td>
+<td>4.55</td>
+<td style="text-align: right;">Social Media</td>
 <td style="text-align: right;">182</td>
-<td style="text-align: right;">2016</td>
-<td style="text-align: right;">24.1%</td>
+<td style="text-align: right;">2017</td>
+<td style="text-align: right;">31.9%</td>
+<td style="text-align: right;">24.4%</td>
+<td style="text-align: right;">&lt; .001</td>
 <td style="text-align: right;">&lt; .001</td>
 </tr>
 <tr class="even">
-<td>Streaming, Audio &amp; Video</td>
+<td>1.00</td>
+<td style="text-align: right;">Streaming, Audio &amp; Video</td>
 <td style="text-align: right;">57</td>
 <td style="text-align: right;">2026</td>
+<td style="text-align: right;">6.7%</td>
 <td style="text-align: right;">4.6%</td>
 <td style="text-align: right;">.153</td>
+<td style="text-align: right;">.204</td>
 </tr>
 <tr class="odd">
-<td>Tracking &amp; Wearables</td>
+<td>2.00</td>
+<td style="text-align: right;">Tracking &amp; Wearables</td>
 <td style="text-align: right;">56</td>
 <td style="text-align: right;">2014</td>
+<td style="text-align: right;">6.2%</td>
 <td style="text-align: right;">4.5%</td>
-<td style="text-align: right;">.388</td>
+<td style="text-align: right;">.413</td>
+<td style="text-align: right;">.508</td>
 </tr>
 <tr class="even">
-<td>Other</td>
+<td>1.84</td>
+<td style="text-align: right;">Other</td>
 <td style="text-align: right;">85</td>
 <td style="text-align: right;">2014</td>
+<td style="text-align: right;">31.2%</td>
 <td style="text-align: right;">7.3%</td>
-<td style="text-align: right;">.440</td>
+<td style="text-align: right;">.458</td>
+<td style="text-align: right;">.523</td>
 </tr>
 </tbody>
 </table>
@@ -931,23 +988,27 @@ Figure&nbsp;4: Academic and media attention by technology cluster, 2008-2026. Ea
 <div id="tbl-coverage-gap" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-coverage-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3: Academic and media attention to consumer-technology clusters, 2008–2026. Academic share and media share are the pooled share of attention that each cluster received within all consumer-technology mentions of its respective corpus, pooled across the whole period rather than averaged over years. The gap is the academic share minus the media share, in percentage points. The ratio divides each cluster’s share of all academic technology mentions by its share of all media technology mentions; values above 1 indicate a cluster that draws more academic than media attention and values below 1 the reverse. For each cluster we draw a Dirichlet posterior of the academic share vector, using the media distribution as the baseline; Credibly higher marks a cluster whose 95% credible interval for the academic-to-media ratio lies entirely above 1, Credibly lower one that lies entirely below it.
+Table&nbsp;3: Academic and media attention to consumer-technology clusters, 2008–2026. Academic share and media share are the pooled share of attention that each cluster received within all consumer-technology mentions of its respective corpus, pooled across the whole period rather than averaged over years. The gap is the academic share minus the media share, in percentage points. Academic rank and media rank order the clusters by their pooled share within each corpus, with 1 the largest share and tied shares given their average rank. The ratio divides each cluster’s share of all academic technology mentions by its share of all media technology mentions; values above 1 indicate a cluster that draws more academic than media attention and values below 1 the reverse. For each cluster we draw a Dirichlet posterior of the academic share vector, using the media distribution as the baseline; Credibly higher marks a cluster whose 95% credible interval for the academic-to-media ratio lies entirely above 1, Credibly lower one that lies entirely below it.
 </figcaption>
 <div aria-describedby="tbl-coverage-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
+<col style="width: 9%">
 <col style="width: 12%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 20%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 15%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Technology cluster</th>
 <th style="text-align: right;">Academic share</th>
+<th style="text-align: right;">Academic rank</th>
 <th style="text-align: right;">Media share</th>
+<th style="text-align: right;">Media rank</th>
 <th style="text-align: right;">Gap</th>
 <th style="text-align: right;">Ratio</th>
 <th style="text-align: center;">Mark</th>
@@ -955,25 +1016,31 @@ Table&nbsp;3: Academic and media attention to consumer-technology clusters, 2008
 </thead>
 <tbody>
 <tr class="odd">
-<td>AR, VR &amp; Robots</td>
-<td style="text-align: right;">3.72%</td>
-<td style="text-align: right;">2.18%</td>
-<td style="text-align: right;">+1.5</td>
-<td style="text-align: right;">1.70</td>
+<td>Algorithms &amp; Recommendations</td>
+<td style="text-align: right;">6.58%</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1.32%</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">+5.3</td>
+<td style="text-align: right;">4.97</td>
 <td style="text-align: center;">Credibly higher</td>
 </tr>
 <tr class="even">
-<td>Algorithms &amp; Recommendations</td>
-<td style="text-align: right;">6.58%</td>
-<td style="text-align: right;">1.32%</td>
-<td style="text-align: right;">+5.3</td>
-<td style="text-align: right;">4.97</td>
+<td>AR, VR &amp; Robots</td>
+<td style="text-align: right;">3.72%</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">2.18%</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">+1.5</td>
+<td style="text-align: right;">1.70</td>
 <td style="text-align: center;">Credibly higher</td>
 </tr>
 <tr class="odd">
 <td>Auctions &amp; Pricing</td>
 <td style="text-align: right;">1.29%</td>
+<td style="text-align: right;">16</td>
 <td style="text-align: right;">0.02%</td>
+<td style="text-align: right;">16</td>
 <td style="text-align: right;">+1.3</td>
 <td style="text-align: right;">57.10</td>
 <td style="text-align: center;">Credibly higher</td>
@@ -981,7 +1048,9 @@ Table&nbsp;3: Academic and media attention to consumer-technology clusters, 2008
 <tr class="even">
 <td>Computers &amp; Software</td>
 <td style="text-align: right;">7.01%</td>
+<td style="text-align: right;">5</td>
 <td style="text-align: right;">9.21%</td>
+<td style="text-align: right;">5</td>
 <td style="text-align: right;">-2.2</td>
 <td style="text-align: right;">0.76</td>
 <td style="text-align: center;">Credibly lower</td>
@@ -989,7 +1058,9 @@ Table&nbsp;3: Academic and media attention to consumer-technology clusters, 2008
 <tr class="odd">
 <td>Crypto &amp; Fintech</td>
 <td style="text-align: right;">6.22%</td>
+<td style="text-align: right;">7.5</td>
 <td style="text-align: right;">3.15%</td>
+<td style="text-align: right;">9</td>
 <td style="text-align: right;">+3.1</td>
 <td style="text-align: right;">1.97</td>
 <td style="text-align: center;">Credibly higher</td>
@@ -997,7 +1068,9 @@ Table&nbsp;3: Academic and media attention to consumer-technology clusters, 2008
 <tr class="even">
 <td>E-Commerce</td>
 <td style="text-align: right;">4.51%</td>
+<td style="text-align: right;">11</td>
 <td style="text-align: right;">1.10%</td>
+<td style="text-align: right;">13</td>
 <td style="text-align: right;">+3.4</td>
 <td style="text-align: right;">4.11</td>
 <td style="text-align: center;">Credibly higher</td>
@@ -1005,15 +1078,19 @@ Table&nbsp;3: Academic and media attention to consumer-technology clusters, 2008
 <tr class="odd">
 <td>Gaming &amp; Digital Platforms</td>
 <td style="text-align: right;">7.15%</td>
+<td style="text-align: right;">4</td>
 <td style="text-align: right;">2.37%</td>
+<td style="text-align: right;">10</td>
 <td style="text-align: right;">+4.8</td>
 <td style="text-align: right;">3.02</td>
 <td style="text-align: center;">Credibly higher</td>
 </tr>
 <tr class="even">
-<td>Generative AI</td>
+<td>(Generative) AI</td>
 <td style="text-align: right;">15.52%</td>
+<td style="text-align: right;">1</td>
 <td style="text-align: right;">5.44%</td>
+<td style="text-align: right;">8</td>
 <td style="text-align: right;">+10.1</td>
 <td style="text-align: right;">2.85</td>
 <td style="text-align: center;">Credibly higher</td>
@@ -1021,7 +1098,9 @@ Table&nbsp;3: Academic and media attention to consumer-technology clusters, 2008
 <tr class="odd">
 <td>Internet &amp; Broadcasting</td>
 <td style="text-align: right;">6.22%</td>
+<td style="text-align: right;">7.5</td>
 <td style="text-align: right;">16.79%</td>
+<td style="text-align: right;">2</td>
 <td style="text-align: right;">-10.6</td>
 <td style="text-align: right;">0.37</td>
 <td style="text-align: center;">Credibly lower</td>
@@ -1029,7 +1108,9 @@ Table&nbsp;3: Academic and media attention to consumer-technology clusters, 2008
 <tr class="even">
 <td>Mobility &amp; Transportation</td>
 <td style="text-align: right;">1.79%</td>
+<td style="text-align: right;">15</td>
 <td style="text-align: right;">0.73%</td>
+<td style="text-align: right;">14</td>
 <td style="text-align: right;">+1.1</td>
 <td style="text-align: right;">2.45</td>
 <td style="text-align: center;">Credibly higher</td>
@@ -1037,7 +1118,9 @@ Table&nbsp;3: Academic and media attention to consumer-technology clusters, 2008
 <tr class="odd">
 <td>Search &amp; Advertising</td>
 <td style="text-align: right;">5.94%</td>
+<td style="text-align: right;">9</td>
 <td style="text-align: right;">7.61%</td>
+<td style="text-align: right;">6</td>
 <td style="text-align: right;">-1.7</td>
 <td style="text-align: right;">0.78</td>
 <td style="text-align: center;">Credibly lower</td>
@@ -1045,7 +1128,9 @@ Table&nbsp;3: Academic and media attention to consumer-technology clusters, 2008
 <tr class="even">
 <td>Smartphones &amp; Apps</td>
 <td style="text-align: right;">8.08%</td>
+<td style="text-align: right;">3</td>
 <td style="text-align: right;">10.80%</td>
+<td style="text-align: right;">4</td>
 <td style="text-align: right;">-2.7</td>
 <td style="text-align: right;">0.75</td>
 <td style="text-align: center;">Credibly lower</td>
@@ -1053,7 +1138,9 @@ Table&nbsp;3: Academic and media attention to consumer-technology clusters, 2008
 <tr class="odd">
 <td>Social Media</td>
 <td style="text-align: right;">12.95%</td>
+<td style="text-align: right;">2</td>
 <td style="text-align: right;">21.42%</td>
+<td style="text-align: right;">1</td>
 <td style="text-align: right;">-8.5</td>
 <td style="text-align: right;">0.60</td>
 <td style="text-align: center;">Credibly lower</td>
@@ -1061,7 +1148,9 @@ Table&nbsp;3: Academic and media attention to consumer-technology clusters, 2008
 <tr class="even">
 <td>Streaming, Audio &amp; Video</td>
 <td style="text-align: right;">3.79%</td>
+<td style="text-align: right;">12</td>
 <td style="text-align: right;">6.47%</td>
+<td style="text-align: right;">7</td>
 <td style="text-align: right;">-2.7</td>
 <td style="text-align: right;">0.59</td>
 <td style="text-align: center;">Credibly lower</td>
@@ -1069,7 +1158,9 @@ Table&nbsp;3: Academic and media attention to consumer-technology clusters, 2008
 <tr class="odd">
 <td>Tracking &amp; Wearables</td>
 <td style="text-align: right;">3.65%</td>
+<td style="text-align: right;">14</td>
 <td style="text-align: right;">0.53%</td>
+<td style="text-align: right;">15</td>
 <td style="text-align: right;">+3.1</td>
 <td style="text-align: right;">6.85</td>
 <td style="text-align: center;">Credibly higher</td>
@@ -1077,7 +1168,9 @@ Table&nbsp;3: Academic and media attention to consumer-technology clusters, 2008
 <tr class="even">
 <td>Other</td>
 <td style="text-align: right;">5.58%</td>
+<td style="text-align: right;">10</td>
 <td style="text-align: right;">10.84%</td>
+<td style="text-align: right;">3</td>
 <td style="text-align: right;">-5.3</td>
 <td style="text-align: right;">0.51</td>
 <td style="text-align: center;">Credibly lower</td>
@@ -1129,6 +1222,21 @@ Table&nbsp;4: Correlation between annual academic and media attention at each la
 </thead>
 <tbody>
 <tr class="odd">
+<td>(Generative) AI</td>
+<td style="text-align: right;">0.727 (p = .071)</td>
+<td style="text-align: right;">0.824 (p = .067)</td>
+<td style="text-align: right;">0.862 (p = .062)</td>
+<td style="text-align: right;">0.852 (p = .059)</td>
+<td style="text-align: right;">0.876 (p = .056)</td>
+<td style="text-align: right;">0.873 (p = .053)</td>
+<td style="text-align: right;">0.741 (p = .056)</td>
+<td style="text-align: right;">0.726 (p = .059)</td>
+<td style="text-align: right;">0.657 (p = .062)</td>
+<td style="text-align: right;"><strong>0.905 (p = .067)</strong></td>
+<td style="text-align: right;">0.891 (p = .071)</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
 <td>AR, VR &amp; Robots</td>
 <td style="text-align: right;">0.044 (p = .857)</td>
 <td style="text-align: right;">-0.256 (p = .200)</td>
@@ -1143,7 +1251,7 @@ Table&nbsp;4: Correlation between annual academic and media attention at each la
 <td style="text-align: right;">0.678 (p = .143)</td>
 <td style="text-align: right;">4</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Algorithms &amp; Recommendations</td>
 <td style="text-align: right;">-0.480 (p = .143)</td>
 <td style="text-align: right;">-0.062 (p = .933)</td>
@@ -1158,7 +1266,7 @@ Table&nbsp;4: Correlation between annual academic and media attention at each la
 <td style="text-align: right;">0.387 (p = .357)</td>
 <td style="text-align: right;">3</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Auctions &amp; Pricing</td>
 <td style="text-align: right;">-0.111 (p = .643)</td>
 <td style="text-align: right;">0.100 (p = .733)</td>
@@ -1173,7 +1281,7 @@ Table&nbsp;4: Correlation between annual academic and media attention at each la
 <td style="text-align: right;">0.115 (p = .643)</td>
 <td style="text-align: right;">4</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Computers &amp; Software</td>
 <td style="text-align: right;">0.214 (p = .714)</td>
 <td style="text-align: right;">0.352 (p = .333)</td>
@@ -1188,7 +1296,7 @@ Table&nbsp;4: Correlation between annual academic and media attention at each la
 <td style="text-align: right;">-0.056 (p = .857)</td>
 <td style="text-align: right;">-2</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Crypto &amp; Fintech</td>
 <td style="text-align: right;">-0.203 (p = .429)</td>
 <td style="text-align: right;">0.078 (p = .733)</td>
@@ -1203,7 +1311,7 @@ Table&nbsp;4: Correlation between annual academic and media attention at each la
 <td style="text-align: right;">0.383 (p = .357)</td>
 <td style="text-align: right;">3</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>E-Commerce</td>
 <td style="text-align: right;">0.106 (p = .643)</td>
 <td style="text-align: right;">-0.068 (p = .667)</td>
@@ -1218,7 +1326,7 @@ Table&nbsp;4: Correlation between annual academic and media attention at each la
 <td style="text-align: right;">-0.368 (p = .143)</td>
 <td style="text-align: right;">-3</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Gaming &amp; Digital Platforms</td>
 <td style="text-align: right;">0.489 (p = .071)</td>
 <td style="text-align: right;">0.361 (p = .333)</td>
@@ -1231,21 +1339,6 @@ Table&nbsp;4: Correlation between annual academic and media attention at each la
 <td style="text-align: right;">0.455 (p = .250)</td>
 <td style="text-align: right;"><strong>0.608 (p = .133)</strong></td>
 <td style="text-align: right;">0.433 (p = .214)</td>
-<td style="text-align: right;">4</td>
-</tr>
-<tr class="even">
-<td>Generative AI</td>
-<td style="text-align: right;">0.727 (p = .071)</td>
-<td style="text-align: right;">0.824 (p = .067)</td>
-<td style="text-align: right;">0.862 (p = .062)</td>
-<td style="text-align: right;">0.852 (p = .059)</td>
-<td style="text-align: right;">0.876 (p = .056)</td>
-<td style="text-align: right;">0.873 (p = .053)</td>
-<td style="text-align: right;">0.741 (p = .056)</td>
-<td style="text-align: right;">0.726 (p = .059)</td>
-<td style="text-align: right;">0.657 (p = .062)</td>
-<td style="text-align: right;"><strong>0.905 (p = .067)</strong></td>
-<td style="text-align: right;">0.891 (p = .071)</td>
 <td style="text-align: right;">4</td>
 </tr>
 <tr class="odd">

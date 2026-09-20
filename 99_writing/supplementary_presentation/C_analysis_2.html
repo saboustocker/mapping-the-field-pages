@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>analysis_2 – Mapping the Field</title>
+<title>c_analysis_2 – Mapping the Field</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -417,16 +417,12 @@ window.Quarto = {
 <span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../99_writing/main.html"> 
-<span class="menu-text">Manuscript</span></a>
+    <a class="nav-link" href="../../99_writing/slides_index.html"> 
+<span class="menu-text">Slides</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../99_writing/appendix_index.html"> 
 <span class="menu-text">Appendix</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../99_writing/slides_index.html"> 
-<span class="menu-text">Slides</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -445,7 +441,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#detailed-and-supplementary-analyses-for-2-add-the-field" id="toc-detailed-and-supplementary-analyses-for-2-add-the-field" class="nav-link active" data-scroll-target="#detailed-and-supplementary-analyses-for-2-add-the-field">Detailed and Supplementary Analyses for 2 – &lt; add &gt; the Field</a>
+  <li><a href="#detailed-and-supplementary-analyses-for-2-structuring-the-field" id="toc-detailed-and-supplementary-analyses-for-2-structuring-the-field" class="nav-link active" data-scroll-target="#detailed-and-supplementary-analyses-for-2-structuring-the-field">Detailed and Supplementary Analyses for 2 – Structuring the Field</a>
   <ul class="collapse">
   <li><a href="#historiographic-analysis" id="toc-historiographic-analysis" class="nav-link" data-scroll-target="#historiographic-analysis">Historiographic Analysis</a>
   <ul class="collapse">
@@ -484,8 +480,8 @@ function fitPlotFrames() {
 window.addEventListener('load', fitPlotFrames);
 window.addEventListener('resize', fitPlotFrames);
 </script>
-<section id="detailed-and-supplementary-analyses-for-2-add-the-field" class="level1 page-columns page-full">
-<h1>Detailed and Supplementary Analyses for 2 – &lt; add &gt; the Field</h1>
+<section id="detailed-and-supplementary-analyses-for-2-structuring-the-field" class="level1 page-columns page-full">
+<h1>Detailed and Supplementary Analyses for 2 – Structuring the Field</h1>
 <p>In our bibliometric analysis, we focus on historiographic and co-citation analyses. Below, we report the specifications for each and provide interactive maps to explore the results.</p>
 <section id="historiographic-analysis" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="historiographic-analysis">Historiographic Analysis</h2>
@@ -496,16 +492,7 @@ window.addEventListener('resize', fitPlotFrames);
 </div>
 </div>
 <p>For the historiographic analysis, we work with the <code>bibliometrix</code> package <span class="citation" data-cites="ariaBibliometrixRtoolComprehensive2017">(<a href="#ref-ariaBibliometrixRtoolComprehensive2017" role="doc-biblioref">Aria &amp; Cuccurullo, 2017</a>)</span> (version 5.4.1), using the <code>histplot</code> function on our corpus. We further quantify cluster citations along two links: clusters <em>citing</em> other clusters, and clusters being <em>cited by</em> other clusters. For citation comparisons within and across clusters, we include two control variables: the overall citeability of the cluster, and a normalization of the citing / cited-by measures, treating each as the percentage of all citations this cluster makes / receives. We compare how much more often (in %) a cluster cites / is cited by another cluster than this cluster is cited / cites on average across all other clusters, and create a ratio based on the two values.</p>
-<ul>
-<li>Each cell carries a raw count, the cross-citation share <span class="math inline">\(CC_{ij}\)</span> of row cluster <span class="math inline">\(i\)</span> with column cluster <span class="math inline">\(j\)</span>, and the ratio <span class="math inline">\(r_{ij}\)</span>.</li>
-<li>In the cites grid, <span class="math inline">\(CC_{ij}\)</span> divides the cell by all citations the row cluster makes within the corpus: how its outgoing attention is distributed.</li>
-<li>In the cited-by grid, <span class="math inline">\(CC_{ij}\)</span> divides the cell by all citations the row cluster receives within the corpus: where its incoming attention comes from.</li>
-<li>Rows sum to 100% in both grids, so <span class="math inline">\(CC_{ij}\)</span> describes a cluster’s profile rather than its volume, and clusters of different size stay comparable.</li>
-<li><span class="math inline">\(\overline{CC}_j = \frac{1}{15}\sum_{i \neq j} CC_{ij}\)</span>, the average share the other clusters record for that same column cluster.</li>
-<li>The average is taken over the fifteen other rows, excluding the column cluster’s own row, so a cluster’s internal citation does not set its own reference point.</li>
-<li><span class="math inline">\(r_{ij} = CC_{ij} / \overline{CC}_j\)</span>, so 1 = the usual amount of attention for that counterpart, 2 = twice as much, 0.5 = half.</li>
-<li>On the diagonal, <span class="math inline">\(r_{ii}\)</span> states how much more of its attention a cluster keeps internally than the other clusters direct at it.</li>
-</ul>
+<p>Each cell carries a raw count, the cross-citation share <span class="math inline">\(CC_{ij}\)</span> of row cluster <span class="math inline">\(i\)</span> with column cluster <span class="math inline">\(j\)</span>, and the ratio <span class="math inline">\(r_{ij}\)</span>. In the cites grid, <span class="math inline">\(CC_{ij}\)</span> divides the cell by all citations the row cluster makes within the corpus, showing how its outgoing attention is distributed. In the cited-by grid, <span class="math inline">\(CC_{ij}\)</span> divides the cell by all citations the row cluster receives within the corpus, showing where its incoming attention comes from. Rows sum to 100% in both grids, so <span class="math inline">\(CC_{ij}\)</span> describes a cluster’s profile rather than its volume, and clusters of different size stay comparable. <span class="math inline">\(\overline{CC}_j = \frac{1}{15}\sum_{i \neq j} CC_{ij}\)</span> is the average share the other clusters record for that same column cluster. The average is taken over the fifteen other rows, excluding the column cluster’s own row, so a cluster’s internal citation does not set its own reference point. The ratio <span class="math inline">\(r_{ij} = CC_{ij} / \overline{CC}_j\)</span> then reads as the usual amount of attention for that counterpart at 1, twice as much at 2, and half at 0.5. On the diagonal, <span class="math inline">\(r_{ii}\)</span> states how much more of its attention a cluster keeps internally than the other clusters direct at it.</p>
 <p>We again use Dirichlet posteriors to make two comparisons. First, does any given cluster cite / get cited by other clusters credibly more than this cluster cites / is cited by other clusters on average (i.e., excluding self-citations)? Second – reported on the diagonal in <a href="#tbl-cluster-citation-cites" class="quarto-xref">Table&nbsp;1</a> and <a href="#tbl-cluster-citation-cited-by" class="quarto-xref">Table&nbsp;2</a> – does a cluster cite itself credibly more often than all clusters cite themselves on average? To account for the fact that age affects citations, we construct our first prior by creating a citation vector for each paper based on the papers it could cite / be cited by at that time, and averaging across all of these vectors to construct the baseline distribution. We then compare the cluster distribution against this baseline and sample from a gamma distribution with 20,000 draws. We again treat values lying credibly outside the 95% credible interval as lower / higher. For self-citation, we construct a prior by averaging across all self- vs.&nbsp;all-other percentages and follow the same sampling procedure.</p>
 <div class="column-screen-inset wide-table">
 <div id="tbl-cluster-citation-cites" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1506,7 +1493,7 @@ Table&nbsp;4: How the citations each journal receives are distributed across the
 <section id="impact-of-early-adoption-and-connectedness-internal-and-across-clusters-on-being-cited" class="level3">
 <h3 class="anchored" data-anchor-id="impact-of-early-adoption-and-connectedness-internal-and-across-clusters-on-being-cited">Impact of Early Adoption and Connectedness (Internal and Across Clusters) on Being Cited</h3>
 <p>To better understand the impact of early publications on a consumer technology, and of connectedness within a technology as well as across clusters, we analyze the predictive power of early adoption on local citations (within the corpus) and global citations (as indexed by Scopus / Web of Science).</p>
-<p>We use generalized additive models (GAMs) <span class="citation" data-cites="woodGeneralizedAdditiveModels2017">(<a href="#ref-woodGeneralizedAdditiveModels2017" role="doc-biblioref">Wood, 2017</a>)</span> to test our models, with the same smooth of age and <span class="math inline">\(k = 10\)</span>, as we determined in <strong>?@sec-analysis-1</strong> that <span class="math inline">\(k = 10\)</span> is the optimal threshold across all clusters.</p>
+<p>We use generalized additive models (GAMs) <span class="citation" data-cites="woodGeneralizedAdditiveModels2017">(<a href="#ref-woodGeneralizedAdditiveModels2017" role="doc-biblioref">Wood, 2017</a>)</span> to test our models, with the same smooth of age and <span class="math inline">\(k = 10\)</span>, as we determined in <a href="../../99_writing/supplementary_presentation/analysis_1.qmd#sec-analysis-1">Analysis 1</a> that <span class="math inline">\(k = 10\)</span> is the optimal threshold across all clusters.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 30%">
