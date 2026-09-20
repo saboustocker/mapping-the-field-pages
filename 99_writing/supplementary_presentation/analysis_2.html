@@ -1,0 +1,3135 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>analysis_2 – Mapping the Field</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2a573a22b376d011974acbd750bd6779.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d1a1cc0e78a522636e8de0e3679d9964.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2a573a22b376d011974acbd750bd6779.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-28bfa436920035aec3295b9beccaf3e3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-632cac142708b530a6f51e9517c442f0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-28bfa436920035aec3295b9beccaf3e3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+
+  html {
+
+    visibility: hidden;
+
+  }
+
+</style>
+
+
+
+<script>
+
+  (() => {
+
+    const expectedPassword = "mappingthefield";
+
+    const storageKey = "mapping-field-access";
+
+
+
+    const unlock = () => {
+
+      sessionStorage.setItem(storageKey, "granted");
+
+      document.documentElement.style.visibility = "visible";
+
+    };
+
+
+
+    if (sessionStorage.getItem(storageKey) === "granted") {
+
+      unlock();
+
+      return;
+
+    }
+
+
+
+    const enteredPassword = window.prompt(
+
+      "Please enter the password provided to you to view this page:"
+
+    );
+
+
+
+    if (enteredPassword === expectedPassword) {
+
+      unlock();
+
+    } else {
+
+      document.addEventListener("DOMContentLoaded", () => {
+
+        document.body.innerHTML = `
+
+          <main style="
+
+            max-width: 600px;
+
+            margin: 15vh auto;
+
+            padding: 2rem;
+
+            font-family: sans-serif;
+
+            text-align: center;
+
+          ">
+
+            <h1>Access denied</h1>
+
+            <p>The password was incorrect.</p>
+
+            <button onclick="location.reload()">Try again</button>
+
+          </main>
+
+        `;
+
+
+
+        document.documentElement.style.visibility = "visible";
+
+      });
+
+    }
+
+  })();
+
+</script>
+<script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+<link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="..\..\site_libs\quarto-contrib\quarto-project\saboustocker\unisg\assets\logos\HSG_Logo_EN_RGB_Weiss.svg" alt="" class="navbar-logo light-content">
+    <img src="..\..\site_libs\quarto-contrib\quarto-project\saboustocker\unisg\assets\logos\HSG_Logo_EN_RGB_Weiss.svg" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Mapping the Field</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Overview</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../99_writing/main.html"> 
+<span class="menu-text">Manuscript</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../99_writing/appendix_index.html"> 
+<span class="menu-text">Appendix</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../99_writing/slides_index.html"> 
+<span class="menu-text">Slides</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#detailed-and-supplementary-analyses-for-2-add-the-field" id="toc-detailed-and-supplementary-analyses-for-2-add-the-field" class="nav-link active" data-scroll-target="#detailed-and-supplementary-analyses-for-2-add-the-field">Detailed and Supplementary Analyses for 2 – &lt; add &gt; the Field</a>
+  <ul class="collapse">
+  <li><a href="#historiographic-analysis" id="toc-historiographic-analysis" class="nav-link" data-scroll-target="#historiographic-analysis">Historiographic Analysis</a>
+  <ul class="collapse">
+  <li><a href="#historiographic-analysis-on-journal-level" id="toc-historiographic-analysis-on-journal-level" class="nav-link" data-scroll-target="#historiographic-analysis-on-journal-level">Historiographic Analysis on Journal Level</a></li>
+  <li><a href="#impact-of-early-adoption-and-connectedness-internal-and-across-clusters-on-being-cited" id="toc-impact-of-early-adoption-and-connectedness-internal-and-across-clusters-on-being-cited" class="nav-link" data-scroll-target="#impact-of-early-adoption-and-connectedness-internal-and-across-clusters-on-being-cited">Impact of Early Adoption and Connectedness (Internal and Across Clusters) on Being Cited</a></li>
+  </ul></li>
+  <li><a href="#co-citation-analysis" id="toc-co-citation-analysis" class="nav-link" data-scroll-target="#co-citation-analysis">Co-Citation Analysis</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<style>
+.wide-table { overflow-x: auto; }
+.wide-table table { font-size: 0.8rem; }
+.plot-frame { position: relative; overflow: hidden; }
+.plot-frame iframe { position: absolute; top: 0; left: 0; width: 1600px; border: none; transform-origin: 0 0; }
+</style>
+<script>
+function fitPlotFrames() {
+  document.querySelectorAll('.plot-frame').forEach(function (box) {
+    var f = box.querySelector('iframe');
+    var h = parseInt(f.dataset.height, 10);
+    var scale = Math.min(1, box.clientWidth / 1600);
+    f.style.height = h + 'px';
+    f.style.transform = 'scale(' + scale + ')';
+    box.style.height = (h * scale) + 'px';
+  });
+}
+window.addEventListener('load', fitPlotFrames);
+window.addEventListener('resize', fitPlotFrames);
+</script>
+<section id="detailed-and-supplementary-analyses-for-2-add-the-field" class="level1 page-columns page-full">
+<h1>Detailed and Supplementary Analyses for 2 – &lt; add &gt; the Field</h1>
+<p>In our bibliometric analysis, we focus on historiographic and co-citation analyses. Below, we report the specifications for each and provide interactive maps to explore the results.</p>
+<section id="historiographic-analysis" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="historiographic-analysis">Historiographic Analysis</h2>
+<div class="column-screen-inset">
+<div class="plot-frame">
+<iframe src="../../31_academic_foundation_output/figure_1.html" data-height="950" scrolling="no">
+</iframe>
+</div>
+</div>
+<p>For the historiographic analysis, we work with the <code>bibliometrix</code> package <span class="citation" data-cites="ariaBibliometrixRtoolComprehensive2017">(<a href="#ref-ariaBibliometrixRtoolComprehensive2017" role="doc-biblioref">Aria &amp; Cuccurullo, 2017</a>)</span> (version 5.4.1), using the <code>histplot</code> function on our corpus. We further quantify cluster citations along two links: clusters <em>citing</em> other clusters, and clusters being <em>cited by</em> other clusters. For citation comparisons within and across clusters, we include two control variables: the overall citeability of the cluster, and a normalization of the citing / cited-by measures, treating each as the percentage of all citations this cluster makes / receives. We compare how much more often (in %) a cluster cites / is cited by another cluster than this cluster is cited / cites on average across all other clusters, and create a ratio based on the two values.</p>
+<ul>
+<li>Each cell carries a raw count, the cross-citation share <span class="math inline">\(CC_{ij}\)</span> of row cluster <span class="math inline">\(i\)</span> with column cluster <span class="math inline">\(j\)</span>, and the ratio <span class="math inline">\(r_{ij}\)</span>.</li>
+<li>In the cites grid, <span class="math inline">\(CC_{ij}\)</span> divides the cell by all citations the row cluster makes within the corpus: how its outgoing attention is distributed.</li>
+<li>In the cited-by grid, <span class="math inline">\(CC_{ij}\)</span> divides the cell by all citations the row cluster receives within the corpus: where its incoming attention comes from.</li>
+<li>Rows sum to 100% in both grids, so <span class="math inline">\(CC_{ij}\)</span> describes a cluster’s profile rather than its volume, and clusters of different size stay comparable.</li>
+<li><span class="math inline">\(\overline{CC}_j = \frac{1}{15}\sum_{i \neq j} CC_{ij}\)</span>, the average share the other clusters record for that same column cluster.</li>
+<li>The average is taken over the fifteen other rows, excluding the column cluster’s own row, so a cluster’s internal citation does not set its own reference point.</li>
+<li><span class="math inline">\(r_{ij} = CC_{ij} / \overline{CC}_j\)</span>, so 1 = the usual amount of attention for that counterpart, 2 = twice as much, 0.5 = half.</li>
+<li>On the diagonal, <span class="math inline">\(r_{ii}\)</span> states how much more of its attention a cluster keeps internally than the other clusters direct at it.</li>
+</ul>
+<p>We again use Dirichlet posteriors to make two comparisons. First, does any given cluster cite / get cited by other clusters credibly more than this cluster cites / is cited by other clusters on average (i.e., excluding self-citations)? Second – reported on the diagonal in <a href="#tbl-cluster-citation-cites" class="quarto-xref">Table&nbsp;1</a> and <a href="#tbl-cluster-citation-cited-by" class="quarto-xref">Table&nbsp;2</a> – does a cluster cite itself credibly more often than all clusters cite themselves on average? To account for the fact that age affects citations, we construct our first prior by creating a citation vector for each paper based on the papers it could cite / be cited by at that time, and averaging across all of these vectors to construct the baseline distribution. We then compare the cluster distribution against this baseline and sample from a gamma distribution with 20,000 draws. We again treat values lying credibly outside the 95% credible interval as lower / higher. For self-citation, we construct a prior by averaging across all self- vs.&nbsp;all-other percentages and follow the same sampling procedure.</p>
+<div class="column-screen-inset wide-table">
+<div id="tbl-cluster-citation-cites" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cluster-citation-cites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: How the citations each technology cluster makes are distributed across the clusters. Cells report the number of citations the row cluster <span class="math inline">\(i\)</span> makes to the column cluster <span class="math inline">\(j\)</span>, the cross-citation share <span class="math inline">\(CC_{ij}\)</span> of all citations <span class="math inline">\(i\)</span> makes within the corpus, and the ratio <span class="math inline">\(r_{ij} = CC_{ij} / \overline{CC}_j\)</span>, where <span class="math inline">\(\overline{CC}_j\)</span> is the average share the fifteen other clusters direct at <span class="math inline">\(j\)</span>. A ratio of 1 means the row cluster gives the column cluster its usual amount of attention and 2 twice as much. Rows sum to 100%. The diagonal reports citations within the row cluster itself. Marks come from Dirichlet posteriors on each row’s citation profile: <sup>1</sup> a share whose 95% credible interval lies entirely above the baseline share, <sup>2</sup> one that lies entirely below it, blank no credible deviation. Off the diagonal the baseline is the share of the column cluster among all corpus papers published up to each of the row cluster’s papers, averaged over those papers, so it reflects what the row could cite given publication years; on the diagonal it is the average self-citation share of the other clusters.
+</figcaption>
+<div aria-describedby="tbl-cluster-citation-cites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Technology Cluster</th>
+<th>Algorithms &amp; Recommendations</th>
+<th>AR, VR &amp; Robots</th>
+<th>Auctions &amp; Pricing</th>
+<th>Computers &amp; Software</th>
+<th>Crypto &amp; Fintech</th>
+<th>E-Commerce</th>
+<th>Gaming &amp; Digital Platforms</th>
+<th>(Generative) AI</th>
+<th>Internet &amp; Broadcasting</th>
+<th>Mobility &amp; Transportation</th>
+<th>Search &amp; Advertising</th>
+<th>Smartphones &amp; Apps</th>
+<th>Social Media</th>
+<th>Streaming, Audio &amp; Video</th>
+<th>Tracking &amp; Wearables</th>
+<th>Other</th>
+<th>Average excl. own cluster</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Algorithms &amp; Recommendations</td>
+<td>186(40.8%, 10.44)</td>
+<td>19(4.2%, 1.91)<sup>1</sup></td>
+<td>5(1.1%, 2.43)</td>
+<td>22(4.8%, 0.98)<sup>2</sup></td>
+<td>9(2%, 0.87)</td>
+<td>11(2.4%, 0.55)</td>
+<td>8(1.8%, 0.37)<sup>2</sup></td>
+<td>90(19.7%, 2.7)<sup>1</sup></td>
+<td>17(3.7%, 0.46)<sup>2</sup></td>
+<td>2(0.4%, 1)</td>
+<td>30(6.6%, 1.27)</td>
+<td>8(1.8%, 0.3)<sup>2</sup></td>
+<td>33(7.2%, 0.87)</td>
+<td>4(0.9%, 0.36)</td>
+<td>7(1.5%, 0.82)</td>
+<td>5(1.1%, 0.44)<sup>2</sup></td>
+<td>3.9%</td>
+</tr>
+<tr class="even">
+<td>AR, VR &amp; Robots</td>
+<td>18(5.1%, 1.31)</td>
+<td>113(31.9%, 14.5)<sup>2</sup></td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>14(4%, 0.82)<sup>2</sup></td>
+<td>6(1.7%, 0.74)<sup>2</sup></td>
+<td>17(4.8%, 1.11)</td>
+<td>7(2%, 0.41)<sup>2</sup></td>
+<td>78(22%, 3.01)<sup>1</sup></td>
+<td>16(4.5%, 0.56)<sup>2</sup></td>
+<td>1(0.3%, 0.75)</td>
+<td>11(3.1%, 0.6)</td>
+<td>15(4.2%, 0.71)</td>
+<td>40(11.3%, 1.36)<sup>1</sup></td>
+<td>7(2%, 0.8)</td>
+<td>3(0.8%, 0.44)<sup>2</sup></td>
+<td>8(2.3%, 0.92)</td>
+<td>4.5%</td>
+</tr>
+<tr class="odd">
+<td>Auctions &amp; Pricing</td>
+<td>3(4.9%, 1.25)</td>
+<td>0(0%, 0)</td>
+<td>35(57.4%, 126.62)<sup>1</sup></td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>8(13.1%, 5.7)<sup>1</sup></td>
+<td>1(1.6%, 0.37)</td>
+<td>0(0%, 0)</td>
+<td>2(3.3%, 0.45)</td>
+<td>3(4.9%, 0.62)</td>
+<td>0(0%, 0)</td>
+<td>3(4.9%, 0.95)</td>
+<td>2(3.3%, 0.56)</td>
+<td>2(3.3%, 0.4)</td>
+<td>0(0%, 0)</td>
+<td>0(0%, 0)</td>
+<td>2(3.3%, 1.32)</td>
+<td>2.8%</td>
+</tr>
+<tr class="even">
+<td>Computers &amp; Software</td>
+<td>15(3.3%, 0.84)</td>
+<td>12(2.6%, 1.18)<sup>1</sup></td>
+<td>1(0.2%, 0.44)<sup>2</sup></td>
+<td>180(39.4%, 8.05)</td>
+<td>3(0.7%, 0.3)<sup>2</sup></td>
+<td>15(3.3%, 0.76)</td>
+<td>21(4.6%, 0.95)</td>
+<td>57(12.5%, 1.71)<sup>1</sup></td>
+<td>38(8.3%, 1.04)<sup>2</sup></td>
+<td>1(0.2%, 0.5)<sup>2</sup></td>
+<td>9(2%, 0.39)<sup>2</sup></td>
+<td>51(11.2%, 1.89)<sup>1</sup></td>
+<td>17(3.7%, 0.45)</td>
+<td>9(2%, 0.8)</td>
+<td>8(1.8%, 0.99)</td>
+<td>20(4.4%, 1.76)</td>
+<td>4.1%</td>
+</tr>
+<tr class="odd">
+<td>Crypto &amp; Fintech</td>
+<td>8(2.5%, 0.64)</td>
+<td>8(2.5%, 1.14)</td>
+<td>2(0.6%, 1.32)</td>
+<td>9(2.8%, 0.57)<sup>2</sup></td>
+<td>138(42.7%, 18.57)</td>
+<td>9(2.8%, 0.65)</td>
+<td>30(9.3%, 1.91)<sup>1</sup></td>
+<td>26(8%, 1.1)</td>
+<td>17(5.3%, 0.67)</td>
+<td>3(0.9%, 2.25)</td>
+<td>14(4.3%, 0.83)</td>
+<td>11(3.4%, 0.57)</td>
+<td>31(9.6%, 1.16)<sup>1</sup></td>
+<td>9(2.8%, 1.11)</td>
+<td>6(1.9%, 1.04)</td>
+<td>2(0.6%, 0.24)<sup>2</sup></td>
+<td>3.8%</td>
+</tr>
+<tr class="even">
+<td>E-Commerce</td>
+<td>27(7.7%, 1.97)<sup>1</sup></td>
+<td>3(0.9%, 0.41)</td>
+<td>5(1.4%, 3.09)</td>
+<td>22(6.3%, 1.29)<sup>2</sup></td>
+<td>5(1.4%, 0.61)<sup>2</sup></td>
+<td>100(28.6%, 6.61)<sup>2</sup></td>
+<td>19(5.4%, 1.11)</td>
+<td>19(5.4%, 0.74)</td>
+<td>49(14%, 1.76)</td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>27(7.7%, 1.49)</td>
+<td>22(6.3%, 1.06)</td>
+<td>33(9.4%, 1.14)<sup>1</sup></td>
+<td>6(1.7%, 0.68)</td>
+<td>7(2%, 1.09)</td>
+<td>6(1.7%, 0.68)<sup>2</sup></td>
+<td>4.8%</td>
+</tr>
+<tr class="odd">
+<td>Gaming &amp; Digital Platforms</td>
+<td>18(3.6%, 0.92)</td>
+<td>8(1.6%, 0.73)</td>
+<td>2(0.4%, 0.88)<sup>2</sup></td>
+<td>33(6.5%, 1.33)</td>
+<td>9(1.8%, 0.78)<sup>2</sup></td>
+<td>37(7.3%, 1.69)<sup>1</sup></td>
+<td>162(32.1%, 6.6)<sup>2</sup></td>
+<td>16(3.2%, 0.44)<sup>2</sup></td>
+<td>38(7.5%, 0.94)</td>
+<td>5(1%, 2.5)</td>
+<td>30(6%, 1.16)</td>
+<td>34(6.7%, 1.13)</td>
+<td>79(15.7%, 1.9)<sup>1</sup></td>
+<td>19(3.8%, 1.51)<sup>1</sup></td>
+<td>7(1.4%, 0.77)<sup>2</sup></td>
+<td>7(1.4%, 0.56)<sup>2</sup></td>
+<td>4.5%</td>
+</tr>
+<tr class="even">
+<td>(Generative) AI</td>
+<td>114(8.9%, 2.28)<sup>1</sup></td>
+<td>105(8.2%, 3.73)<sup>1</sup></td>
+<td>3(0.2%, 0.44)<sup>2</sup></td>
+<td>65(5.1%, 1.04)<sup>2</sup></td>
+<td>13(1%, 0.43)<sup>2</sup></td>
+<td>32(2.5%, 0.58)<sup>2</sup></td>
+<td>37(2.9%, 0.6)<sup>2</sup></td>
+<td>550(43.1%, 5.9)<sup>1</sup></td>
+<td>74(5.8%, 0.73)</td>
+<td>3(0.2%, 0.5)<sup>2</sup></td>
+<td>54(4.2%, 0.81)</td>
+<td>53(4.2%, 0.71)<sup>2</sup></td>
+<td>107(8.4%, 1.01)<sup>1</sup></td>
+<td>21(1.6%, 0.64)</td>
+<td>28(2.2%, 1.2)</td>
+<td>16(1.3%, 0.52)<sup>2</sup></td>
+<td>3.8%</td>
+</tr>
+<tr class="odd">
+<td>Internet &amp; Broadcasting</td>
+<td>24(4.8%, 1.23)</td>
+<td>8(1.6%, 0.73)</td>
+<td>3(0.6%, 1.32)<sup>2</sup></td>
+<td>38(7.6%, 1.55)<sup>2</sup></td>
+<td>9(1.8%, 0.78)</td>
+<td>31(6.2%, 1.43)</td>
+<td>31(6.2%, 1.27)<sup>1</sup></td>
+<td>28(5.6%, 0.77)</td>
+<td>189(37.9%, 4.76)</td>
+<td>4(0.8%, 2)</td>
+<td>30(6%, 1.16)</td>
+<td>23(4.6%, 0.78)<sup>2</sup></td>
+<td>36(7.2%, 0.87)<sup>1</sup></td>
+<td>23(4.6%, 1.83)<sup>1</sup></td>
+<td>7(1.4%, 0.77)</td>
+<td>15(3%, 1.2)</td>
+<td>4.1%</td>
+</tr>
+<tr class="even">
+<td>Mobility &amp; Transportation</td>
+<td>1(1.6%, 0.41)</td>
+<td>0(0%, 0)</td>
+<td>0(0%, 0)</td>
+<td>3(4.8%, 0.98)</td>
+<td>2(3.2%, 1.39)</td>
+<td>7(11.3%, 2.61)<sup>1</sup></td>
+<td>7(11.3%, 2.32)<sup>1</sup></td>
+<td>2(3.2%, 0.44)</td>
+<td>5(8.1%, 1.02)</td>
+<td>24(38.7%, 96.75)</td>
+<td>1(1.6%, 0.31)</td>
+<td>5(8.1%, 1.37)</td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>2(3.2%, 1.27)</td>
+<td>0(0%, 0)</td>
+<td>3(4.8%, 1.91)</td>
+<td>4.1%</td>
+</tr>
+<tr class="odd">
+<td>Search &amp; Advertising</td>
+<td>17(4.5%, 1.15)</td>
+<td>4(1%, 0.45)</td>
+<td>4(1%, 2.21)</td>
+<td>15(3.9%, 0.8)<sup>2</sup></td>
+<td>5(1.3%, 0.57)<sup>2</sup></td>
+<td>16(4.2%, 0.97)</td>
+<td>21(5.5%, 1.13)</td>
+<td>17(4.5%, 0.62)</td>
+<td>43(11.3%, 1.42)</td>
+<td>1(0.3%, 0.75)<sup>2</sup></td>
+<td>134(35.1%, 6.78)</td>
+<td>27(7.1%, 1.2)</td>
+<td>49(12.8%, 1.55)<sup>1</sup></td>
+<td>16(4.2%, 1.67)<sup>1</sup></td>
+<td>8(2.1%, 1.15)</td>
+<td>5(1.3%, 0.52)<sup>2</sup></td>
+<td>4.3%</td>
+</tr>
+<tr class="even">
+<td>Smartphones &amp; Apps</td>
+<td>13(2.1%, 0.54)</td>
+<td>6(1%, 0.45)</td>
+<td>3(0.5%, 1.1)<sup>2</sup></td>
+<td>57(9.3%, 1.9)</td>
+<td>6(1%, 0.43)<sup>2</sup></td>
+<td>24(3.9%, 0.9)</td>
+<td>29(4.7%, 0.97)</td>
+<td>28(4.5%, 0.62)</td>
+<td>57(9.3%, 1.17)</td>
+<td>3(0.5%, 1.25)</td>
+<td>37(6%, 1.16)</td>
+<td>244(39.6%, 6.69)</td>
+<td>54(8.8%, 1.06)<sup>1</sup></td>
+<td>9(1.5%, 0.6)</td>
+<td>18(2.9%, 1.59)</td>
+<td>28(4.5%, 1.8)</td>
+<td>4%</td>
+</tr>
+<tr class="odd">
+<td>Social Media</td>
+<td>27(2.6%, 0.67)</td>
+<td>16(1.5%, 0.68)</td>
+<td>1(0.1%, 0.22)<sup>2</sup></td>
+<td>29(2.8%, 0.57)<sup>2</sup></td>
+<td>12(1.1%, 0.48)<sup>2</sup></td>
+<td>42(4%, 0.92)</td>
+<td>69(6.6%, 1.36)<sup>1</sup></td>
+<td>32(3%, 0.41)</td>
+<td>80(7.6%, 0.95)</td>
+<td>3(0.3%, 0.75)<sup>2</sup></td>
+<td>67(6.4%, 1.24)<sup>1</sup></td>
+<td>46(4.4%, 0.74)</td>
+<td>549(52.3%, 6.32)<sup>1</sup></td>
+<td>43(4.1%, 1.63)<sup>1</sup></td>
+<td>16(1.5%, 0.82)</td>
+<td>18(1.7%, 0.68)<sup>2</sup></td>
+<td>3.2%</td>
+</tr>
+<tr class="even">
+<td>Streaming, Audio &amp; Video</td>
+<td>7(2.4%, 0.61)</td>
+<td>4(1.4%, 0.64)</td>
+<td>1(0.3%, 0.66)<sup>2</sup></td>
+<td>13(4.5%, 0.92)<sup>2</sup></td>
+<td>7(2.4%, 1.04)</td>
+<td>13(4.5%, 1.04)</td>
+<td>21(7.3%, 1.5)<sup>1</sup></td>
+<td>12(4.2%, 0.58)</td>
+<td>47(16.4%, 2.06)<sup>1</sup></td>
+<td>1(0.3%, 0.75)</td>
+<td>15(5.2%, 1)</td>
+<td>14(4.9%, 0.83)</td>
+<td>36(12.5%, 1.51)<sup>1</sup></td>
+<td>79(27.5%, 10.94)<sup>2</sup></td>
+<td>12(4.2%, 2.3)</td>
+<td>5(1.7%, 0.68)<sup>2</sup></td>
+<td>4.8%</td>
+</tr>
+<tr class="odd">
+<td>Tracking &amp; Wearables</td>
+<td>5(2.5%, 0.64)</td>
+<td>3(1.5%, 0.68)</td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>7(3.5%, 0.72)<sup>2</sup></td>
+<td>4(2%, 0.87)</td>
+<td>3(1.5%, 0.35)</td>
+<td>5(2.5%, 0.51)</td>
+<td>11(5.4%, 0.74)</td>
+<td>9(4.5%, 0.56)</td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>16(7.9%, 1.53)<sup>1</sup></td>
+<td>20(9.9%, 1.67)<sup>1</sup></td>
+<td>13(6.4%, 0.77)</td>
+<td>4(2%, 0.8)</td>
+<td>93(46%, 25.18)<sup>1</sup></td>
+<td>9(4.5%, 1.8)</td>
+<td>3.6%</td>
+</tr>
+<tr class="even">
+<td>Other</td>
+<td>5(2.1%, 0.54)</td>
+<td>12(5%, 2.27)<sup>1</sup></td>
+<td>1(0.4%, 0.88)<sup>2</sup></td>
+<td>18(7.5%, 1.53)</td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>11(4.6%, 1.06)</td>
+<td>7(2.9%, 0.6)</td>
+<td>12(5%, 0.68)</td>
+<td>20(8.3%, 1.04)</td>
+<td>2(0.8%, 2)</td>
+<td>14(5.8%, 1.12)</td>
+<td>21(8.7%, 1.47)</td>
+<td>19(7.9%, 0.95)</td>
+<td>8(3.3%, 1.31)</td>
+<td>9(3.7%, 2.03)</td>
+<td>82(34%, 13.56)</td>
+<td>4.4%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+<div class="column-screen-inset wide-table">
+<div id="tbl-cluster-citation-cited-by" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cluster-citation-cited-by-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: How the citations each technology cluster receives are distributed across the clusters. Cells report the number of citations the row cluster <span class="math inline">\(i\)</span> receives from the column cluster <span class="math inline">\(j\)</span>, the cross-citation share <span class="math inline">\(CC_{ij}\)</span> of all citations <span class="math inline">\(i\)</span> receives within the corpus, and the ratio <span class="math inline">\(r_{ij} = CC_{ij} / \overline{CC}_j\)</span>, where <span class="math inline">\(\overline{CC}_j\)</span> is the average share the fifteen other clusters receive from <span class="math inline">\(j\)</span>. A ratio of 1 means the row cluster draws its usual amount from the column cluster and 2 twice as much. Rows sum to 100%. The diagonal reports citations within the row cluster itself. Marks come from Dirichlet posteriors on each row’s citation profile: <sup>1</sup> a share whose 95% credible interval lies entirely above the baseline share, <sup>2</sup> one that lies entirely below it, blank no credible deviation. Off the diagonal the baseline is the share of the column cluster among all corpus papers published from each of the row cluster’s papers onwards, averaged over those papers, so it reflects who could cite the row given publication years; on the diagonal it is the average self-citation share of the other clusters.
+</figcaption>
+<div aria-describedby="tbl-cluster-citation-cited-by-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Technology Cluster</th>
+<th>Algorithms &amp; Recommendations</th>
+<th>AR, VR &amp; Robots</th>
+<th>Auctions &amp; Pricing</th>
+<th>Computers &amp; Software</th>
+<th>Crypto &amp; Fintech</th>
+<th>E-Commerce</th>
+<th>Gaming &amp; Digital Platforms</th>
+<th>(Generative) AI</th>
+<th>Internet &amp; Broadcasting</th>
+<th>Mobility &amp; Transportation</th>
+<th>Search &amp; Advertising</th>
+<th>Smartphones &amp; Apps</th>
+<th>Social Media</th>
+<th>Streaming, Audio &amp; Video</th>
+<th>Tracking &amp; Wearables</th>
+<th>Other</th>
+<th>Average excl. own cluster</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Algorithms &amp; Recommendations</td>
+<td>186(38.1%, 9.72)</td>
+<td>18(3.7%, 1.29)</td>
+<td>3(0.6%, 1.3)</td>
+<td>15(3.1%, 0.79)</td>
+<td>8(1.6%, 0.56)<sup>2</sup></td>
+<td>27(5.5%, 1.54)<sup>1</sup></td>
+<td>18(3.7%, 0.71)<sup>2</sup></td>
+<td>114(23.4%, 2.09)<sup>1</sup></td>
+<td>24(4.9%, 0.92)<sup>1</sup></td>
+<td>1(0.2%, 0.33)<sup>2</sup></td>
+<td>17(3.5%, 0.95)</td>
+<td>13(2.7%, 0.46)<sup>2</sup></td>
+<td>27(5.5%, 0.68)</td>
+<td>7(1.4%, 0.48)<sup>2</sup></td>
+<td>5(1%, 0.67)<sup>2</sup></td>
+<td>5(1%, 0.41)<sup>2</sup></td>
+<td>4.1%</td>
+</tr>
+<tr class="even">
+<td>AR, VR &amp; Robots</td>
+<td>19(5.9%, 1.51)</td>
+<td>113(35.2%, 12.28)</td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>12(3.7%, 0.94)</td>
+<td>8(2.5%, 0.88)<sup>2</sup></td>
+<td>3(0.9%, 0.25)</td>
+<td>8(2.5%, 0.48)<sup>2</sup></td>
+<td>105(32.7%, 2.92)<sup>1</sup></td>
+<td>8(2.5%, 0.47)</td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>4(1.2%, 0.33)<sup>2</sup></td>
+<td>6(1.9%, 0.32)<sup>2</sup></td>
+<td>16(5%, 0.62)</td>
+<td>4(1.2%, 0.42)<sup>2</sup></td>
+<td>3(0.9%, 0.6)<sup>2</sup></td>
+<td>12(3.7%, 1.5)</td>
+<td>4.3%</td>
+</tr>
+<tr class="odd">
+<td>Auctions &amp; Pricing</td>
+<td>5(7.6%, 1.94)</td>
+<td>0(0%, 0)</td>
+<td>35(53%, 115.22)<sup>1</sup></td>
+<td>1(1.5%, 0.38)</td>
+<td>2(3%, 1.05)</td>
+<td>5(7.6%, 2.13)<sup>1</sup></td>
+<td>2(3%, 0.58)</td>
+<td>3(4.5%, 0.4)</td>
+<td>3(4.5%, 0.84)</td>
+<td>0(0%, 0)</td>
+<td>4(6.1%, 1.66)</td>
+<td>3(4.5%, 0.77)</td>
+<td>1(1.5%, 0.18)</td>
+<td>1(1.5%, 0.52)</td>
+<td>0(0%, 0)</td>
+<td>1(1.5%, 0.61)</td>
+<td>3.1%</td>
+</tr>
+<tr class="even">
+<td>Computers &amp; Software</td>
+<td>22(4.2%, 1.07)</td>
+<td>14(2.7%, 0.94)</td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>180(34.3%, 8.75)<sup>2</sup></td>
+<td>9(1.7%, 0.6)<sup>2</sup></td>
+<td>22(4.2%, 1.18)</td>
+<td>33(6.3%, 1.21)</td>
+<td>65(12.4%, 1.11)</td>
+<td>38(7.2%, 1.35)<sup>1</sup></td>
+<td>3(0.6%, 1)</td>
+<td>15(2.9%, 0.79)</td>
+<td>57(10.9%, 1.86)<sup>1</sup></td>
+<td>29(5.5%, 0.68)<sup>2</sup></td>
+<td>13(2.5%, 0.87)</td>
+<td>7(1.3%, 0.87)<sup>2</sup></td>
+<td>18(3.4%, 1.38)</td>
+<td>4.4%</td>
+</tr>
+<tr class="odd">
+<td>Crypto &amp; Fintech</td>
+<td>9(3.8%, 0.97)</td>
+<td>6(2.5%, 0.87)</td>
+<td>8(3.4%, 7.39)<sup>1</sup></td>
+<td>3(1.3%, 0.33)</td>
+<td>138(58.5%, 20.55)<sup>1</sup></td>
+<td>5(2.1%, 0.59)</td>
+<td>9(3.8%, 0.73)</td>
+<td>13(5.5%, 0.49)<sup>2</sup></td>
+<td>9(3.8%, 0.71)<sup>1</sup></td>
+<td>2(0.8%, 1.33)</td>
+<td>5(2.1%, 0.57)</td>
+<td>6(2.5%, 0.43)</td>
+<td>12(5.1%, 0.63)</td>
+<td>7(3%, 1.04)</td>
+<td>4(1.7%, 1.13)</td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>2.8%</td>
+</tr>
+<tr class="even">
+<td>E-Commerce</td>
+<td>11(3%, 0.77)</td>
+<td>17(4.6%, 1.6)</td>
+<td>1(0.3%, 0.65)</td>
+<td>15(4.1%, 1.05)</td>
+<td>9(2.4%, 0.84)<sup>2</sup></td>
+<td>100(27.1%, 7.61)<sup>2</sup></td>
+<td>37(10%, 1.92)<sup>1</sup></td>
+<td>32(8.7%, 0.78)<sup>2</sup></td>
+<td>31(8.4%, 1.58)<sup>1</sup></td>
+<td>7(1.9%, 3.17)</td>
+<td>16(4.3%, 1.17)</td>
+<td>24(6.5%, 1.11)</td>
+<td>42(11.4%, 1.41)</td>
+<td>13(3.5%, 1.21)</td>
+<td>3(0.8%, 0.53)<sup>2</sup></td>
+<td>11(3%, 1.22)</td>
+<td>4.9%</td>
+</tr>
+<tr class="odd">
+<td>Gaming &amp; Digital Platforms</td>
+<td>8(1.7%, 0.43)<sup>2</sup></td>
+<td>7(1.5%, 0.52)<sup>2</sup></td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>21(4.4%, 1.12)</td>
+<td>30(6.3%, 2.21)</td>
+<td>19(4%, 1.12)</td>
+<td>162(34.2%, 6.57)<sup>2</sup></td>
+<td>37(7.8%, 0.7)<sup>2</sup></td>
+<td>31(6.5%, 1.22)<sup>1</sup></td>
+<td>7(1.5%, 2.5)</td>
+<td>21(4.4%, 1.2)</td>
+<td>29(6.1%, 1.04)</td>
+<td>69(14.6%, 1.8)<sup>1</sup></td>
+<td>21(4.4%, 1.52)</td>
+<td>5(1.1%, 0.73)<sup>2</sup></td>
+<td>7(1.5%, 0.61)<sup>2</sup></td>
+<td>4.4%</td>
+</tr>
+<tr class="even">
+<td>(Generative) AI</td>
+<td>90(9.2%, 2.35)<sup>1</sup></td>
+<td>78(8%, 2.79)<sup>1</sup></td>
+<td>2(0.2%, 0.43)</td>
+<td>57(5.8%, 1.48)<sup>1</sup></td>
+<td>26(2.7%, 0.95)<sup>2</sup></td>
+<td>19(1.9%, 0.53)</td>
+<td>16(1.6%, 0.31)<sup>2</sup></td>
+<td>550(56.1%, 5.01)<sup>1</sup></td>
+<td>28(2.9%, 0.54)<sup>1</sup></td>
+<td>2(0.2%, 0.33)<sup>2</sup></td>
+<td>17(1.7%, 0.46)<sup>2</sup></td>
+<td>28(2.9%, 0.5)</td>
+<td>32(3.3%, 0.41)<sup>2</sup></td>
+<td>12(1.2%, 0.42)<sup>2</sup></td>
+<td>11(1.1%, 0.73)<sup>2</sup></td>
+<td>12(1.2%, 0.49)<sup>2</sup></td>
+<td>2.9%</td>
+</tr>
+<tr class="odd">
+<td>Internet &amp; Broadcasting</td>
+<td>17(2.4%, 0.61)<sup>2</sup></td>
+<td>16(2.3%, 0.8)</td>
+<td>3(0.4%, 0.87)</td>
+<td>38(5.4%, 1.38)</td>
+<td>17(2.4%, 0.84)<sup>2</sup></td>
+<td>49(7%, 1.97)<sup>1</sup></td>
+<td>38(5.4%, 1.04)</td>
+<td>74(10.5%, 0.94)</td>
+<td>189(26.9%, 5.04)<sup>2</sup></td>
+<td>5(0.7%, 1.17)</td>
+<td>43(6.1%, 1.66)<sup>1</sup></td>
+<td>57(8.1%, 1.39)<sup>1</sup></td>
+<td>80(11.4%, 1.41)<sup>1</sup></td>
+<td>47(6.7%, 2.32)<sup>1</sup></td>
+<td>9(1.3%, 0.87)<sup>2</sup></td>
+<td>20(2.8%, 1.14)</td>
+<td>4.9%</td>
+</tr>
+<tr class="even">
+<td>Mobility &amp; Transportation</td>
+<td>2(3.8%, 0.97)</td>
+<td>1(1.9%, 0.66)</td>
+<td>0(0%, 0)</td>
+<td>1(1.9%, 0.48)</td>
+<td>3(5.7%, 2)</td>
+<td>0(0%, 0)</td>
+<td>5(9.4%, 1.81)</td>
+<td>3(5.7%, 0.51)</td>
+<td>4(7.5%, 1.41)</td>
+<td>24(45.3%, 75.5)</td>
+<td>1(1.9%, 0.52)</td>
+<td>3(5.7%, 0.97)</td>
+<td>3(5.7%, 0.7)</td>
+<td>1(1.9%, 0.66)</td>
+<td>0(0%, 0)</td>
+<td>2(3.8%, 1.54)</td>
+<td>3.7%</td>
+</tr>
+<tr class="odd">
+<td>Search &amp; Advertising</td>
+<td>30(6.1%, 1.56)</td>
+<td>11(2.2%, 0.77)</td>
+<td>3(0.6%, 1.3)</td>
+<td>9(1.8%, 0.46)<sup>2</sup></td>
+<td>14(2.8%, 0.98)<sup>2</sup></td>
+<td>27(5.5%, 1.54)<sup>1</sup></td>
+<td>30(6.1%, 1.17)</td>
+<td>54(11%, 0.98)<sup>2</sup></td>
+<td>30(6.1%, 1.14)<sup>1</sup></td>
+<td>1(0.2%, 0.33)<sup>2</sup></td>
+<td>134(27.2%, 7.4)<sup>2</sup></td>
+<td>37(7.5%, 1.28)</td>
+<td>67(13.6%, 1.68)<sup>1</sup></td>
+<td>15(3%, 1.04)</td>
+<td>16(3.3%, 2.2)</td>
+<td>14(2.8%, 1.14)</td>
+<td>4.8%</td>
+</tr>
+<tr class="even">
+<td>Smartphones &amp; Apps</td>
+<td>8(1.3%, 0.33)<sup>2</sup></td>
+<td>15(2.5%, 0.87)</td>
+<td>2(0.3%, 0.65)</td>
+<td>51(8.6%, 2.19)<sup>1</sup></td>
+<td>11(1.8%, 0.63)<sup>2</sup></td>
+<td>22(3.7%, 1.04)</td>
+<td>34(5.7%, 1.09)</td>
+<td>53(8.9%, 0.79)<sup>2</sup></td>
+<td>23(3.9%, 0.73)</td>
+<td>5(0.8%, 1.33)</td>
+<td>27(4.5%, 1.23)</td>
+<td>244(40.9%, 7)</td>
+<td>46(7.7%, 0.95)</td>
+<td>14(2.3%, 0.8)</td>
+<td>20(3.4%, 2.27)</td>
+<td>21(3.5%, 1.42)</td>
+<td>3.9%</td>
+</tr>
+<tr class="odd">
+<td>Social Media</td>
+<td>33(3%, 0.77)</td>
+<td>40(3.6%, 1.26)</td>
+<td>2(0.2%, 0.43)</td>
+<td>17(1.5%, 0.38)<sup>2</sup></td>
+<td>31(2.8%, 0.98)<sup>2</sup></td>
+<td>33(3%, 0.84)</td>
+<td>79(7.2%, 1.38)<sup>1</sup></td>
+<td>107(9.7%, 0.87)</td>
+<td>36(3.3%, 0.62)<sup>1</sup></td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>49(4.5%, 1.23)<sup>1</sup></td>
+<td>54(4.9%, 0.84)</td>
+<td>549(50%, 6.16)<sup>1</sup></td>
+<td>36(3.3%, 1.14)</td>
+<td>13(1.2%, 0.8)<sup>2</sup></td>
+<td>19(1.7%, 0.69)</td>
+<td>3.3%</td>
+</tr>
+<tr class="even">
+<td>Streaming, Audio &amp; Video</td>
+<td>4(1.5%, 0.38)<sup>2</sup></td>
+<td>7(2.7%, 0.94)</td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>9(3.5%, 0.89)</td>
+<td>9(3.5%, 1.23)</td>
+<td>6(2.3%, 0.65)</td>
+<td>19(7.3%, 1.4)</td>
+<td>21(8.1%, 0.72)<sup>2</sup></td>
+<td>23(8.9%, 1.67)<sup>1</sup></td>
+<td>2(0.8%, 1.33)</td>
+<td>16(6.2%, 1.69)</td>
+<td>9(3.5%, 0.6)</td>
+<td>43(16.6%, 2.05)<sup>1</sup></td>
+<td>79(30.5%, 10.57)<sup>2</sup></td>
+<td>4(1.5%, 1)</td>
+<td>8(3.1%, 1.26)</td>
+<td>4.6%</td>
+</tr>
+<tr class="odd">
+<td>Tracking &amp; Wearables</td>
+<td>7(3.1%, 0.79)</td>
+<td>3(1.3%, 0.45)</td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>8(3.5%, 0.89)</td>
+<td>6(2.6%, 0.91)</td>
+<td>7(3.1%, 0.87)</td>
+<td>7(3.1%, 0.6)</td>
+<td>28(12.2%, 1.09)</td>
+<td>7(3.1%, 0.58)</td>
+<td>0(0%, 0)<sup>2</sup></td>
+<td>8(3.5%, 0.95)</td>
+<td>18(7.9%, 1.35)<sup>1</sup></td>
+<td>16(7%, 0.86)</td>
+<td>12(5.2%, 1.8)</td>
+<td>93(40.6%, 27.07)</td>
+<td>9(3.9%, 1.59)</td>
+<td>4%</td>
+</tr>
+<tr class="even">
+<td>Other</td>
+<td>5(2.2%, 0.56)</td>
+<td>8(3.5%, 1.22)</td>
+<td>2(0.9%, 1.96)</td>
+<td>20(8.7%, 2.22)<sup>1</sup></td>
+<td>2(0.9%, 0.32)<sup>2</sup></td>
+<td>6(2.6%, 0.73)</td>
+<td>7(3%, 0.58)<sup>2</sup></td>
+<td>16(6.9%, 0.62)<sup>2</sup></td>
+<td>15(6.5%, 1.22)<sup>1</sup></td>
+<td>3(1.3%, 2.17)</td>
+<td>5(2.2%, 0.6)</td>
+<td>28(12.1%, 2.07)<sup>1</sup></td>
+<td>18(7.8%, 0.96)</td>
+<td>5(2.2%, 0.76)</td>
+<td>9(3.9%, 2.6)</td>
+<td>82(35.5%, 14.43)</td>
+<td>4.3%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+<section id="historiographic-analysis-on-journal-level" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="historiographic-analysis-on-journal-level">Historiographic Analysis on Journal Level</h3>
+<p>Analogous to the historiographic analysis on the cluster level, we also analyze journals citing or being cited by other journals. The method and calculations follow the same principle as described above.</p>
+<div class="column-screen-inset">
+<div class="plot-frame">
+<iframe src="../../31_academic_foundation_output/figure_journals.html" data-height="950" scrolling="no">
+</iframe>
+</div>
+</div>
+<div class="column-screen-inset wide-table">
+<div id="tbl-journal-citation-cites" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-journal-citation-cites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: How the citations each journal makes are distributed across the journals. Cells report the number of citations the row journal <span class="math inline">\(i\)</span> makes to the column journal <span class="math inline">\(j\)</span>, the cross-citation share <span class="math inline">\(CC_{ij}\)</span> of all citations <span class="math inline">\(i\)</span> makes within the corpus, and the ratio <span class="math inline">\(r_{ij} = CC_{ij} / \overline{CC}_j\)</span>, where <span class="math inline">\(\overline{CC}_j\)</span> is the average share the six other journals direct at <span class="math inline">\(j\)</span>. A ratio of 1 means the row journal gives the column journal its usual amount of attention and 2 twice as much. Rows sum to 100%. The diagonal reports citations within the row journal itself. Marks come from Dirichlet posteriors on each row’s citation profile: <sup>1</sup> a share whose 95% credible interval lies entirely above the baseline share, <sup>2</sup> one that lies entirely below it, blank no credible deviation. Off the diagonal the baseline is the share of the column journal among all corpus papers published up to each of the row journal’s papers, averaged over those papers, so it reflects what the row could cite given publication years; on the diagonal it is the average self-citation share of the other journals.
+</figcaption>
+<div aria-describedby="tbl-journal-citation-cites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Journal</th>
+<th>IJRM</th>
+<th>JAMS</th>
+<th>JCP</th>
+<th>JCR</th>
+<th>JM</th>
+<th>JMR</th>
+<th>MS</th>
+<th>Average excl. own journal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>IJRM</td>
+<td>376(39.1%, 10.86)<sup>2</sup></td>
+<td>67(7%, 1.67)<sup>2</sup></td>
+<td>15(1.6%, 1.23)<sup>2</sup></td>
+<td>61(6.3%, 0.84)<sup>2</sup></td>
+<td>167(17.4%, 1.13)<sup>1</sup></td>
+<td>147(15.3%, 0.96)<sup>1</sup></td>
+<td>128(13.3%, 1.09)<sup>2</sup></td>
+<td>10.2%</td>
+</tr>
+<tr class="even">
+<td>JAMS</td>
+<td>72(7.8%, 2.17)<sup>2</sup></td>
+<td>347(37.7%, 9.01)<sup>2</sup></td>
+<td>18(2%, 1.54)<sup>2</sup></td>
+<td>49(5.3%, 0.71)<sup>2</sup></td>
+<td>209(22.7%, 1.48)<sup>1</sup></td>
+<td>133(14.5%, 0.91)</td>
+<td>92(10%, 0.82)<sup>2</sup></td>
+<td>10.4%</td>
+</tr>
+<tr class="odd">
+<td>JCP</td>
+<td>4(1.7%, 0.47)<sup>2</sup></td>
+<td>14(6.1%, 1.46)</td>
+<td>79(34.5%, 26.54)<sup>2</sup></td>
+<td>40(17.5%, 2.34)<sup>1</sup></td>
+<td>36(15.7%, 1.02)<sup>1</sup></td>
+<td>40(17.5%, 1.1)<sup>1</sup></td>
+<td>16(7%, 0.58)<sup>2</sup></td>
+<td>10.9%</td>
+</tr>
+<tr class="even">
+<td>JCR</td>
+<td>3(1%, 0.28)<sup>2</sup></td>
+<td>15(5.1%, 1.22)</td>
+<td>5(1.7%, 1.31)</td>
+<td>179(61.1%, 8.18)<sup>1</sup></td>
+<td>40(13.7%, 0.89)<sup>1</sup></td>
+<td>33(11.3%, 0.71)<sup>1</sup></td>
+<td>18(6.1%, 0.5)<sup>2</sup></td>
+<td>6.5%</td>
+</tr>
+<tr class="odd">
+<td>JM</td>
+<td>40(4.7%, 1.31)<sup>2</sup></td>
+<td>46(5.4%, 1.29)<sup>2</sup></td>
+<td>12(1.4%, 1.08)<sup>2</sup></td>
+<td>61(7.2%, 0.96)</td>
+<td>384(45.3%, 2.95)<sup>2</sup></td>
+<td>173(20.4%, 1.28)<sup>1</sup></td>
+<td>132(15.6%, 1.28)</td>
+<td>9.1%</td>
+</tr>
+<tr class="even">
+<td>JMR</td>
+<td>30(4.6%, 1.28)<sup>2</sup></td>
+<td>8(1.2%, 0.29)<sup>2</sup></td>
+<td>5(0.8%, 0.62)<sup>2</sup></td>
+<td>44(6.7%, 0.9)</td>
+<td>108(16.4%, 1.07)<sup>1</sup></td>
+<td>326(49.5%, 3.11)</td>
+<td>138(20.9%, 1.72)<sup>1</sup></td>
+<td>8.4%</td>
+</tr>
+<tr class="odd">
+<td>MS</td>
+<td>12(1.8%, 0.5)<sup>2</sup></td>
+<td>2(0.3%, 0.07)<sup>2</sup></td>
+<td>2(0.3%, 0.23)<sup>2</sup></td>
+<td>12(1.8%, 0.24)<sup>2</sup></td>
+<td>43(6.3%, 0.41)</td>
+<td>113(16.5%, 1.04)<sup>1</sup></td>
+<td>499(73.1%, 6.02)<sup>1</sup></td>
+<td>4.5%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+<div class="column-screen-inset wide-table">
+<div id="tbl-journal-citation-cited-by" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-journal-citation-cited-by-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: How the citations each journal receives are distributed across the journals. Cells report the number of citations the row journal <span class="math inline">\(i\)</span> receives from the column journal <span class="math inline">\(j\)</span>, the cross-citation share <span class="math inline">\(CC_{ij}\)</span> of all citations <span class="math inline">\(i\)</span> receives within the corpus, and the ratio <span class="math inline">\(r_{ij} = CC_{ij} / \overline{CC}_j\)</span>, where <span class="math inline">\(\overline{CC}_j\)</span> is the average share the six other journals receive from <span class="math inline">\(j\)</span>. A ratio of 1 means the row journal draws its usual amount from the column journal and 2 twice as much. Rows sum to 100%. The diagonal reports citations within the row journal itself. Marks come from Dirichlet posteriors on each row’s citation profile: <sup>1</sup> a share whose 95% credible interval lies entirely above the baseline share, <sup>2</sup> one that lies entirely below it, blank no credible deviation. Off the diagonal the baseline is the share of the column journal among all corpus papers published from each of the row journal’s papers onwards, averaged over those papers, so it reflects who could cite the row given publication years; on the diagonal it is the average self-citation share of the other journals.
+</figcaption>
+<div aria-describedby="tbl-journal-citation-cited-by-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Journal</th>
+<th>IJRM</th>
+<th>JAMS</th>
+<th>JCP</th>
+<th>JCR</th>
+<th>JM</th>
+<th>JMR</th>
+<th>MS</th>
+<th>Average excl. own journal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>IJRM</td>
+<td>376(70%, 5.08)<sup>1</sup></td>
+<td>72(13.4%, 0.99)<sup>1</sup></td>
+<td>4(0.7%, 0.19)<sup>2</sup></td>
+<td>3(0.6%, 0.22)<sup>2</sup></td>
+<td>40(7.4%, 0.64)<sup>1</sup></td>
+<td>30(5.6%, 0.74)</td>
+<td>12(2.2%, 0.58)<sup>2</sup></td>
+<td>5%</td>
+</tr>
+<tr class="even">
+<td>JAMS</td>
+<td>67(13.4%, 0.97)<sup>1</sup></td>
+<td>347(69.5%, 5.11)<sup>1</sup></td>
+<td>14(2.8%, 0.77)</td>
+<td>15(3%, 1.08)</td>
+<td>46(9.2%, 0.79)<sup>1</sup></td>
+<td>8(1.6%, 0.21)<sup>2</sup></td>
+<td>2(0.4%, 0.1)<sup>2</sup></td>
+<td>5.1%</td>
+</tr>
+<tr class="odd">
+<td>JCP</td>
+<td>15(11%, 0.8)</td>
+<td>18(13.2%, 0.97)<sup>1</sup></td>
+<td>79(58.1%, 15.99)</td>
+<td>5(3.7%, 1.34)</td>
+<td>12(8.8%, 0.76)</td>
+<td>5(3.7%, 0.49)</td>
+<td>2(1.5%, 0.39)<sup>2</sup></td>
+<td>7%</td>
+</tr>
+<tr class="even">
+<td>JCR</td>
+<td>61(13.7%, 0.99)</td>
+<td>49(11%, 0.81)</td>
+<td>40(9%, 2.48)<sup>1</sup></td>
+<td>179(40.1%, 14.49)<sup>2</sup></td>
+<td>61(13.7%, 1.18)<sup>1</sup></td>
+<td>44(9.9%, 1.31)</td>
+<td>12(2.7%, 0.71)<sup>2</sup></td>
+<td>10%</td>
+</tr>
+<tr class="odd">
+<td>JM</td>
+<td>167(16.9%, 1.23)<sup>1</sup></td>
+<td>209(21.2%, 1.56)<sup>1</sup></td>
+<td>36(3.6%, 0.99)</td>
+<td>40(4.1%, 1.48)<sup>2</sup></td>
+<td>384(38.9%, 3.34)<sup>2</sup></td>
+<td>108(10.9%, 1.45)</td>
+<td>43(4.4%, 1.15)<sup>2</sup></td>
+<td>10.2%</td>
+</tr>
+<tr class="even">
+<td>JMR</td>
+<td>147(15.2%, 1.1)</td>
+<td>133(13.8%, 1.01)</td>
+<td>40(4.1%, 1.13)</td>
+<td>33(3.4%, 1.23)<sup>2</sup></td>
+<td>173(17.9%, 1.54)<sup>1</sup></td>
+<td>326(33.8%, 4.49)<sup>2</sup></td>
+<td>113(11.7%, 3.07)<sup>2</sup></td>
+<td>11%</td>
+</tr>
+<tr class="odd">
+<td>MS</td>
+<td>128(12.5%, 0.91)</td>
+<td>92(9%, 0.66)</td>
+<td>16(1.6%, 0.44)<sup>2</sup></td>
+<td>18(1.8%, 0.65)<sup>2</sup></td>
+<td>132(12.9%, 1.11)<sup>1</sup></td>
+<td>138(13.5%, 1.79)<sup>1</sup></td>
+<td>499(48.8%, 12.79)</td>
+<td>8.6%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="impact-of-early-adoption-and-connectedness-internal-and-across-clusters-on-being-cited" class="level3">
+<h3 class="anchored" data-anchor-id="impact-of-early-adoption-and-connectedness-internal-and-across-clusters-on-being-cited">Impact of Early Adoption and Connectedness (Internal and Across Clusters) on Being Cited</h3>
+<p>To better understand the impact of early publications on a consumer technology, and of connectedness within a technology as well as across clusters, we analyze the predictive power of early adoption on local citations (within the corpus) and global citations (as indexed by Scopus / Web of Science).</p>
+<p>We use generalized additive models (GAMs) <span class="citation" data-cites="woodGeneralizedAdditiveModels2017">(<a href="#ref-woodGeneralizedAdditiveModels2017" role="doc-biblioref">Wood, 2017</a>)</span> to test our models, with the same smooth of age and <span class="math inline">\(k = 10\)</span>, as we determined in <strong>?@sec-analysis-1</strong> that <span class="math inline">\(k = 10\)</span> is the optimal threshold across all clusters.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 15%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Internal</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(Intercept)</td>
+<td>0.622</td>
+<td>3.344</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(0.435)</td>
+<td>(0.365)</td>
+</tr>
+<tr class="odd">
+<td>early_adopter_score</td>
+<td>-0.017</td>
+<td>-0.001</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(0.020)</td>
+<td>(0.017)</td>
+</tr>
+<tr class="odd">
+<td>cluster_citeability</td>
+<td>0.004</td>
+<td>0.007</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(0.001)</td>
+<td>(0.001)</td>
+</tr>
+<tr class="odd">
+<td>Num.Obs.</td>
+<td>1329</td>
+<td>1329</td>
+</tr>
+<tr class="even">
+<td>AIC</td>
+<td>5589.6</td>
+<td>13638.8</td>
+</tr>
+<tr class="odd">
+<td>BIC</td>
+<td>5649.5</td>
+<td>13702.5</td>
+</tr>
+<tr class="even">
+<td>RMSE</td>
+<td>5.15</td>
+<td>218.03</td>
+</tr>
+</tbody>
+</table>
+<div class="wide-table">
+<div id="tbl-impact-early-adoption" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-impact-early-adoption-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: Impact of early adoption within each technology cluster. Cells report the negative-binomial GAM coefficient for the early adoption score with its p-value in parentheses; the score is the publication year minus the year of the cluster’s earliest paper, so lower values indicate earlier adoption and a negative coefficient means earlier papers accumulate more citations. Within Corpus counts citations from other corpus articles, Total counts all citations.
+</figcaption>
+<div aria-describedby="tbl-impact-early-adoption-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Cluster ID</th>
+<th>Cluster</th>
+<th>Within Corpus</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Algorithms &amp; Recommendations</td>
+<td>-0.108 (&lt; .001)</td>
+<td>-0.112 (&lt; .001)</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>AR, VR &amp; Robots</td>
+<td>-0.196 (&lt; .001)</td>
+<td>-0.27 (&lt; .001)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Auctions &amp; Pricing</td>
+<td>-0.098 (.011)</td>
+<td>-0.102 (&lt; .001)</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Computers &amp; Software</td>
+<td>-0.05 (.005)</td>
+<td>-0.118 (&lt; .001)</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Crypto &amp; Fintech</td>
+<td>-0.067 (.004)</td>
+<td>-0.149 (&lt; .001)</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>E-Commerce</td>
+<td>-0.061 (.016)</td>
+<td>-0.084 (&lt; .001)</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Gaming &amp; Digital Platforms</td>
+<td>-0.161 (&lt; .001)</td>
+<td>-0.289 (&lt; .001)</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>(Generative) AI</td>
+<td>-0.168 (&lt; .001)</td>
+<td>-0.269 (&lt; .001)</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Internet &amp; Broadcasting</td>
+<td>-0.063 (.001)</td>
+<td>-0.105 (&lt; .001)</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Mobility &amp; Transportation</td>
+<td>-0.167 (.001)</td>
+<td>-0.305 (&lt; .001)</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Search &amp; Advertising</td>
+<td>-0.078 (&lt; .001)</td>
+<td>-0.171 (&lt; .001)</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Smartphones &amp; Apps</td>
+<td>-0.042 (.06)</td>
+<td>-0.144 (&lt; .001)</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>Social Media</td>
+<td>-0.256 (&lt; .001)</td>
+<td>-0.311 (&lt; .001)</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>Streaming, Audio &amp; Video</td>
+<td>-0.158 (&lt; .001)</td>
+<td>-0.212 (&lt; .001)</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>Tracking &amp; Wearables</td>
+<td>-0.126 (&lt; .001)</td>
+<td>-0.21 (&lt; .001)</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>Other</td>
+<td>-0.113 (&lt; .001)</td>
+<td>-0.189 (&lt; .001)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+<p>For the within- and across-cluster citations, we construct standardized scores following the same logic as for the historiographic analysis, standardizing the scores by the number of papers they could possibly cite to begin with. Additionally, we include an overall citeability factor (the mean number of citations of all papers within that cluster) as a control variable in the GAM, as some clusters are overall more relevant to other domains and thereby garner more citations by default. We include age as a second control variable, as early adoption in itself may increase citations, retaining <span class="math inline">\(k = 10\)</span> as above.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 15%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Internal</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(Intercept)</td>
+<td>0.071</td>
+<td>3.142</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(0.146)</td>
+<td>(0.118)</td>
+</tr>
+<tr class="odd">
+<td>wi_cluster_std</td>
+<td>1.221</td>
+<td>1.465</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(0.287)</td>
+<td>(0.258)</td>
+</tr>
+<tr class="odd">
+<td>ac_cluster_std</td>
+<td>15.317</td>
+<td>16.176</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(2.943)</td>
+<td>(2.734)</td>
+</tr>
+<tr class="odd">
+<td>cluster_citeability</td>
+<td>0.004</td>
+<td>0.006</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(0.001)</td>
+<td>(0.001)</td>
+</tr>
+<tr class="odd">
+<td>Num.Obs.</td>
+<td>1303</td>
+<td>1303</td>
+</tr>
+<tr class="even">
+<td>AIC</td>
+<td>5374.4</td>
+<td>13187.4</td>
+</tr>
+<tr class="odd">
+<td>BIC</td>
+<td>5437.4</td>
+<td>13255.3</td>
+</tr>
+<tr class="even">
+<td>RMSE</td>
+<td>6.32</td>
+<td>445.68</td>
+</tr>
+</tbody>
+</table>
+<div class="wide-table">
+<div id="tbl-impact-citations" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-impact-citations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6: Impact of citing within and across technology clusters. Cells report the negative-binomial GAM coefficient with its p-value in parentheses, from models controlling for publication age with a smooth. wi is the standardised number of citations a paper makes to its own cluster, ac the standardised number it makes to other clusters, each divided by the papers available to be cited at that point. Within Corpus counts citations from other corpus articles, Total counts all citations.
+</figcaption>
+<div aria-describedby="tbl-impact-citations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cluster ID</th>
+<th>Cluster</th>
+<th>wi: Within Corpus</th>
+<th>wi: Total</th>
+<th>ac: Within Corpus</th>
+<th>ac: Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Algorithms &amp; Recommendations</td>
+<td>0.346 (.743)</td>
+<td>-0.507 (.58)</td>
+<td>31.918 (.278)</td>
+<td>53.669 (.02)</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>AR, VR &amp; Robots</td>
+<td>0.384 (.849)</td>
+<td>1.51 (.433)</td>
+<td>15.421 (.706)</td>
+<td>2.06 (.958)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Auctions &amp; Pricing</td>
+<td>0.179 (.862)</td>
+<td>0.471 (.529)</td>
+<td>21.724 (.722)</td>
+<td>-10.409 (.801)</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Computers &amp; Software</td>
+<td>3.496 (.454)</td>
+<td>10.003 (.004)</td>
+<td>24.533 (.047)</td>
+<td>-1.564 (.86)</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Crypto &amp; Fintech</td>
+<td>-2.039 (.449)</td>
+<td>0.476 (.837)</td>
+<td>-2.341 (.95)</td>
+<td>62.079 (.033)</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>E-Commerce</td>
+<td>1.1 (.602)</td>
+<td>1.644 (.389)</td>
+<td>12.358 (.401)</td>
+<td>-4.956 (.68)</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Gaming &amp; Digital Platforms</td>
+<td>-1.847 (.211)</td>
+<td>-0.544 (.77)</td>
+<td>19.946 (.043)</td>
+<td>15.615 (.158)</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>(Generative) AI</td>
+<td>2.812 (.069)</td>
+<td>3.258 (.044)</td>
+<td>7.099 (.67)</td>
+<td>-5.336 (.757)</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Internet &amp; Broadcasting</td>
+<td>2.583 (.389)</td>
+<td>1.815 (.477)</td>
+<td>14.558 (.047)</td>
+<td>16.529 (.006)</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Mobility &amp; Transportation</td>
+<td>-5.14 (.104)</td>
+<td>-2.38 (.235)</td>
+<td>-90.947 (.239)</td>
+<td>76.916 (.171)</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Search &amp; Advertising</td>
+<td>-1.373 (.442)</td>
+<td>0.621 (.686)</td>
+<td>3.717 (.645)</td>
+<td>21.64 (.001)</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Smartphones &amp; Apps</td>
+<td>1.499 (.558)</td>
+<td>-1.4 (.432)</td>
+<td>37.786 (.054)</td>
+<td>49.546 (.001)</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>Social Media</td>
+<td>3.573 (.001)</td>
+<td>3.976 (.001)</td>
+<td>-2.139 (.84)</td>
+<td>15.363 (.132)</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>Streaming, Audio &amp; Video</td>
+<td>0.054 (.983)</td>
+<td>1.201 (.623)</td>
+<td>-14.134 (.673)</td>
+<td>7.157 (.765)</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>Tracking &amp; Wearables</td>
+<td>-0.384 (.82)</td>
+<td>1.022 (.417)</td>
+<td>17.896 (.698)</td>
+<td>45.011 (.134)</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>Other</td>
+<td>-1.391 (.462)</td>
+<td>-3.638 (.025)</td>
+<td>109.473 (.001)</td>
+<td>45.606 (.048)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+</section>
+</section>
+<section id="co-citation-analysis" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="co-citation-analysis">Co-Citation Analysis</h2>
+<div class="column-screen-inset">
+<div class="plot-frame">
+<iframe src="../../31_academic_foundation_output/cocitation_option1.html" data-height="900" scrolling="no">
+</iframe>
+</div>
+</div>
+<p>For the co-citation analysis, we again use the <code>bibliometrix</code> package <span class="citation" data-cites="ariaBibliometrixRtoolComprehensive2017">(<a href="#ref-ariaBibliometrixRtoolComprehensive2017" role="doc-biblioref">Aria &amp; Cuccurullo, 2017</a>)</span>, using the <code>biblionetwork</code> function on our corpus. We extract the top 500 cited references, excluding all exclusively methodological papers. We define exclusively methodological papers as papers that only describe a method, without providing any empirically grounded application beyond toy simulations with simulated data. If a paper both describes a method and uses the method to answer an empirical question, we do not exclude it. The first author of this paper went through the top 700 citations and manually marked all papers following this definition. The list of excluded papers can be found in <a href="#tbl-excluded-methods" class="quarto-xref">Table&nbsp;7</a>.</p>
+<div class="cell">
+<div id="tbl-excluded-methods" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-excluded-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;7: List of excluded methodological papers.
+</figcaption>
+<div aria-describedby="tbl-excluded-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; ">
+<table class="table cell caption-top table-sm table-striped small">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Paper</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">Number of Citations in Corpus</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">HAYES A.F. INTRODUCTION TO MEDIATION MODERATION AND CONDITIONAL PROCESS ANALYSIS: A REGRESSION-BASED APPROACH (2013)</td>
+<td style="text-align: right;">31</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">HAYES A.F. INTRODUCTION TO MEDIATION MODERATION AND CONDITIONAL PROCESS ANALYSIS: A REGRESSION-BASED APPROACH (2017)</td>
+<td style="text-align: right;">31</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">FORNELL C. LARCKER D.F. EVALUATING STRUCTURAL EQUATION MODELS WITH UNOBSERVABLE VARIABLES AND MEASUREMENT ERROR JOURNAL OF MARKETING RESEARCH 18 1 PP. 39-50 (1981)</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">17</td>
+<td style="text-align: left;">SPENCER S.J. ZANNA M.P. FONG G.T. ESTABLISHING A CAUSAL CHAIN: WHY EXPERIMENTS ARE OFTEN MORE EFFECTIVE THAN MEDIATIONAL ANALYSES IN EXAMINING PSYCHOLOGICAL PROCESSES JOURNAL OF PERSONALITY AND SOCIAL PSYCHOLOGY 89 6 PP. 845-851 (2005)</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">PETRIN A. TRAIN K. A CONTROL FUNCTION APPROACH TO ENDOGENEITY IN CONSUMER CHOICE MODELS JOURNAL OF MARKETING RESEARCH 47 1 PP. 3-13 (2010)</td>
+<td style="text-align: right;">18</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">23</td>
+<td style="text-align: left;">WOOLDRIDGE J.M. ECONOMETRIC ANALYSIS OF CROSS SECTION AND PANEL DATA (2010)</td>
+<td style="text-align: right;">18</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">38</td>
+<td style="text-align: left;">WEDEL M. KANNAN P.K. MARKETING ANALYTICS FOR DATA-RICH ENVIRONMENTS JOURNAL OF MARKETING 80 6 PP. 97-121 (2016)</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">42</td>
+<td style="text-align: left;">PENNEBAKER J.W. BOYD R.L. JORDAN K. BLACKBURN K. THE DEVELOPMENT AND PSYCHOMETRIC PROPERTIES OF LIWC2015 (2015)</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">43</td>
+<td style="text-align: left;">ROSENBAUM P.R. RUBIN D.B. THE CENTRAL ROLE OF THE PROPENSITY SCORE IN OBSERVATIONAL STUDIES FOR CAUSAL EFFECTS BIOMETRIKA 70 1 PP. 41-55 (1983)</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">51</td>
+<td style="text-align: left;">PREACHER K.J. HAYES A.F. ASYMPTOTIC AND RESAMPLING STRATEGIES FOR ASSESSING AND COMPARING INDIRECT EFFECTS IN MULTIPLE MEDIATOR MODELS BEHAVIOR RESEARCH METHODS 40 3 PP. 879-891 (2008)</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">64</td>
+<td style="text-align: left;">HAYES A.F. INTRODUCTION TO MEDIATION MODERATION AND CONDITIONAL PROCESS ANALYSIS: A REGRESSION-BASED APPROACH (2018)</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">65</td>
+<td style="text-align: left;">HECKMAN J.J. SAMPLE SELECTION BIAS AS A SPECIFICATION ERROR ECONOMETRICA 47 1 PP. 153-161 (1979)</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">94</td>
+<td style="text-align: left;">PARK S. GUPTA S. HANDLING ENDOGENOUS REGRESSORS BY JOINT ESTIMATION USING COPULAS MARKETING SCIENCE 31 4 PP. 567-586 (2012)</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">104</td>
+<td style="text-align: left;">COHEN J. STATISTICAL POWER ANALYSIS FOR THE BEHAVIORAL SCIENCES (1988)</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">105</td>
+<td style="text-align: left;">GOLDFARB A. TUCKER C. WANG Y. CONDUCTING RESEARCH IN MARKETING WITH QUASI-EXPERIMENTS JOURNAL OF MARKETING 86 3 PP. 1-20 (2022)</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">122</td>
+<td style="text-align: left;">ANDERSON J.C. GERBING D.W. STRUCTURAL EQUATION MODELING IN PRACTICE: A REVIEW AND RECOMMENDED TWO-STEP APPROACH PSYCHOLOGICAL BULLETIN 103 3 PP. 411-423 (1988)</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">126</td>
+<td style="text-align: left;">BLEI D.M. NG A.Y. JORDAN M.I. LATENT DIRICHLET ALLOCATION JOURNAL OF MACHINE LEARNING RESEARCH 3 PP. 993-1022 (2003)</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">189</td>
+<td style="text-align: left;">AIKEN L.S. WEST S.G. MULTIPLE REGRESSION: TESTING AND INTERPRETING INTERACTIONS (1991)</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">215</td>
+<td style="text-align: left;">GREENE W.H. ECONOMETRIC ANALYSIS (2003)</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">218</td>
+<td style="text-align: left;">HAYES A.F. PARTIAL CONDITIONAL AND MODERATED MODERATED MEDIATION: QUANTIFICATION INFERENCE AND INTERPRETATION COMMUNICATION MONOGRAPHS 85 1 PP. 4-40 (2018)</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">244</td>
+<td style="text-align: left;">WOOLDRIDGE J.M. ECONOMETRIC ANALYSIS OF CROSS SECTION AND PANEL DATA (2002)</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">386</td>
+<td style="text-align: left;">GREENE W.H. ECONOMETRIC ANALYSIS (2000)</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">389</td>
+<td style="text-align: left;">HARTMANN J. HUPPERTZ J. SCHAMP C. HEITMANN M. COMPARING AUTOMATED TEXT CLASSIFICATION METHODS INTERNATIONAL JOURNAL OF RESEARCH IN MARKETING 36 1 PP. 20-38 (2019)</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">397</td>
+<td style="text-align: left;">JOHNSON P.O. NEYMAN J. TESTS OF CERTAIN LINEAR HYPOTHESES AND THEIR APPLICATION TO SOME EDUCATIONAL PROBLEMS STATISTICAL RESEARCH MEMOIRS 1 PP. 57-93 (1936)</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">415</td>
+<td style="text-align: left;">LIU X. SINGH P.V. SRINIVASAN K. A STRUCTURED ANALYSIS OF UNSTRUCTURED BIG DATA BY LEVERAGING CLOUD COMPUTING MARKETING SCIENCE 35 3 PP. 363-388 (2016)</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">436</td>
+<td style="text-align: left;">OPPENHEIMER D.M. MEYVIS T. DAVIDENKO N. INSTRUCTIONAL MANIPULATION CHECKS: DETECTING SATISFICING TO INCREASE STATISTICAL POWER JOURNAL OF EXPERIMENTAL SOCIAL PSYCHOLOGY 45 4 PP. 867-872 (2009)</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">444</td>
+<td style="text-align: left;">PREACHER K.J. HAYES A.F. SPSS AND SAS PROCEDURES FOR ESTIMATING INDIRECT EFFECTS IN SIMPLE MEDIATION MODELS BEHAVIOR RESEARCH METHODS INSTRUMENTS AND COMPUTERS 36 4 PP. 717-731 (2004)</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">445</td>
+<td style="text-align: left;">PREACHER K.J. RUCKER D.D. HAYES A.F. ADDRESSING MODERATED MEDIATION HYPOTHESES: THEORY METHODS AND PRESCRIPTIONS MULTIVARIATE BEHAVIORAL RESEARCH 42 1 PP. 185-227 (2007)</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">456</td>
+<td style="text-align: left;">SPIGGLE S. ANALYSIS AND INTERPRETATION OF QUALITATIVE DATA IN CONSUMER RESEARCH JOURNAL OF CONSUMER RESEARCH 21 3 PP. 491-503 (1994)</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">559</td>
+<td style="text-align: left;">GELMAN A. HILL J. DATA ANALYSIS USING REGRESSION AND MULTILEVEL/HIERARCHICAL MODELS (2006)</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">576</td>
+<td style="text-align: left;">HAIR J.F. ANDERSON R.E. TATHAM R.L. BLACK W.C. MULTIVARIATE DATA ANALYSIS (1998)</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">579</td>
+<td style="text-align: left;">HAUSMAN J.A. SPECIFICATION TESTS IN ECONOMETRICS ECONOMETRICA 46 6 PP. 1251-1271 (1978)</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">580</td>
+<td style="text-align: left;">HAYES A.F. AN INTRODUCTION TO MEDIATION MODERATION AND CONDITIONAL PROCESS ANALYSIS: A REGRESSION-BASED APPROACH (2013)</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">581</td>
+<td style="text-align: left;">HAYES A.F. INTRODUCTION TO MEDIATION MODERATION AND CONDITIONAL PROCESS ANALYSIS (2013)</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">588</td>
+<td style="text-align: left;">HILL S. PROVOST F. VOLINSKY C. NETWORK-BASED MARKETING: IDENTIFYING LIKELY ADOPTERS VIA CONSUMER NETWORKS STATISTICAL SCIENCE 21 2 PP. 256-276 (2006)</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">595</td>
+<td style="text-align: left;">HOTELLING H. STABILITY IN COMPETITION ECONOM. J 39 153 PP. 41-57 (1929)</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">599</td>
+<td style="text-align: left;">IACUS S.M. KING G. PORRO G. CAUSAL INFERENCE WITHOUT BALANCE CHECKING: COARSENED EXACT MATCHING POLITICAL ANALYSIS 20 1 PP. 1-24 (2012)</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">625</td>
+<td style="text-align: left;">LANDIS J.R. KOCH G.G. THE MEASUREMENT OF OBSERVER AGREEMENT FOR CATEGORICAL DATA BIOMETRICS 33 1 PP. 159-174 (1977)</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">645</td>
+<td style="text-align: left;">MEYVIS T. VAN OSSELAER S.M.J. INCREASING THE POWER OF YOUR STUDY BY INCREASING THE EFFECT SIZE JOURNAL OF CONSUMER RESEARCH 44 5 PP. 1157-1173 (2018)</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">653</td>
+<td style="text-align: left;">NUNNALLY J.C. PSYCHOMETRIC THEORY (1978)</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">658</td>
+<td style="text-align: left;">PAPIES D. EBBES P. VAN HEERDE H.J. ADDRESSING ENDOGENEITY IN MARKETING MODELS ADVANCED METHODS FOR MODELING MARKETS PP. 581-627 (2017)</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">666</td>
+<td style="text-align: left;">PREACHER K.J. HAYES A.F. ASYMPTOTIC AND RESAMPLING STRATEGIES FOR ASSESSING AND COMPARING INDIRECT EFFECTS IN MULTIPLE MEDIATOR MODELS BEHAVIOR RESEARCH METHODS 40 PP. 879-891 (2008)</td>
+<td style="text-align: right;">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>We then performed the co-citation analysis using Louvain clustering with <span class="math inline">\(n = 500\)</span> references and a minimum edge weight of 3, and visualized it using a community repulsion of 0.8 and a Fruchterman layout. We labelled the resulting Louvain communities based on the top cited references.</p>
+<p><a href="#fig-cocitation-dominant" class="quarto-xref">Figure&nbsp;1</a> visualizes the resulting communities, coloring each reference according to the dominant cluster citing it (dominance defined as 25%). For all statistical analyses, we do not reduce each reference to one cluster; the coloring is done purely for illustrative purposes.</p>
+<div id="fig-cocitation-dominant" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cocitation-dominant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../31_academic_foundation_output/cocitation_option1.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cocitation-dominant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Co-citation network of the top 500 references, with each reference colored by its dominant technology cluster.
+</figcaption>
+</figure>
+</div>
+<p>We then compare the overall dispersion of citations across Louvain clusters as the baseline against the dispersion of citations across Louvain clusters within each consumer technology cluster, treating clusters over- or under-referencing certain communities outside the 95% credible interval as citing credibly more or less than the entire corpus.</p>
+<div class="column-screen-inset wide-table">
+<div id="tbl-cocitation-base-shares" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cocitation-base-shares-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;8: References of each technology cluster by co-citation base cluster. Cells report the number of matched article-reference mentions falling into that base cluster, out of all matched mentions of the technology cluster, with the corresponding share. Rows sum to 100%. Rows and columns are alphabetical, with the residual Other category last. The final row gives the baseline, the overall distribution of references across base clusters pooled over all technology clusters. <sup>1</sup> marks a share whose 95% credible interval lies entirely above that baseline share, <sup>2</sup> one that lies entirely below it.
+</figcaption>
+<div aria-describedby="tbl-cocitation-base-shares-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Technology Cluster</th>
+<th>algorithm and AI perception &amp; acceptance</th>
+<th>consumer decisionmaking</th>
+<th>crowdfunding</th>
+<th>customer engagement</th>
+<th>customer management</th>
+<th>customization</th>
+<th>emotions</th>
+<th>goals</th>
+<th>herd behavior</th>
+<th>identity and self</th>
+<th>mental accounting</th>
+<th>mobile apps</th>
+<th>network effects and social contagion</th>
+<th>product failure</th>
+<th>product uncertainty</th>
+<th>self-service technologies</th>
+<th>self disclosure</th>
+<th>social media</th>
+<th>targeting</th>
+<th>television advertising</th>
+<th>word of mouth and virality</th>
+<th>other</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Algorithms &amp; Recommendations</td>
+<td>82 / 169 (48.5%)<sup>1</sup></td>
+<td>6 / 169 (3.6%)<sup>1</sup></td>
+<td>0 / 169 (0.0%)</td>
+<td>4 / 169 (2.4%)</td>
+<td>5 / 169 (3.0%)<sup>2</sup></td>
+<td>5 / 169 (3.0%)<sup>1</sup></td>
+<td>0 / 169 (0.0%)</td>
+<td>1 / 169 (0.6%)</td>
+<td>0 / 169 (0.0%)</td>
+<td>4 / 169 (2.4%)</td>
+<td>0 / 169 (0.0%)</td>
+<td>0 / 169 (0.0%)</td>
+<td>9 / 169 (5.3%)</td>
+<td>2 / 169 (1.2%)</td>
+<td>0 / 169 (0.0%)</td>
+<td>0 / 169 (0.0%)</td>
+<td>2 / 169 (1.2%)</td>
+<td>14 / 169 (8.3%)<sup>2</sup></td>
+<td>13 / 169 (7.7%)</td>
+<td>0 / 169 (0.0%)</td>
+<td>22 / 169 (13.0%)<sup>2</sup></td>
+<td>0 / 169 (0.0%)</td>
+</tr>
+<tr class="even">
+<td>AR, VR &amp; Robots</td>
+<td>137 / 315 (43.5%)<sup>1</sup></td>
+<td>0 / 315 (0.0%)</td>
+<td>1 / 315 (0.3%)</td>
+<td>8 / 315 (2.5%)</td>
+<td>73 / 315 (23.2%)<sup>1</sup></td>
+<td>1 / 315 (0.3%)</td>
+<td>1 / 315 (0.3%)</td>
+<td>1 / 315 (0.3%)</td>
+<td>0 / 315 (0.0%)</td>
+<td>0 / 315 (0.0%)</td>
+<td>3 / 315 (1.0%)</td>
+<td>0 / 315 (0.0%)</td>
+<td>5 / 315 (1.6%)<sup>2</sup></td>
+<td>0 / 315 (0.0%)</td>
+<td>5 / 315 (1.6%)</td>
+<td>3 / 315 (1.0%)</td>
+<td>2 / 315 (0.6%)</td>
+<td>19 / 315 (6.0%)<sup>2</sup></td>
+<td>11 / 315 (3.5%)<sup>2</sup></td>
+<td>0 / 315 (0.0%)</td>
+<td>44 / 315 (14.0%)<sup>2</sup></td>
+<td>1 / 315 (0.3%)</td>
+</tr>
+<tr class="odd">
+<td>Auctions &amp; Pricing</td>
+<td>3 / 7 (42.9%)</td>
+<td>0 / 7 (0.0%)</td>
+<td>0 / 7 (0.0%)</td>
+<td>0 / 7 (0.0%)</td>
+<td>1 / 7 (14.3%)</td>
+<td>0 / 7 (0.0%)</td>
+<td>0 / 7 (0.0%)</td>
+<td>0 / 7 (0.0%)</td>
+<td>0 / 7 (0.0%)</td>
+<td>0 / 7 (0.0%)</td>
+<td>0 / 7 (0.0%)</td>
+<td>0 / 7 (0.0%)</td>
+<td>0 / 7 (0.0%)</td>
+<td>0 / 7 (0.0%)</td>
+<td>0 / 7 (0.0%)</td>
+<td>0 / 7 (0.0%)</td>
+<td>0 / 7 (0.0%)</td>
+<td>0 / 7 (0.0%)</td>
+<td>0 / 7 (0.0%)</td>
+<td>2 / 7 (28.6%)<sup>1</sup></td>
+<td>1 / 7 (14.3%)</td>
+<td>0 / 7 (0.0%)</td>
+</tr>
+<tr class="even">
+<td>Computers &amp; Software</td>
+<td>55 / 216 (25.5%)<sup>1</sup></td>
+<td>3 / 216 (1.4%)</td>
+<td>0 / 216 (0.0%)</td>
+<td>22 / 216 (10.2%)<sup>1</sup></td>
+<td>20 / 216 (9.3%)<sup>2</sup></td>
+<td>0 / 216 (0.0%)</td>
+<td>1 / 216 (0.5%)</td>
+<td>0 / 216 (0.0%)</td>
+<td>2 / 216 (0.9%)</td>
+<td>3 / 216 (1.4%)</td>
+<td>1 / 216 (0.5%)</td>
+<td>4 / 216 (1.9%)<sup>1</sup></td>
+<td>10 / 216 (4.6%)</td>
+<td>3 / 216 (1.4%)</td>
+<td>0 / 216 (0.0%)</td>
+<td>4 / 216 (1.9%)<sup>1</sup></td>
+<td>9 / 216 (4.2%)<sup>1</sup></td>
+<td>23 / 216 (10.6%)<sup>2</sup></td>
+<td>13 / 216 (6.0%)</td>
+<td>1 / 216 (0.5%)</td>
+<td>36 / 216 (16.7%)<sup>2</sup></td>
+<td>6 / 216 (2.8%)<sup>1</sup></td>
+</tr>
+<tr class="odd">
+<td>Crypto &amp; Fintech</td>
+<td>7 / 159 (4.4%)<sup>2</sup></td>
+<td>6 / 159 (3.8%)<sup>1</sup></td>
+<td>25 / 159 (15.7%)<sup>1</sup></td>
+<td>12 / 159 (7.5%)</td>
+<td>15 / 159 (9.4%)<sup>2</sup></td>
+<td>3 / 159 (1.9%)</td>
+<td>1 / 159 (0.6%)</td>
+<td>8 / 159 (5.0%)<sup>1</sup></td>
+<td>2 / 159 (1.3%)</td>
+<td>3 / 159 (1.9%)</td>
+<td>5 / 159 (3.1%)<sup>1</sup></td>
+<td>0 / 159 (0.0%)</td>
+<td>3 / 159 (1.9%)<sup>2</sup></td>
+<td>1 / 159 (0.6%)</td>
+<td>0 / 159 (0.0%)</td>
+<td>0 / 159 (0.0%)</td>
+<td>1 / 159 (0.6%)</td>
+<td>26 / 159 (16.4%)</td>
+<td>7 / 159 (4.4%)</td>
+<td>2 / 159 (1.3%)</td>
+<td>32 / 159 (20.1%)</td>
+<td>0 / 159 (0.0%)</td>
+</tr>
+<tr class="even">
+<td>E-Commerce</td>
+<td>9 / 159 (5.7%)<sup>2</sup></td>
+<td>1 / 159 (0.6%)</td>
+<td>0 / 159 (0.0%)</td>
+<td>8 / 159 (5.0%)</td>
+<td>52 / 159 (32.7%)<sup>1</sup></td>
+<td>0 / 159 (0.0%)</td>
+<td>0 / 159 (0.0%)</td>
+<td>0 / 159 (0.0%)</td>
+<td>1 / 159 (0.6%)</td>
+<td>0 / 159 (0.0%)</td>
+<td>1 / 159 (0.6%)</td>
+<td>0 / 159 (0.0%)</td>
+<td>7 / 159 (4.4%)</td>
+<td>0 / 159 (0.0%)</td>
+<td>6 / 159 (3.8%)<sup>1</sup></td>
+<td>0 / 159 (0.0%)</td>
+<td>2 / 159 (1.3%)</td>
+<td>17 / 159 (10.7%)</td>
+<td>20 / 159 (12.6%)<sup>1</sup></td>
+<td>1 / 159 (0.6%)</td>
+<td>33 / 159 (20.8%)</td>
+<td>1 / 159 (0.6%)</td>
+</tr>
+<tr class="odd">
+<td>Gaming &amp; Digital Platforms</td>
+<td>11 / 305 (3.6%)<sup>2</sup></td>
+<td>0 / 305 (0.0%)</td>
+<td>0 / 305 (0.0%)</td>
+<td>18 / 305 (5.9%)</td>
+<td>38 / 305 (12.5%)</td>
+<td>1 / 305 (0.3%)</td>
+<td>1 / 305 (0.3%)</td>
+<td>4 / 305 (1.3%)</td>
+<td>1 / 305 (0.3%)</td>
+<td>5 / 305 (1.6%)</td>
+<td>2 / 305 (0.7%)</td>
+<td>4 / 305 (1.3%)</td>
+<td>32 / 305 (10.5%)<sup>1</sup></td>
+<td>0 / 305 (0.0%)</td>
+<td>2 / 305 (0.7%)</td>
+<td>0 / 305 (0.0%)</td>
+<td>2 / 305 (0.7%)</td>
+<td>46 / 305 (15.1%)</td>
+<td>5 / 305 (1.6%)<sup>2</sup></td>
+<td>2 / 305 (0.7%)</td>
+<td>131 / 305 (43.0%)<sup>1</sup></td>
+<td>0 / 305 (0.0%)</td>
+</tr>
+<tr class="even">
+<td>Generative AI</td>
+<td>405 / 883 (45.9%)<sup>1</sup></td>
+<td>3 / 883 (0.3%)<sup>2</sup></td>
+<td>6 / 883 (0.7%)</td>
+<td>13 / 883 (1.5%)<sup>2</sup></td>
+<td>67 / 883 (7.6%)<sup>2</sup></td>
+<td>1 / 883 (0.1%)</td>
+<td>5 / 883 (0.6%)</td>
+<td>1 / 883 (0.1%)<sup>2</sup></td>
+<td>1 / 883 (0.1%)</td>
+<td>7 / 883 (0.8%)</td>
+<td>2 / 883 (0.2%)</td>
+<td>1 / 883 (0.1%)</td>
+<td>9 / 883 (1.0%)<sup>2</sup></td>
+<td>8 / 883 (0.9%)</td>
+<td>2 / 883 (0.2%)<sup>2</sup></td>
+<td>3 / 883 (0.3%)</td>
+<td>9 / 883 (1.0%)</td>
+<td>137 / 883 (15.5%)</td>
+<td>47 / 883 (5.3%)<sup>2</sup></td>
+<td>1 / 883 (0.1%)<sup>2</sup></td>
+<td>155 / 883 (17.6%)<sup>2</sup></td>
+<td>0 / 883 (0.0%)</td>
+</tr>
+<tr class="odd">
+<td>Internet &amp; Broadcasting</td>
+<td>16 / 176 (9.1%)<sup>2</sup></td>
+<td>2 / 176 (1.1%)</td>
+<td>0 / 176 (0.0%)</td>
+<td>1 / 176 (0.6%)<sup>2</sup></td>
+<td>52 / 176 (29.5%)<sup>1</sup></td>
+<td>2 / 176 (1.1%)</td>
+<td>0 / 176 (0.0%)</td>
+<td>1 / 176 (0.6%)</td>
+<td>0 / 176 (0.0%)</td>
+<td>2 / 176 (1.1%)</td>
+<td>3 / 176 (1.7%)</td>
+<td>1 / 176 (0.6%)</td>
+<td>6 / 176 (3.4%)</td>
+<td>0 / 176 (0.0%)</td>
+<td>5 / 176 (2.8%)<sup>1</sup></td>
+<td>0 / 176 (0.0%)</td>
+<td>0 / 176 (0.0%)</td>
+<td>17 / 176 (9.7%)<sup>2</sup></td>
+<td>18 / 176 (10.2%)</td>
+<td>2 / 176 (1.1%)</td>
+<td>48 / 176 (27.3%)</td>
+<td>0 / 176 (0.0%)</td>
+</tr>
+<tr class="even">
+<td>Mobility &amp; Transportation</td>
+<td>7 / 19 (36.8%)</td>
+<td>0 / 19 (0.0%)</td>
+<td>0 / 19 (0.0%)</td>
+<td>1 / 19 (5.3%)</td>
+<td>1 / 19 (5.3%)</td>
+<td>0 / 19 (0.0%)</td>
+<td>0 / 19 (0.0%)</td>
+<td>0 / 19 (0.0%)</td>
+<td>1 / 19 (5.3%)</td>
+<td>0 / 19 (0.0%)</td>
+<td>0 / 19 (0.0%)</td>
+<td>0 / 19 (0.0%)</td>
+<td>6 / 19 (31.6%)<sup>1</sup></td>
+<td>0 / 19 (0.0%)</td>
+<td>0 / 19 (0.0%)</td>
+<td>0 / 19 (0.0%)</td>
+<td>0 / 19 (0.0%)</td>
+<td>1 / 19 (5.3%)</td>
+<td>1 / 19 (5.3%)</td>
+<td>0 / 19 (0.0%)</td>
+<td>1 / 19 (5.3%)</td>
+<td>0 / 19 (0.0%)</td>
+</tr>
+<tr class="odd">
+<td>Search &amp; Advertising</td>
+<td>5 / 174 (2.9%)<sup>2</sup></td>
+<td>3 / 174 (1.7%)</td>
+<td>0 / 174 (0.0%)</td>
+<td>0 / 174 (0.0%)</td>
+<td>85 / 174 (48.9%)<sup>1</sup></td>
+<td>0 / 174 (0.0%)</td>
+<td>0 / 174 (0.0%)</td>
+<td>0 / 174 (0.0%)</td>
+<td>2 / 174 (1.1%)</td>
+<td>2 / 174 (1.1%)</td>
+<td>0 / 174 (0.0%)</td>
+<td>0 / 174 (0.0%)</td>
+<td>3 / 174 (1.7%)<sup>2</sup></td>
+<td>0 / 174 (0.0%)</td>
+<td>2 / 174 (1.1%)</td>
+<td>0 / 174 (0.0%)</td>
+<td>4 / 174 (2.3%)</td>
+<td>15 / 174 (8.6%)<sup>2</sup></td>
+<td>24 / 174 (13.8%)<sup>1</sup></td>
+<td>3 / 174 (1.7%)</td>
+<td>26 / 174 (14.9%)<sup>2</sup></td>
+<td>0 / 174 (0.0%)</td>
+</tr>
+<tr class="even">
+<td>Smartphones &amp; Apps</td>
+<td>20 / 428 (4.7%)<sup>2</sup></td>
+<td>1 / 428 (0.2%)</td>
+<td>0 / 428 (0.0%)</td>
+<td>25 / 428 (5.8%)</td>
+<td>95 / 428 (22.2%)<sup>1</sup></td>
+<td>1 / 428 (0.2%)</td>
+<td>2 / 428 (0.5%)</td>
+<td>6 / 428 (1.4%)</td>
+<td>0 / 428 (0.0%)</td>
+<td>5 / 428 (1.2%)</td>
+<td>4 / 428 (0.9%)</td>
+<td>5 / 428 (1.2%)</td>
+<td>30 / 428 (7.0%)</td>
+<td>4 / 428 (0.9%)</td>
+<td>1 / 428 (0.2%)</td>
+<td>0 / 428 (0.0%)</td>
+<td>15 / 428 (3.5%)<sup>1</sup></td>
+<td>41 / 428 (9.6%)<sup>2</sup></td>
+<td>81 / 428 (18.9%)<sup>1</sup></td>
+<td>7 / 428 (1.6%)</td>
+<td>85 / 428 (19.9%)</td>
+<td>0 / 428 (0.0%)</td>
+</tr>
+<tr class="odd">
+<td>Social Media</td>
+<td>22 / 947 (2.3%)<sup>2</sup></td>
+<td>10 / 947 (1.1%)</td>
+<td>0 / 947 (0.0%)</td>
+<td>55 / 947 (5.8%)<sup>1</sup></td>
+<td>81 / 947 (8.6%)<sup>2</sup></td>
+<td>3 / 947 (0.3%)</td>
+<td>2 / 947 (0.2%)</td>
+<td>2 / 947 (0.2%)<sup>2</sup></td>
+<td>7 / 947 (0.7%)</td>
+<td>6 / 947 (0.6%)</td>
+<td>0 / 947 (0.0%)</td>
+<td>1 / 947 (0.1%)<sup>2</sup></td>
+<td>124 / 947 (13.1%)<sup>1</sup></td>
+<td>9 / 947 (1.0%)</td>
+<td>0 / 947 (0.0%)</td>
+<td>0 / 947 (0.0%)</td>
+<td>1 / 947 (0.1%)<sup>2</sup></td>
+<td>270 / 947 (28.5%)<sup>1</sup></td>
+<td>45 / 947 (4.8%)<sup>2</sup></td>
+<td>2 / 947 (0.2%)<sup>2</sup></td>
+<td>306 / 947 (32.3%)<sup>1</sup></td>
+<td>1 / 947 (0.1%)</td>
+</tr>
+<tr class="even">
+<td>Streaming, Audio &amp; Video</td>
+<td>3 / 104 (2.9%)<sup>2</sup></td>
+<td>0 / 104 (0.0%)</td>
+<td>1 / 104 (1.0%)</td>
+<td>3 / 104 (2.9%)</td>
+<td>21 / 104 (20.2%)</td>
+<td>0 / 104 (0.0%)</td>
+<td>4 / 104 (3.8%)<sup>1</sup></td>
+<td>1 / 104 (1.0%)</td>
+<td>0 / 104 (0.0%)</td>
+<td>0 / 104 (0.0%)</td>
+<td>1 / 104 (1.0%)</td>
+<td>1 / 104 (1.0%)</td>
+<td>3 / 104 (2.9%)</td>
+<td>0 / 104 (0.0%)</td>
+<td>1 / 104 (1.0%)</td>
+<td>0 / 104 (0.0%)</td>
+<td>2 / 104 (1.9%)</td>
+<td>15 / 104 (14.4%)</td>
+<td>5 / 104 (4.8%)</td>
+<td>4 / 104 (3.8%)<sup>1</sup></td>
+<td>39 / 104 (37.5%)<sup>1</sup></td>
+<td>0 / 104 (0.0%)</td>
+</tr>
+<tr class="odd">
+<td>Tracking &amp; Wearables</td>
+<td>31 / 106 (29.2%)<sup>1</sup></td>
+<td>2 / 106 (1.9%)</td>
+<td>0 / 106 (0.0%)</td>
+<td>5 / 106 (4.7%)</td>
+<td>16 / 106 (15.1%)</td>
+<td>0 / 106 (0.0%)</td>
+<td>1 / 106 (0.9%)</td>
+<td>2 / 106 (1.9%)</td>
+<td>0 / 106 (0.0%)</td>
+<td>1 / 106 (0.9%)</td>
+<td>0 / 106 (0.0%)</td>
+<td>1 / 106 (0.9%)</td>
+<td>6 / 106 (5.7%)</td>
+<td>0 / 106 (0.0%)</td>
+<td>0 / 106 (0.0%)</td>
+<td>0 / 106 (0.0%)</td>
+<td>0 / 106 (0.0%)</td>
+<td>14 / 106 (13.2%)</td>
+<td>19 / 106 (17.9%)<sup>1</sup></td>
+<td>1 / 106 (0.9%)</td>
+<td>7 / 106 (6.6%)<sup>2</sup></td>
+<td>0 / 106 (0.0%)</td>
+</tr>
+<tr class="even">
+<td>Other</td>
+<td>5 / 114 (4.4%)<sup>2</sup></td>
+<td>1 / 114 (0.9%)</td>
+<td>0 / 114 (0.0%)</td>
+<td>4 / 114 (3.5%)</td>
+<td>27 / 114 (23.7%)<sup>1</sup></td>
+<td>1 / 114 (0.9%)</td>
+<td>0 / 114 (0.0%)</td>
+<td>1 / 114 (0.9%)</td>
+<td>0 / 114 (0.0%)</td>
+<td>0 / 114 (0.0%)</td>
+<td>1 / 114 (0.9%)</td>
+<td>0 / 114 (0.0%)</td>
+<td>9 / 114 (7.9%)</td>
+<td>0 / 114 (0.0%)</td>
+<td>4 / 114 (3.5%)<sup>1</sup></td>
+<td>2 / 114 (1.8%)</td>
+<td>0 / 114 (0.0%)</td>
+<td>11 / 114 (9.6%)</td>
+<td>11 / 114 (9.6%)</td>
+<td>2 / 114 (1.8%)</td>
+<td>34 / 114 (29.8%)</td>
+<td>1 / 114 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td>All clusters (baseline)</td>
+<td>818 / 4281 (19.1%)</td>
+<td>38 / 4281 (0.9%)</td>
+<td>33 / 4281 (0.8%)</td>
+<td>179 / 4281 (4.2%)</td>
+<td>649 / 4281 (15.2%)</td>
+<td>18 / 4281 (0.4%)</td>
+<td>18 / 4281 (0.4%)</td>
+<td>28 / 4281 (0.7%)</td>
+<td>17 / 4281 (0.4%)</td>
+<td>38 / 4281 (0.9%)</td>
+<td>23 / 4281 (0.5%)</td>
+<td>18 / 4281 (0.4%)</td>
+<td>262 / 4281 (6.1%)</td>
+<td>27 / 4281 (0.6%)</td>
+<td>28 / 4281 (0.7%)</td>
+<td>12 / 4281 (0.3%)</td>
+<td>49 / 4281 (1.1%)</td>
+<td>666 / 4281 (15.6%)</td>
+<td>320 / 4281 (7.5%)</td>
+<td>30 / 4281 (0.7%)</td>
+<td>1000 / 4281 (23.4%)</td>
+<td>10 / 4281 (0.2%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-ariaBibliometrixRtoolComprehensive2017" class="csl-entry" role="listitem">
+Aria, M., &amp; Cuccurullo, C. (2017). Bibliometrix : <span class="nocase">An R-tool</span> for comprehensive science mapping analysis. <em>Journal of Informetrics</em>, <em>11</em>(4), 959–975. <a href="https://doi.org/10.1016/j.joi.2017.08.007">https://doi.org/10.1016/j.joi.2017.08.007</a>
+</div>
+<div id="ref-woodGeneralizedAdditiveModels2017" class="csl-entry" role="listitem">
+Wood, S. N. (2017). <em>Generalized <span>Additive Models</span>: <span>An Introduction</span> with <span>R</span></em> (2nd ed.). <span>Chapman and Hall/CRC</span>. <a href="https://doi.org/10.1201/9781315370279">https://doi.org/10.1201/9781315370279</a>
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>University of St.Gallen</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with Quarto</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
