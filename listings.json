@@ -1,5 +1,11 @@
 [
   {
+    "listing": "/99_writing/slides_index.html",
+    "items": [
+      "/99_writing/slides/2026-09-22_PsychofAI.html"
+    ]
+  },
+  {
     "listing": "/99_writing/appendix_index.html",
     "items": [
       "/99_writing/supplementary_presentation/B_analysis_1.html",
@@ -7,13 +13,6 @@
       "/99_writing/supplementary_presentation/D_analysis_3.html",
       "/99_writing/supplementary_presentation/A2_articles.html",
       "/99_writing/supplementary_presentation/A_model_choice.html"
-    ]
-  },
-  {
-    "listing": "/99_writing/slides_index.html",
-    "items": [
-      "/99_writing/slides/2026-09-22_PsychofAI.html",
-      "/99_writing/slides/backup-slides.html"
     ]
   }
 ]
