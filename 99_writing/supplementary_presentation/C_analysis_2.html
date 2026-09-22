@@ -454,14 +454,14 @@ window.Quarto = {
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
 
 <style>
-.wide-table { overflow-x: auto; }
+.wide-table { max-width: 100%; overflow-x: auto; }
 .wide-table table { font-size: 0.8rem; }
 .plot-frame { position: relative; overflow: hidden; }
 .plot-frame iframe { position: absolute; top: 0; left: 0; width: 1600px; border: none; transform-origin: 0 0; }
@@ -480,12 +480,12 @@ function fitPlotFrames() {
 window.addEventListener('load', fitPlotFrames);
 window.addEventListener('resize', fitPlotFrames);
 </script>
-<section id="detailed-and-supplementary-analyses-for-2-structuring-the-field" class="level1 page-columns page-full">
+<section id="detailed-and-supplementary-analyses-for-2-structuring-the-field" class="level1">
 <h1>Detailed and Supplementary Analyses for 2 – Structuring the Field</h1>
 <p>In our bibliometric analysis, we focus on historiographic and co-citation analyses. Below, we report the specifications for each and provide interactive maps to explore the results.</p>
-<section id="historiographic-analysis" class="level2 page-columns page-full">
+<section id="historiographic-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="historiographic-analysis">Historiographic Analysis</h2>
-<div class="column-screen-inset">
+<div class="plot-box">
 <div class="plot-frame">
 <iframe src="../../31_academic_foundation_output/figure_1.html" data-height="950" scrolling="no">
 </iframe>
@@ -494,7 +494,7 @@ window.addEventListener('resize', fitPlotFrames);
 <p>For the historiographic analysis, we work with the <code>bibliometrix</code> package <span class="citation" data-cites="ariaBibliometrixRtoolComprehensive2017">(<a href="#ref-ariaBibliometrixRtoolComprehensive2017" role="doc-biblioref">Aria &amp; Cuccurullo, 2017</a>)</span> (version 5.4.1), using the <code>histplot</code> function on our corpus. We further quantify cluster citations along two links: clusters <em>citing</em> other clusters, and clusters being <em>cited by</em> other clusters. For citation comparisons within and across clusters, we include two control variables: the overall citeability of the cluster, and a normalization of the citing / cited-by measures, treating each as the percentage of all citations this cluster makes / receives. We compare how much more often (in %) a cluster cites / is cited by another cluster than this cluster is cited / cites on average across all other clusters, and create a ratio based on the two values.</p>
 <p>Each cell carries a raw count, the cross-citation share <span class="math inline">\(CC_{ij}\)</span> of row cluster <span class="math inline">\(i\)</span> with column cluster <span class="math inline">\(j\)</span>, and the ratio <span class="math inline">\(r_{ij}\)</span>. In the cites grid, <span class="math inline">\(CC_{ij}\)</span> divides the cell by all citations the row cluster makes within the corpus, showing how its outgoing attention is distributed. In the cited-by grid, <span class="math inline">\(CC_{ij}\)</span> divides the cell by all citations the row cluster receives within the corpus, showing where its incoming attention comes from. Rows sum to 100% in both grids, so <span class="math inline">\(CC_{ij}\)</span> describes a cluster’s profile rather than its volume, and clusters of different size stay comparable. <span class="math inline">\(\overline{CC}_j = \frac{1}{15}\sum_{i \neq j} CC_{ij}\)</span> is the average share the other clusters record for that same column cluster. The average is taken over the fifteen other rows, excluding the column cluster’s own row, so a cluster’s internal citation does not set its own reference point. The ratio <span class="math inline">\(r_{ij} = CC_{ij} / \overline{CC}_j\)</span> then reads as the usual amount of attention for that counterpart at 1, twice as much at 2, and half at 0.5. On the diagonal, <span class="math inline">\(r_{ii}\)</span> states how much more of its attention a cluster keeps internally than the other clusters direct at it.</p>
 <p>We again use Dirichlet posteriors to make two comparisons. First, does any given cluster cite / get cited by other clusters credibly more than this cluster cites / is cited by other clusters on average (i.e., excluding self-citations)? Second – reported on the diagonal in <a href="#tbl-cluster-citation-cites" class="quarto-xref">Table&nbsp;1</a> and <a href="#tbl-cluster-citation-cited-by" class="quarto-xref">Table&nbsp;2</a> – does a cluster cite itself credibly more often than all clusters cite themselves on average? To account for the fact that age affects citations, we construct our first prior by creating a citation vector for each paper based on the papers it could cite / be cited by at that time, and averaging across all of these vectors to construct the baseline distribution. We then compare the cluster distribution against this baseline and sample from a gamma distribution with 20,000 draws. We again treat values lying credibly outside the 95% credible interval as lower / higher. For self-citation, we construct a prior by averaging across all self- vs.&nbsp;all-other percentages and follow the same sampling procedure.</p>
-<div class="column-screen-inset wide-table">
+<div class="wide-table">
 <div id="tbl-cluster-citation-cites" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cluster-citation-cites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -871,7 +871,7 @@ Table&nbsp;1: How the citations each technology cluster makes are distributed ac
 </figure>
 </div>
 </div>
-<div class="column-screen-inset wide-table">
+<div class="wide-table">
 <div id="tbl-cluster-citation-cited-by" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cluster-citation-cited-by-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1248,16 +1248,16 @@ Table&nbsp;2: How the citations each technology cluster receives are distributed
 </figure>
 </div>
 </div>
-<section id="historiographic-analysis-on-journal-level" class="level3 page-columns page-full">
+<section id="historiographic-analysis-on-journal-level" class="level3">
 <h3 class="anchored" data-anchor-id="historiographic-analysis-on-journal-level">Historiographic Analysis on Journal Level</h3>
 <p>Analogous to the historiographic analysis on the cluster level, we also analyze journals citing or being cited by other journals. The method and calculations follow the same principle as described above.</p>
-<div class="column-screen-inset">
+<div class="plot-box">
 <div class="plot-frame">
 <iframe src="../../31_academic_foundation_output/figure_journals.html" data-height="950" scrolling="no">
 </iframe>
 </div>
 </div>
-<div class="column-screen-inset wide-table">
+<div class="wide-table">
 <div id="tbl-journal-citation-cites" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-journal-citation-cites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1373,7 +1373,7 @@ Table&nbsp;3: How the citations each journal makes are distributed across the jo
 </figure>
 </div>
 </div>
-<div class="column-screen-inset wide-table">
+<div class="wide-table">
 <div id="tbl-journal-citation-cited-by" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-journal-citation-cited-by-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1494,77 +1494,51 @@ Table&nbsp;4: How the citations each journal receives are distributed across the
 <h3 class="anchored" data-anchor-id="impact-of-early-adoption-and-connectedness-internal-and-across-clusters-on-being-cited">Impact of Early Adoption and Connectedness (Internal and Across Clusters) on Being Cited</h3>
 <p>To better understand the impact of early publications on a consumer technology, and of connectedness within a technology as well as across clusters, we analyze the predictive power of early adoption on local citations (within the corpus) and global citations (as indexed by Scopus / Web of Science).</p>
 <p>We use generalized additive models (GAMs) <span class="citation" data-cites="woodGeneralizedAdditiveModels2017">(<a href="#ref-woodGeneralizedAdditiveModels2017" role="doc-biblioref">Wood, 2017</a>)</span> to test our models, with the same smooth of age and <span class="math inline">\(k = 10\)</span>, as we determined in <a href="../../99_writing/supplementary_presentation/analysis_1.qmd#sec-analysis-1">Analysis 1</a> that <span class="math inline">\(k = 10\)</span> is the optimal threshold across all clusters.</p>
+<div id="tbl-impact-early-adoption-overall" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-impact-early-adoption-overall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: Impact of early adoption across all technology clusters.
+</figcaption>
+<div aria-describedby="tbl-impact-early-adoption-overall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 30%">
-<col style="width: 15%">
-<col style="width: 13%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th></th>
-<th>Internal</th>
+<th>Term</th>
+<th>Within Corpus</th>
 <th>Total</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>(Intercept)</td>
-<td>0.622</td>
-<td>3.344</td>
+<td>Intercept</td>
+<td>0.622 (0.435), p = 0.15</td>
+<td>3.344 (0.365), p = 0</td>
 </tr>
 <tr class="even">
-<td></td>
-<td>(0.435)</td>
-<td>(0.365)</td>
+<td>Early adoption score</td>
+<td>-0.017 (0.02), p = 0.42</td>
+<td>-0.001 (0.017), p = 0.97</td>
 </tr>
 <tr class="odd">
-<td>early_adopter_score</td>
-<td>-0.017</td>
-<td>-0.001</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>(0.020)</td>
-<td>(0.017)</td>
-</tr>
-<tr class="odd">
-<td>cluster_citeability</td>
-<td>0.004</td>
-<td>0.007</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>(0.001)</td>
-<td>(0.001)</td>
-</tr>
-<tr class="odd">
-<td>Num.Obs.</td>
-<td>1329</td>
-<td>1329</td>
-</tr>
-<tr class="even">
-<td>AIC</td>
-<td>5589.6</td>
-<td>13638.8</td>
-</tr>
-<tr class="odd">
-<td>BIC</td>
-<td>5649.5</td>
-<td>13702.5</td>
-</tr>
-<tr class="even">
-<td>RMSE</td>
-<td>5.15</td>
-<td>218.03</td>
+<td>Cluster citeability</td>
+<td>0.004 (0.001), p = 0</td>
+<td>0.007 (0.001), p = 0</td>
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
+</div>
 <div class="wide-table">
 <div id="tbl-impact-early-adoption" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-impact-early-adoption-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;5: Impact of early adoption within each technology cluster. Cells report the negative-binomial GAM coefficient for the early adoption score with its p-value in parentheses; the score is the publication year minus the year of the cluster’s earliest paper, so lower values indicate earlier adoption and a negative coefficient means earlier papers accumulate more citations. Within Corpus counts citations from other corpus articles, Total counts all citations.
+Table&nbsp;6: Impact of early adoption within each technology cluster. Cells report the negative-binomial GAM coefficient for the early adoption score with its p-value in parentheses; the score is the publication year minus the year of the cluster’s earliest paper, so lower values indicate earlier adoption and a negative coefficient means earlier papers accumulate more citations. Within Corpus counts citations from other corpus articles, Total counts all citations.
 </figcaption>
 <div aria-describedby="tbl-impact-early-adoption-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -1680,87 +1654,56 @@ Table&nbsp;5: Impact of early adoption within each technology cluster. Cells rep
 </div>
 </div>
 <p>For the within- and across-cluster citations, we construct standardized scores following the same logic as for the historiographic analysis, standardizing the scores by the number of papers they could possibly cite to begin with. Additionally, we include an overall citeability factor (the mean number of citations of all papers within that cluster) as a control variable in the GAM, as some clusters are overall more relevant to other domains and thereby garner more citations by default. We include age as a second control variable, as early adoption in itself may increase citations, retaining <span class="math inline">\(k = 10\)</span> as above.</p>
+<div id="tbl-impact-citations-overall" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-impact-citations-overall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;7: Impact of citing within and across technology clusters, across all clusters.
+</figcaption>
+<div aria-describedby="tbl-impact-citations-overall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 30%">
-<col style="width: 15%">
-<col style="width: 13%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th></th>
-<th>Internal</th>
+<th>Term</th>
+<th>Within Corpus</th>
 <th>Total</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>(Intercept)</td>
-<td>0.071</td>
-<td>3.142</td>
+<td>Intercept</td>
+<td>0.071 (0.146), p = 0.624</td>
+<td>3.142 (0.118), p &lt; 0.001</td>
 </tr>
 <tr class="even">
-<td></td>
-<td>(0.146)</td>
-<td>(0.118)</td>
+<td>Within-cluster citations (std.)</td>
+<td>1.221 (0.287), p &lt; 0.001</td>
+<td>1.465 (0.258), p &lt; 0.001</td>
 </tr>
 <tr class="odd">
-<td>wi_cluster_std</td>
-<td>1.221</td>
-<td>1.465</td>
+<td>Across-cluster citations (std.)</td>
+<td>15.317 (2.943), p &lt; 0.001</td>
+<td>16.176 (2.734), p &lt; 0.001</td>
 </tr>
 <tr class="even">
-<td></td>
-<td>(0.287)</td>
-<td>(0.258)</td>
-</tr>
-<tr class="odd">
-<td>ac_cluster_std</td>
-<td>15.317</td>
-<td>16.176</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>(2.943)</td>
-<td>(2.734)</td>
-</tr>
-<tr class="odd">
-<td>cluster_citeability</td>
-<td>0.004</td>
-<td>0.006</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>(0.001)</td>
-<td>(0.001)</td>
-</tr>
-<tr class="odd">
-<td>Num.Obs.</td>
-<td>1303</td>
-<td>1303</td>
-</tr>
-<tr class="even">
-<td>AIC</td>
-<td>5374.4</td>
-<td>13187.4</td>
-</tr>
-<tr class="odd">
-<td>BIC</td>
-<td>5437.4</td>
-<td>13255.3</td>
-</tr>
-<tr class="even">
-<td>RMSE</td>
-<td>6.32</td>
-<td>445.68</td>
+<td>Cluster citeability</td>
+<td>0.004 (0.001), p &lt; 0.001</td>
+<td>0.006 (0.001), p &lt; 0.001</td>
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
+</div>
 <div class="wide-table">
 <div id="tbl-impact-citations" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-impact-citations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;6: Impact of citing within and across technology clusters. Cells report the negative-binomial GAM coefficient with its p-value in parentheses, from models controlling for publication age with a smooth. wi is the standardised number of citations a paper makes to its own cluster, ac the standardised number it makes to other clusters, each divided by the papers available to be cited at that point. Within Corpus counts citations from other corpus articles, Total counts all citations.
+Table&nbsp;8: Impact of citing within and across technology clusters. Cells report the negative-binomial GAM coefficient with its p-value in parentheses, from models controlling for publication age with a smooth. wi is the standardised number of citations a paper makes to its own cluster, ac the standardised number it makes to other clusters, each divided by the papers available to be cited at that point. Within Corpus counts citations from other corpus articles, Total counts all citations.
 </figcaption>
 <div aria-describedby="tbl-impact-citations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -1919,20 +1862,20 @@ Table&nbsp;6: Impact of citing within and across technology clusters. Cells repo
 </div>
 </section>
 </section>
-<section id="co-citation-analysis" class="level2 page-columns page-full">
+<section id="co-citation-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="co-citation-analysis">Co-Citation Analysis</h2>
-<div class="column-screen-inset">
+<div class="plot-box">
 <div class="plot-frame">
 <iframe src="../../31_academic_foundation_output/cocitation_option1.html" data-height="900" scrolling="no">
 </iframe>
 </div>
 </div>
-<p>For the co-citation analysis, we again use the <code>bibliometrix</code> package <span class="citation" data-cites="ariaBibliometrixRtoolComprehensive2017">(<a href="#ref-ariaBibliometrixRtoolComprehensive2017" role="doc-biblioref">Aria &amp; Cuccurullo, 2017</a>)</span>, using the <code>biblionetwork</code> function on our corpus. We extract the top 500 cited references, excluding all exclusively methodological papers. We define exclusively methodological papers as papers that only describe a method, without providing any empirically grounded application beyond toy simulations with simulated data. If a paper both describes a method and uses the method to answer an empirical question, we do not exclude it. The first author of this paper went through the top 700 citations and manually marked all papers following this definition. The list of excluded papers can be found in <a href="#tbl-excluded-methods" class="quarto-xref">Table&nbsp;7</a>.</p>
+<p>For the co-citation analysis, we again use the <code>bibliometrix</code> package <span class="citation" data-cites="ariaBibliometrixRtoolComprehensive2017">(<a href="#ref-ariaBibliometrixRtoolComprehensive2017" role="doc-biblioref">Aria &amp; Cuccurullo, 2017</a>)</span>, using the <code>biblionetwork</code> function on our corpus. We extract the top 500 cited references, excluding all exclusively methodological papers. We define exclusively methodological papers as papers that only describe a method, without providing any empirically grounded application beyond toy simulations with simulated data. If a paper both describes a method and uses the method to answer an empirical question, we do not exclude it. The first author of this paper went through the top 700 citations and manually marked all papers following this definition. The list of excluded papers can be found in <a href="#tbl-excluded-methods" class="quarto-xref">Table&nbsp;9</a>.</p>
 <div class="cell">
 <div id="tbl-excluded-methods" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-excluded-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;7: List of excluded methodological papers.
+Table&nbsp;9: List of excluded methodological papers.
 </figcaption>
 <div aria-describedby="tbl-excluded-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -2177,11 +2120,11 @@ Figure&nbsp;1: Co-citation network of the top 500 references, with each referenc
 </figure>
 </div>
 <p>We then compare the overall dispersion of citations across Louvain clusters as the baseline against the dispersion of citations across Louvain clusters within each consumer technology cluster, treating clusters over- or under-referencing certain communities outside the 95% credible interval as citing credibly more or less than the entire corpus.</p>
-<div class="column-screen-inset wide-table">
+<div class="wide-table">
 <div id="tbl-cocitation-base-shares" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cocitation-base-shares-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;8: References of each technology cluster by co-citation base cluster. Cells report the number of matched article-reference mentions falling into that base cluster, out of all matched mentions of the technology cluster, with the corresponding share. Rows sum to 100%. Rows and columns are alphabetical, with the residual Other category last. The final row gives the baseline, the overall distribution of references across base clusters pooled over all technology clusters. <sup>1</sup> marks a share whose 95% credible interval lies entirely above that baseline share, <sup>2</sup> one that lies entirely below it.
+Table&nbsp;10: References of each technology cluster by co-citation base cluster. Cells report the number of matched article-reference mentions falling into that base cluster, out of all matched mentions of the technology cluster, with the corresponding share. Rows sum to 100%. Rows and columns are alphabetical, with the residual Other category last. The final row gives the baseline, the overall distribution of references across base clusters pooled over all technology clusters. <sup>1</sup> marks a share whose 95% credible interval lies entirely above that baseline share, <sup>2</sup> one that lies entirely below it.
 </figcaption>
 <div aria-describedby="tbl-cocitation-base-shares-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -2239,6 +2182,31 @@ Table&nbsp;8: References of each technology cluster by co-citation base cluster.
 </thead>
 <tbody>
 <tr class="odd">
+<td>(Generative) AI</td>
+<td>405 / 883 (45.9%)<sup>1</sup></td>
+<td>3 / 883 (0.3%)<sup>2</sup></td>
+<td>6 / 883 (0.7%)</td>
+<td>13 / 883 (1.5%)<sup>2</sup></td>
+<td>67 / 883 (7.6%)<sup>2</sup></td>
+<td>1 / 883 (0.1%)</td>
+<td>5 / 883 (0.6%)</td>
+<td>1 / 883 (0.1%)<sup>2</sup></td>
+<td>1 / 883 (0.1%)</td>
+<td>7 / 883 (0.8%)</td>
+<td>2 / 883 (0.2%)</td>
+<td>1 / 883 (0.1%)</td>
+<td>9 / 883 (1.0%)<sup>2</sup></td>
+<td>8 / 883 (0.9%)</td>
+<td>2 / 883 (0.2%)<sup>2</sup></td>
+<td>3 / 883 (0.3%)</td>
+<td>9 / 883 (1.0%)</td>
+<td>137 / 883 (15.5%)</td>
+<td>47 / 883 (5.3%)<sup>2</sup></td>
+<td>1 / 883 (0.1%)<sup>2</sup></td>
+<td>155 / 883 (17.6%)<sup>2</sup></td>
+<td>0 / 883 (0.0%)</td>
+</tr>
+<tr class="even">
 <td>Algorithms &amp; Recommendations</td>
 <td>82 / 169 (48.5%)<sup>1</sup></td>
 <td>6 / 169 (3.6%)<sup>1</sup></td>
@@ -2263,7 +2231,7 @@ Table&nbsp;8: References of each technology cluster by co-citation base cluster.
 <td>22 / 169 (13.0%)<sup>2</sup></td>
 <td>0 / 169 (0.0%)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>AR, VR &amp; Robots</td>
 <td>137 / 315 (43.5%)<sup>1</sup></td>
 <td>0 / 315 (0.0%)</td>
@@ -2288,7 +2256,7 @@ Table&nbsp;8: References of each technology cluster by co-citation base cluster.
 <td>44 / 315 (14.0%)<sup>2</sup></td>
 <td>1 / 315 (0.3%)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Auctions &amp; Pricing</td>
 <td>3 / 7 (42.9%)</td>
 <td>0 / 7 (0.0%)</td>
@@ -2313,7 +2281,7 @@ Table&nbsp;8: References of each technology cluster by co-citation base cluster.
 <td>1 / 7 (14.3%)</td>
 <td>0 / 7 (0.0%)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Computers &amp; Software</td>
 <td>55 / 216 (25.5%)<sup>1</sup></td>
 <td>3 / 216 (1.4%)</td>
@@ -2338,7 +2306,7 @@ Table&nbsp;8: References of each technology cluster by co-citation base cluster.
 <td>36 / 216 (16.7%)<sup>2</sup></td>
 <td>6 / 216 (2.8%)<sup>1</sup></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Crypto &amp; Fintech</td>
 <td>7 / 159 (4.4%)<sup>2</sup></td>
 <td>6 / 159 (3.8%)<sup>1</sup></td>
@@ -2363,7 +2331,7 @@ Table&nbsp;8: References of each technology cluster by co-citation base cluster.
 <td>32 / 159 (20.1%)</td>
 <td>0 / 159 (0.0%)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>E-Commerce</td>
 <td>9 / 159 (5.7%)<sup>2</sup></td>
 <td>1 / 159 (0.6%)</td>
@@ -2388,7 +2356,7 @@ Table&nbsp;8: References of each technology cluster by co-citation base cluster.
 <td>33 / 159 (20.8%)</td>
 <td>1 / 159 (0.6%)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Gaming &amp; Digital Platforms</td>
 <td>11 / 305 (3.6%)<sup>2</sup></td>
 <td>0 / 305 (0.0%)</td>
@@ -2412,31 +2380,6 @@ Table&nbsp;8: References of each technology cluster by co-citation base cluster.
 <td>2 / 305 (0.7%)</td>
 <td>131 / 305 (43.0%)<sup>1</sup></td>
 <td>0 / 305 (0.0%)</td>
-</tr>
-<tr class="even">
-<td>Generative AI</td>
-<td>405 / 883 (45.9%)<sup>1</sup></td>
-<td>3 / 883 (0.3%)<sup>2</sup></td>
-<td>6 / 883 (0.7%)</td>
-<td>13 / 883 (1.5%)<sup>2</sup></td>
-<td>67 / 883 (7.6%)<sup>2</sup></td>
-<td>1 / 883 (0.1%)</td>
-<td>5 / 883 (0.6%)</td>
-<td>1 / 883 (0.1%)<sup>2</sup></td>
-<td>1 / 883 (0.1%)</td>
-<td>7 / 883 (0.8%)</td>
-<td>2 / 883 (0.2%)</td>
-<td>1 / 883 (0.1%)</td>
-<td>9 / 883 (1.0%)<sup>2</sup></td>
-<td>8 / 883 (0.9%)</td>
-<td>2 / 883 (0.2%)<sup>2</sup></td>
-<td>3 / 883 (0.3%)</td>
-<td>9 / 883 (1.0%)</td>
-<td>137 / 883 (15.5%)</td>
-<td>47 / 883 (5.3%)<sup>2</sup></td>
-<td>1 / 883 (0.1%)<sup>2</sup></td>
-<td>155 / 883 (17.6%)<sup>2</sup></td>
-<td>0 / 883 (0.0%)</td>
 </tr>
 <tr class="odd">
 <td>Internet &amp; Broadcasting</td>

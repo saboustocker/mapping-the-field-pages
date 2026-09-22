@@ -448,14 +448,14 @@ window.Quarto = {
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
 
 <style>
-.wide-table { overflow-x: auto; }
+.wide-table { max-width: 100%; overflow-x: auto; }
 .wide-table table { font-size: 0.8rem; }
 .plot-frame { position: relative; overflow: hidden; }
 .plot-frame iframe { position: absolute; top: 0; left: 0; width: 1600px; border: none; transform-origin: 0 0; }
@@ -474,27 +474,27 @@ function fitPlotFrames() {
 window.addEventListener('load', fitPlotFrames);
 window.addEventListener('resize', fitPlotFrames);
 </script>
-<section id="sec-analysis-1" class="level1 page-columns page-full">
+<section id="sec-analysis-1" class="level1">
 <h1>Detailed and Supplementary Analyses for 1 – Modeling the Field</h1>
 <p>For analysis 1, we semantically cluster and temporally analyze consumer technologies identified through an LLM-aided, bottom-up literature search process (see <a href="../../99_writing/supplementary_presentation/articles.qmd#sec-inclusion">Inclusion of Articles in Corpus</a>). In this supplementary material, we provide interactive HTML maps of the results, detailed information on the statistical evaluation, and additional analyses not reported in the main materials.</p>
-<section id="field-map" class="level2 page-columns page-full">
+<section id="field-map" class="level2">
 <h2 class="anchored" data-anchor-id="field-map">Field Map</h2>
-<div class="column-screen-inset">
+<div class="plot-box">
 <div class="plot-frame">
 <iframe src="../../11_semantic_mapping_output/1_semantic_map16.html" data-height="770" scrolling="no">
 </iframe>
 </div>
 </div>
 </section>
-<section id="temporal-trajectories" class="level2 page-columns page-full">
+<section id="temporal-trajectories" class="level2">
 <h2 class="anchored" data-anchor-id="temporal-trajectories">Temporal Trajectories</h2>
-<div class="column-screen-inset">
+<div class="plot-box">
 <div class="plot-frame">
 <iframe src="../../11_semantic_mapping_output/6_absolute_stacked_k16.html" data-height="640" scrolling="no">
 </iframe>
 </div>
 </div>
-<div class="column-screen-inset">
+<div class="plot-box">
 <div class="plot-frame">
 <iframe src="../../11_semantic_mapping_output/3_within_tech_share_k16.html" data-height="640" scrolling="no">
 </iframe>
@@ -711,7 +711,7 @@ Figure&nbsp;1: Fitted and observed annual share of technology mentions per techn
 </figure>
 </div>
 </section>
-<section id="focus-on-technology-clusters-within-journals" class="level2 page-columns page-full">
+<section id="focus-on-technology-clusters-within-journals" class="level2">
 <h2 class="anchored" data-anchor-id="focus-on-technology-clusters-within-journals">Focus on Technology Clusters Within Journals</h2>
 <p>We compare the overall distribution of attention devoted to consumer technologies across all seven journals with the distribution observed within each journal. To assess differences in the spread of attention, we compare each individual journal’s spread against the overall spread using Dirichlet distributions, judging a journal whose individual spread lies fully outside the 95% credible interval of the overall spread as having a credibly higher or lower focus than overall.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Dirichlet Distributions">
@@ -726,14 +726,18 @@ Figure&nbsp;1: Fitted and observed annual share of technology mentions per techn
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<!-- explanation about dirichlet distributions and posteriors here -->
-<p>A Dirichlet distribution is a set of independent gamma distributions divided by their sum.</p>
+<p>The Dirichlet distribution is a multivariate continuous distribution parameterized by a vector <span class="math inline">\(\alpha\)</span> with each <span class="math inline">\(\alpha_i &gt; 0\)</span> and all components adding up to 1. It is therefore well-suited to model proportions, which is what we use it for in our analyses.</p>
+<p>The Dirichlet probability density function is</p>
+<p><span class="math display">\[
+f(X_1,X_2,...X_k;\alpha_1,\alpha_2,...,\alpha_k)=\frac{1}{B(\alpha)}\prod_{i=1}^kX_i^{\alpha_i - 1}
+\]</span></p>
+<p>where <span class="math inline">\(X_1,...,X_k\)</span> are the observations that are distributed with parameters <span class="math inline">\(\alpha_1,...,\alpha_k\)</span>. <span class="math inline">\(B(\alpha)\)</span> is a multivariate beta function.</p>
 </div>
 </div>
 </div>
 <p>We draw 20,000 samples from the Dirichlet posterior of each journal’s technology shares. The baseline is a Dirichlet distribution whose concentration is the baseline distribution of each cluster times a pseudo-count of 16 (because we have 16 clusters).</p>
 <p><a href="#tbl-journal-distribution" class="quarto-xref">Table&nbsp;2</a> reports the distribution of consumer-technology mentions across technology clusters, pooled across all journals and within each journal, with marks for clusters whose share credibly deviates from the pooled share.</p>
-<div class="column-screen-inset wide-table">
+<div class="wide-table">
 <div id="tbl-journal-distribution" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-journal-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -952,10 +956,10 @@ Figure&nbsp;2: Share of consumer-technology mentions per technology cluster acro
 </figure>
 </div>
 </section>
-<section id="cluster-co-mentions" class="level2 page-columns page-full">
+<section id="cluster-co-mentions" class="level2">
 <h2 class="anchored" data-anchor-id="cluster-co-mentions">Cluster Co-Mentions</h2>
 <p>We identify 1,583 unique consumer technology mentions from 1,155 articles. <a href="#tbl-cooccurrence" class="quarto-xref">Table&nbsp;3</a> summarizes the technology co-mentions within articles. Note that if an article mentions two individual consumer technologies from the same cluster, the article is not counted twice.</p>
-<div class="column-screen-inset wide-table">
+<div class="wide-table">
 <div id="tbl-cooccurrence" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cooccurrence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">

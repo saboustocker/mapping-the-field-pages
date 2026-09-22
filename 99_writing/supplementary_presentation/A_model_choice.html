@@ -471,10 +471,10 @@ window.Quarto = {
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Inertia is defined as</p>
-<p>$$</p>
-<p>$$</p>
-<p>, i.e.&nbsp;the sum of squared distances from each point to the centroid of the assigned cluster. It is scale-dependent (<!-- add why -->) and decreases as <span class="math inline">\(k\)</span> increases. The established usage is to interpret it visually, and identify so-called “elbows” which is where the increase in <span class="math inline">\(k\)</span> alone does not meaningfully contribute to a decrease in inertia anymore, indicating a good fit for <span class="math inline">\(k\)</span>.</p>
+<p>Inertia is defined as the sum of squared distances from each point to the centroid of the assigned cluster. It is scale-dependent and decreases as <span class="math inline">\(k\)</span> increases, as Inertia simply computes the squared distance of each sample in a cluster to its cluster center and sums them up. This process is done for each cluster and all samples within that data set. The smaller the Inertia value, the more coherent are the different clusters. When as many clusters are added as there are samples in the data set, then the Inertia value would be zero. The established usage is to interpret it visually, and identify so-called “elbows” which is where the increase in <span class="math inline">\(k\)</span> alone does not meaningfully contribute to a decrease in inertia anymore, indicating a good fit for <span class="math inline">\(k\)</span>.</p>
+<p><span class="math display">\[
+\text{Inertia}=\sum_{i=1}^N(x_i-C_k)^2
+\]</span></p>
 </div>
 </div>
 </div>
@@ -490,7 +490,12 @@ window.Quarto = {
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Silouhette scores are the mean distance of points to other points within the cluster they are assigned to, and to the nearest other cluster. Averaged overa ll points, they measure how much closer points are to their own cluster compared to neighboring clusters, wherein higher silouhette scores indicate better model fit.</p>
+<p>Silouhette scores are the mean distance of points to other points within the cluster they are assigned to, and to the nearest other cluster. Averaged over all points, they measure how much closer points are to their own cluster compared to neighboring clusters, wherein higher silouhette scores indicate better model fit.</p>
+<p>Silouhette scores are defined as</p>
+<p><span class="math display">\[
+\text{Silouhette} = \frac{b_i - a_i}{max(a_i,b_i)}
+\]</span></p>
+<p>wherein <span class="math inline">\(a_i\)</span> is the intra-cluster distance, and <span class="math inline">\(b_i\)</span> is the nearest-cluster distance, being defined as the average of each datapoint in cluster <span class="math inline">\(a\)</span> to all datapoints in the nearest cluster <span class="math inline">\(b\)</span>.</p>
 </div>
 </div>
 </div>
@@ -506,9 +511,22 @@ window.Quarto = {
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Davies-Bouldin scores measure how compact a cluster is by comparing within-cluster scatter. Scatter <span class="math inline">\(s_i\)</span> for cluster <span class="math inline">\(i\)</span> is defined as the mean distance of each point <span class="math inline">\(i_{1,...,n}\)</span> to the centroid <span class="math inline">\(c_i\)</span>. Then, for each cluster pair <span class="math inline">\(i\)</span>, <span class="math inline">\(j\)</span>, the worst possible</p>
-<p>$$</p>
-<p>$$</p>
+<p>The Davies-Bouldin Index (DBI) is a metric for evaluating the validity of a clustering solution. It is a relative clustering validity index, meaning that it compares the clustering results to a hypothetical “ideal” clustering. A lower DBI value indicates a better clustering solution. Higher DBI values indicate poor separation or compactness.</p>
+<p>The DBI is calculated by first determining each intra-cluster dispersion using</p>
+<p><span class="math display">\[
+S_i = {(\frac{1}{T_i}\sum_{j=1}^{T_i}|X_j - A_j|^q)}^\frac{1}{q}
+\]</span></p>
+<p>whereas <span class="math inline">\(T_i\)</span> is the number of observations in cluster <span class="math inline">\(i\)</span>, <span class="math inline">\(X_j\)</span> is the jth observation in cluster <span class="math inline">\(i\)</span> and <span class="math inline">\(A_i\)</span> is the centroid of cluster <span class="math inline">\(i\)</span>. In essence, to get the intra-cluster dispersion, we calculate the average distance between each observation within the cluster and its centroid. <span class="math inline">\(q\)</span> is generally set to 2, meaning that we calculate the euclidian distance.</p>
+<p>We then calculate a separation measure between any possible combination of clusters <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span> by:</p>
+<p><span class="math display">\[
+M_{ij} = {(\sum_{k=1}^N|a_{ki}-a_{kj}|^p)}^\frac{1}{p}
+\]</span></p>
+<p>where <span class="math inline">\(a_{ki}\)</span> is the kth component of an n-dimensional centroid <span class="math inline">\(A_i\)</span> and <span class="math inline">\(a_{kj}\)</span> is the kth component of an n-dimensional centroid <span class="math inline">\(A_j\)</span> respectively. P is generally set to 2, calculating the euclidian distance.</p>
+<p>For any combination of <span class="math inline">\(S_i\)</span>, <span class="math inline">\(S_j\)</span> and <span class="math inline">\(M_{ij}\)</span> we calculate <span class="math inline">\(R_{ij} = \frac{S_i + S_j}{M_{ij}}\)</span> and for each <span class="math inline">\(i\)</span> take <span class="math inline">\(R_i = maximum(R_{ij})\)</span>. The DBI is then simply</p>
+<p><span class="math display">\[
+\overline{R} = DBI = \frac{1}{N}\sum_{i = 1}^N R_{i}
+\]</span></p>
+<p>where <span class="math inline">\(N\)</span> is the number of clusters.</p>
 </div>
 </div>
 </div>
@@ -524,7 +542,22 @@ window.Quarto = {
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Calisnki-Harabasz scores are an indicator of dispersion within compared against between cluster dispersion, and can be interpreted similar to an F-Statistic.</p>
+<p>The Calinski-Harabasz index (also known as the Variance Ratio Criterion) is calculated as a ratio of the sum of inter-cluster dispersion and the sum of intra-cluster dispersion for all clusters (where the dispersion is the sum of squared distances). A high CH-index indicates better clustering (more dense clusters that are further away).</p>
+<p>To calculate inter-cluster dispersion (i.e.&nbsp;between-group dispersion), the between-group sum of squares is calculated as:</p>
+<p><span class="math display">\[
+\text{BGSS} = \sum_{k = 1}^K n_k \times ||C_k - C ||^2
+\]</span></p>
+<p>where <span class="math inline">\(n_k\)</span> is the number of observations in cluster <span class="math inline">\(k\)</span>, <span class="math inline">\(C_k\)</span> is the centroid of cluster <span class="math inline">\(k\)</span>, <span class="math inline">\(C\)</span> the barycenter, and <span class="math inline">\(K\)</span> the number of clusters.</p>
+<p>The intra-cluster dispersion (i.e.&nbsp;the dispersion within clusters) is calculated as</p>
+<p><span class="math display">\[
+\text{WGSS}_k = \sum_{i = 1}^{n_k}||X_{ik} - C_k ||^2
+\]</span></p>
+<p>whereas <span class="math inline">\(X_{ik}\)</span> is the i-th observation of cluster <span class="math inline">\(k\)</span>. We sum all <span class="math inline">\(\text{WGSS}_k\)</span> to <span class="math inline">\(\text{WGSS}\)</span> by <span class="math inline">\(\text{WGSS} = \sum_{k = 1}^K \text{WGSS}_k\)</span>.</p>
+<p>The Calinski-Harabasz Index is then defined as</p>
+<p><span class="math display">\[
+CH = \frac{BGSS}{WGSS} \times \frac{N-K}{K-1}
+\]</span></p>
+<p>whereas <span class="math inline">\(N\)</span> is the total number of observations. If the between-group dispersion is large, and the within-group dispersion is small, we have good clustering.</p>
 </div>
 </div>
 </div>
@@ -679,7 +712,7 @@ window.Quarto = {
 <section id="clustering-component-k" class="level2">
 <h2 class="anchored" data-anchor-id="clustering-component-k">Clustering Component <span class="math inline">\(k\)</span></h2>
 <p>We limited the clusters we tested to <span class="math inline">\(10 \leq k \leq 20\)</span>. Within these parameters, performance tendencially rose across models with an increase in <span class="math inline">\(k\)</span>, but there was no clear jumping point where one model clearly outperformed models with lower <span class="math inline">\(k\)</span>.</p>
-<p>We compare silouhette, Calinski-Harabasz scores and Davies-Bpouldin scores within <em>and</em> across models, and inertia within models, as inertia is dependent on both <span class="math inline">\(k\)</span> (expected to lower with higher <span class="math inline">\(k\)</span>), but also dimensionality of the embedding space, which differs between models.</p>
+<p>We compare silouhette, Calinski-Harabasz scores and Davies-Bouldin scores within <em>and</em> across models, and inertia within models, as inertia is dependent on both <span class="math inline">\(k\)</span> (expected to lower with higher <span class="math inline">\(k\)</span>), but also dimensionality of the embedding space, which differs between models.</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">

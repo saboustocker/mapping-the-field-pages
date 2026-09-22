@@ -452,14 +452,14 @@ window.Quarto = {
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
 
 <style>
-.wide-table { overflow-x: auto; }
+.wide-table { max-width: 100%; overflow-x: auto; }
 .wide-table table { font-size: 0.8rem; }
 .plot-frame { position: relative; overflow: hidden; }
 .plot-frame iframe { position: absolute; top: 0; left: 0; border: none; transform-origin: 0 0; }
@@ -480,27 +480,27 @@ function fitPlotFrames() {
 window.addEventListener('load', fitPlotFrames);
 window.addEventListener('resize', fitPlotFrames);
 </script>
-<section id="detailed-and-supplementary-analyses-for-3-contrasting-the-field" class="level1 page-columns page-full">
+<section id="detailed-and-supplementary-analyses-for-3-contrasting-the-field" class="level1">
 <h1>Detailed and Supplementary Analyses for 3 – Contrasting the Field</h1>
 <p>To construct a benchmark for public salience, we rely on the data provided by the Media Cloud initiative <span class="citation" data-cites="bermejoMediaCloud202026 roberts2021mediacloud">(<a href="#ref-bermejoMediaCloud202026" role="doc-biblioref">Bermejo et al., 2026</a>; <a href="#ref-roberts2021mediacloud" role="doc-biblioref"><span class="nocase">Roberts et al.</span>, 2021</a>)</span>, a large-scale open-source project providing an interface to tap into many RSS feeds and archives of public news sources. For our analysis, we rely on the US News Sources corpus, consisting of 247 popular US news outlets. Media Cloud has limited regex capabilities, which is why we construct our benchmark bottom-up by using its API to query every individual consumer technology (a total of 901 queries), with each query prepared following standard search-string conventions, i.e., truncating word endings and adding wildcard operators. As we were interested only in news stories in which these technologies are a focal object, we restricted our search to titles. We then deduplicated the news stories and aggregated their counts per cluster across time, constructing a database comparable to our corpus of academic articles. Because Media Cloud’s index is only reliable from 2008 onwards <span class="citation" data-cites="roberts2021mediacloud">(<a href="#ref-roberts2021mediacloud" role="doc-biblioref"><span class="nocase">Roberts et al.</span>, 2021</a>)</span>, we restrict all statistical analyses reported below to the period between 01.01.2008 and 30.06.2026.</p>
 <p>Based on these two corpora, we perform both a gap analysis, analyzing which clusters are generally under- or over-represented in academic articles compared to news stories as the baseline, and a lag analysis with full permutation across all 19 available years (2008-2026).</p>
-<section id="gap-analysis" class="level2 page-columns page-full">
+<section id="gap-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="gap-analysis">Gap Analysis</h2>
 <p>We compute the share of attention devoted to each consumer technology cluster within academic articles and within news stories, and compare the two percentages against each other.</p>
-<div class="column-screen-inset">
+<div class="plot-box">
 <div class="plot-frame">
 <iframe src="../../21_mediacloud_benchmark_output/coverage_gap_outputs/within_tech/coverage_gap_ranked.html" data-width="1600" data-height="780" scrolling="no">
 </iframe>
 </div>
 </div>
-<div class="column-screen-inset">
+<div class="plot-box">
 <div class="plot-frame">
 <iframe src="../../21_mediacloud_benchmark_output/coverage_gap_outputs/within_tech/coverage_scatter.html" data-width="1150" data-height="950" scrolling="no">
 </iframe>
 </div>
 </div>
 <p>To gauge whether one source pays credibly more or less attention to any given consumer technology, we use Dirichlet posteriors to compare academic attention against media attention, taking media attention as the baseline / prior. Furthermore, we report the rank-order agreement between the two corpora to provide a more robust measure of relative importance within each corpus.</p>
-<div class="column-screen-inset wide-table">
+<div class="wide-table">
 <div id="tbl-coverage-gap" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-coverage-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -697,7 +697,7 @@ Table&nbsp;1: Academic and media attention to consumer-technology clusters, 2008
 </figure>
 </div>
 </div>
-<div class="column-screen-inset wide-table">
+<div class="wide-table">
 <div id="tbl-rank-order" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rank-order-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -858,10 +858,10 @@ Table&nbsp;2: Rank order of the technology clusters in the academic and the medi
 </figure>
 </div>
 </div>
-<section id="journal-specific-gaps" class="level3 page-columns page-full">
+<section id="journal-specific-gaps" class="level3">
 <h3 class="anchored" data-anchor-id="journal-specific-gaps">Journal Specific Gaps</h3>
 <p>We repeat the gap analysis for each of the seven journals separately, comparing the journal’s own distribution of attention across the sixteen clusters against the same news-story baseline. <a href="#tbl-journal-gap" class="quarto-xref">Table&nbsp;3</a> reports one row per cluster, with an Overall column for the pooled corpus of academic articles and one column per journal; each cell gives the academic minus media share in percentage points and the media rank minus the academic rank in parentheses.</p>
-<div class="column-screen-inset wide-table">
+<div class="wide-table">
 <div id="tbl-journal-gap" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-journal-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1078,11 +1078,11 @@ Table&nbsp;3: Attention gap per technology cluster, overall and by journal, 2008
 </div>
 </section>
 </section>
-<section id="lag-analysis" class="level2 page-columns page-full">
+<section id="lag-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="lag-analysis">Lag Analysis</h2>
 <p>We analyze the attention devoted to each consumer technology across time using full permutation across the 19 years (with lags ranging from -5 to +5), accounting for the autocorrelation of each series. We correlate the two measures of attention at every lag using Pearson correlations. We shift news stories against academic articles, i.e., in negative lags academic articles lead news stories, and in positive lags news stories lead academic articles. Lags with fewer than 3 pairs (at the bounds of the available time period) are excluded from the analysis.</p>
 <p>We calculate per-lag permutation p-values through circular shifting of the news-story values against the academic-article values, keeping the autocorrelation of the news-story series intact. As we theoretically argue that we cover, rather than sample, the research space of consumer technologies, we enumerate the null distribution completely (meaning that we shift <span class="math inline">\(n - 1\)</span> times and do not sample repeatedly under the assumption of an underlying distribution). This also means that, with a maximum of 19 years available, our p-values cannot go below 0.053.</p>
-<div class="column-screen-inset">
+<div class="plot-box">
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -1240,7 +1240,7 @@ Figure&nbsp;1: Correlation between academic-article and news-story attention at 
 </figcaption>
 </figure>
 </div>
-<div class="column-screen-inset wide-table">
+<div class="wide-table">
 <div id="tbl-lag-pvalues" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lag-pvalues-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1527,10 +1527,10 @@ Table&nbsp;4: Correlation between annual academic and media attention at each la
 </figure>
 </div>
 </div>
-<section id="journal-specific-temporal-alignment" class="level3 page-columns page-full">
+<section id="journal-specific-temporal-alignment" class="level3">
 <h3 class="anchored" data-anchor-id="journal-specific-temporal-alignment">Journal-Specific Temporal Alignment</h3>
 <p>For each cluster we take the year of maximum attention in news stories and the year of maximum attention in each journal, both on a three-year rolling average of the within-technology share, and correlate the two orderings across clusters with Spearman’s <span class="math inline">\(\rho\)</span> and Kendall’s <span class="math inline">\(\tau\)</span>. <a href="#tbl-journal-peak-years" class="quarto-xref">Table&nbsp;5</a> reports the peak years and <a href="#tbl-journal-peak-alignment" class="quarto-xref">Table&nbsp;6</a> the agreement per journal.</p>
-<div class="column-screen-inset wide-table">
+<div class="wide-table">
 <div id="tbl-journal-peak-years" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-journal-peak-years-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
